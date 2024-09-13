@@ -1,0 +1,75 @@
+/* Header.css */
+
+/* Common header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Dark background */
+    padding: 10px 20px;
+    color: #fff; /* White text color */
+    position: relative;
+    z-index: 1000; /* Ensure header stays on top */
+  }
+  
+  .header-logo img {
+    max-height: 50px; /* Adjust logo size */
+  }
+  
+  /* Navigation Links */
+  .header-nav {
+    display: flex;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-list li {
+    margin-left: 20px; /* Spacing between links */
+  }
+  
+  .nav-list a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-list a:hover {
+    background-color: #555; /* Hover effect */
+  }
+  
+  /* Burger menu button styles */
+  .bm-burger-button {
+    display: none; /* Hidden by default, shown only on smaller screens */
+  }
+  
+  .bm-burger-bars {
+    background: #fff; /* White lines for the burger icon */
+  }
+  
+  .bm-burger-bars-hover {
+    background: #ddd; /* Lighter color on hover for burger icon */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-nav {
+      display: none; /* Hide regular navigation links on smaller screens */
+    }
+  
+    .bm-burger-button {
+      display: block !important; /* Show hamburger icon on smaller screens */
+      position: fixed;
+      width: 36px;
+      height: 30px;
+      right: 20px;
+      top: 20px;
+    }
+  }
+  
