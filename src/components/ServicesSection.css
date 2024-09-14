@@ -1,0 +1,162 @@
+/* ServicesSection.css */
+
+.services-section {
+    position: relative; /* Position relative for overlapping elements */
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background color for the section */
+    z-index: 1;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .section-header h2 {
+    font-size: 2.5rem; /* Increased font size */
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .section-header p {
+    font-size: 1.2rem; /* Slightly increased font size for the subtitle */
+    color: #666;
+  }
+  
+  .services-cards {
+    position: relative; /* Enables positioning of children */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Gap between cards */
+    z-index: 10; /* Bring cards to the front */
+    margin-bottom: -4.0rem; /* Adjust this to control the overlap */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  }
+  
+  .service-card {
+    background-color: #fff; /* White background for cards */
+    border-radius: 12px;
+    padding: 30px; /* Increased padding */
+    margin: 0;
+    width: 220px; /* Increased width for larger cards */
+    height: 220px; /* Increased height for larger cards */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Default shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Needed for top adjustments */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation on hover */
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .service-icon {
+    font-size: 3rem; /* Larger icon size */
+    color: #333; /* Icon color */
+    margin-bottom: 15px;
+  }
+  
+  .statistics-section {
+    position: relative; /* Position relative for background image */
+    background-image: url('https://picsum.photos/seed/picsums/1200/920'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* White text color */
+    padding: 80px 20px; /* Increased padding to allow for overlap */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+    z-index: 0; /* Ensure this is behind the cards */
+    height: 70vh;
+  }
+  
+  .statistics-text {
+    max-width: 400px;
+    text-align: left;
+  }
+  
+  .statistics-text h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .statistics-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .stat-item {
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .experience-box {
+    background-color: transparent; /* Transparent background to match design */
+    border: 2px solid #fff; /* White border */
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  .experience-box h1 {
+    font-size: 4rem;
+    margin: 0;
+  }
+  
+  .experience-box p {
+    margin: 0;
+    font-weight: 700;
+  }
+  
+  /* Responsive Styles for Mobile */
+  @media (max-width: 768px) {
+    .services-cards {
+      flex-direction: column; /* Stack the boxes vertically */
+      align-items: center; /* Center align for vertical stacking */
+      margin-top: 0; /* Remove negative margin on mobile */
+    }
+  
+    .service-card {
+      width: 80%; /* Adjust width to fit the mobile screen */
+      height: auto; /* Auto height for flexible sizing */
+      margin-bottom: 20px; /* Add margin for spacing between cards */
+    }
+  
+    .service-icon {
+      font-size: 2.5rem; /* Adjust icon size for smaller screens */
+    }  
+    .stat-item h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .service-card {
+      width: 90%; /* Make the cards even narrower for small devices */
+    }
+  
+    .section-header h2 {
+      font-size: 2rem; /* Reduce title size on smaller screens */
+    }
+  
+    .section-header p {
+      font-size: 1rem; /* Adjust subtitle size */
+    }
+  }
+  

@@ -1,0 +1,82 @@
+/* ContentSection.css */
+
+.content-section {
+  background-color: #f5f5f5; /* Light gray background to match overall style */
+  padding: 40px 20px; /* Padding for spacing */
+}
+
+.content-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px; /* Space between rows */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.content-image {
+  flex: 1; /* Image takes half of the row */
+  padding: 20px; /* Padding around the image */
+}
+
+.content-image img {
+  width: 100%; /* Make the image take full width */
+  height: auto; /* Set height to maintain aspect ratio */
+  display: block;
+  object-fit: cover; /* Crop the image to fill the space */
+  aspect-ratio: 6 / 4; /* Maintain a 16:9 aspect ratio for a horizontal rectangle */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Shadow effect for the image */
+}
+
+/* Specific style for the second row image to align right */
+.content-image.right-aligned {
+  order: 2; /* Force the image to be the last in the flex order for the second row */
+}
+
+.content-text {
+  flex: 1; /* Text takes half of the row */
+  padding: 20px; /* Padding around the text */
+  color: #333; /* Dark text color */
+  font-family: 'Arial', sans-serif; /* Font style matching the overall theme */
+}
+
+.content-text h3 {
+  font-size: 1.5rem; /* Heading size */
+  font-weight: 700; /* Bold font for heading */
+  margin-bottom: 10px; /* Space below heading */
+}
+
+.content-text p {
+  font-size: 1rem; /* Paragraph text size */
+  font-weight: 300; /* Light font weight for paragraph */
+  line-height: 1.6; /* Line height for better readability */
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .content-row {
+    flex-direction: column; /* Stack the image and text vertically */
+    align-items: center; /* Center align for vertical stacking */
+  }
+
+  .content-image,
+  .content-text {
+    width: 90%; /* Make content fit within the viewport width */
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  .content-image.right-aligned {
+    order: unset; /* Reset the order for better stacking on small screens */
+  }
+
+  .content-text {
+    text-align: center; /* Center align text for better appearance on mobile */
+  }
+
+  .content-text h3 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .content-text p {
+    font-size: 0.9rem; /* Adjust paragraph text size for smaller screens */
+  }
+}
