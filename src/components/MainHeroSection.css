@@ -1,0 +1,44 @@
+/* MainHeroSection.css */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Adjust the height based on your design */
+    background-image: url('https://picsum.photos/1200/800'); /* Replace with your actual image */
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Ensure it is under the overlapping elements */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent gray overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    z-index: 2; /* Ensure it is above the background */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .overlay h1 {
+      font-size: 2rem; /* Adjust title size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .overlay h1 {
+      font-size: 1.5rem; /* Further adjust title size */
+    }
+  }
+  

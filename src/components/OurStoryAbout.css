@@ -1,0 +1,76 @@
+/* OurStoryAbout.css */
+
+.our-story-section {
+    padding: 40px 20px;
+    background-color: #f5f5f5; /* Light gray background */
+    text-align: center;
+    margin-top: -100px; /* Negative margin to overlap hero section */
+    position: relative;
+    z-index: 2; /* Bring it above the hero section */
+  }
+  
+  .story-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff; /* White background for the story box */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 12px;
+    text-align: center; /* Center-align text within the box */
+    position: relative;
+    z-index: 3; /* Ensure it appears above the hero section */    
+    margin-top: -5rem;
+  }
+  
+  .story-box h2 {
+    color: #2e3b84; /* Title color */
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .story-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .story-box p:last-child {
+    font-weight: bold; /* Make the last paragraph bold */
+  }
+  
+  .quote {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 30px;
+    font-weight: bold;
+    font-style: italic;
+    margin: 30px auto;
+    max-width: 700px;
+    text-align: center; /* Center-align the text */
+    background: none; /* Remove the overlay/background */
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 3; /* Ensure it appears above the hero section */
+  }
+  
+  .quote::before,
+  .quote::after {
+    content: '"'; /* Add double quote character */
+    font-size: 5rem; /* Increased size of quotes */
+    color: #ccc; /* Light gray color for quotes */
+    position: absolute;
+    font-family: 'Arial', sans-serif; /* Ensure font matches the content */
+  }
+  
+  .quote::before {
+    left: -30px; /* Adjust positioning for larger size */
+    top: -20px; /* Adjust vertical alignment for larger size */
+  }
+  
+  .quote::after {
+    right: -30px; /* Adjust positioning for larger size */
+    bottom: -20px; /* Adjust vertical alignment for larger size */
+  }
+  

@@ -1,0 +1,69 @@
+/* CoreValuesSection.css */
+
+.core-values-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f5f5f5; /* Light gray background */
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2e3b84; /* Dark blue color */
+    margin-bottom: 40px;
+  }
+  
+  .core-values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+    gap: 40px;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the grid */
+  }
+  
+  .core-value-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .core-value-icon {
+    font-size: 3rem; /* Size of the FontAwesome icon */
+    margin-bottom: 15px;
+    color: #2e3b84; /* Icon color */
+  }
+  
+  .core-value-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2e3b84; /* Title color */
+    margin-bottom: 10px;
+  }
+  
+  .core-value-description {
+    font-size: 1rem;
+    color: #555; /* Description color */
+    line-height: 1.6;
+    max-width: 220px; /* Limit the width of the description */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .core-values-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .core-values-grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 column per row on very small screens */
+    }
+  
+    .section-title {
+      font-size: 1.8rem; /* Adjust font size for smaller screens */
+    }
+  }
+  

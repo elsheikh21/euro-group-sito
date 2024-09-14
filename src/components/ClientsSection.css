@@ -1,0 +1,62 @@
+/* ClientsSection.css */
+
+.clients-section {
+    background-color: #333; /* Dark gray background */
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .clients-section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff; /* White text */
+    margin-bottom: 5rem;
+  }
+  
+  .clients-logos-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 logos per row */
+    gap: 20px;
+    justify-items: center;
+    width: 80%; /* Set the container width to 80% of the page */
+    max-width: 1200px; /* Set a maximum width */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .client-logo {
+    filter: grayscale(100%); /* Make logos grayscale by default */
+    transition: filter 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .client-logo:hover {
+    filter: none; /* Show the original colors on hover */
+  }
+  
+  .client-logo img {
+    width: 100%;
+    height: auto;
+    max-width: 100px; /* Adjust as needed */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .clients-logos-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 logos per row on smaller screens */
+      width: 90%; /* Slightly wider on smaller screens */
+    }
+  
+    .client-logo img {
+      max-width: 80px; /* Adjust logo size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .clients-logos-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 logos per row on very small screens */
+    }
+  
+    .clients-section-title {
+      font-size: 1.8rem; /* Adjust font size for smaller screens */
+    }
+  }
+  
