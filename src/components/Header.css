@@ -7,7 +7,7 @@
     align-items: center;
     background-color: #333; /* Dark background */
     padding: 20px 20px;
-    color: #fff; /* White text color */
+    color: #f3f3f5; /* White text color */
     position: relative;
     z-index: 1000; /* Ensure header stays on top */
     height: 100px; /* Set a specific height for the header */
@@ -38,7 +38,7 @@
   }
   
   .nav-list a {
-    color: #fff;
+    color: #f3f3f5;
     text-decoration: none;
     padding: 20px 10px;
     border-radius: 5px;
@@ -49,7 +49,7 @@
   }
   
   .nav-list a:hover {
-    background-color: #555; /* Hover effect */
+    background-color: #262628; /* Hover effect */
   }
   
   /* Burger menu button styles */
@@ -58,7 +58,7 @@
   }
   
   .bm-burger-bars {
-    background: #fff; /* White lines for the burger icon */
+    background: #f3f3f5; /* White lines for the burger icon */
   }
   
   .bm-burger-bars-hover {
