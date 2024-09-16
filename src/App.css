@@ -1,3 +1,9 @@
+@import url('https://fonts.cdnfonts.com/css/archivo');
+
+html, body {
+  font-family: 'Archivo', 'Arial', sans-serif;
+}
+
 .App {
   text-align: center;
 }
