@@ -8,6 +8,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import ProjectPage from './components/ProjectPage'; // Import the ScrollToTopButton component
 import ScrollToTopButton from './components/ScrollToTopButton'; // Import the ScrollToTopButton component
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/project/:projectId" element={<ProjectPage />} /> {/* Dynamic route for each project */}
         </Routes>
         <ScrollToTopButton /> {/* Add the ScrollToTopButton component */}
         <Footer />
