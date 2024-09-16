@@ -6,29 +6,12 @@ const Footer = () => {
     <footer className="footer">
       {/* Upper Row */}
       <div className="footer-upper">
-        <img src="../logo192.png" alt="Logo" className="footer-logo" />
+        <img src="../images/logos/logo_white.png" alt="Logo" className="footer-logo" />
       </div>
 
       {/* Middle Row */}
       <div className="footer-middle">
-        <div className="footer-column">
-          <h4>Home</h4>
-          <ul>
-            <li><a href="#About">About us</a></li>
-            <li><a href="#Services">Our Services</a></li>
-            <li><a href="#Projects">Previous Projects</a></li>
-            <li><a href="#Contact">Contact</a></li>
-          </ul>
-        </div>
-        <div className="footer-column">
-          <h4>About Us</h4>
-          <ul>
-            <li><a href="#Story">Our Story</a></li>
-            <li><a href="#Team">Team</a></li>
-            <li><a href="#Careers">Careers</a></li>
-            <li><a href="#News">News</a></li>
-          </ul>
-        </div>
+
         <div className="footer-column">
           <h4>Projects</h4>
           <ul>
@@ -44,11 +27,11 @@ const Footer = () => {
         </div>
         <div className="footer-column">
           <h4>Social Media</h4>
-          <ul>
-            <li><a href="#Facebook">Facebook</a></li>
-            <li><a href="#Twitter">Twitter</a></li>
-            <li><a href="#Instagram">Instagram</a></li>
-            <li><a href="#LinkedIn">LinkedIn</a></li>
+          <ul className="social-media-list">
+            <li><a href="#Facebook" className="social-icon fab fa-facebook-f"></a></li>
+            <li><a href="#Twitter" className="social-icon fab fa-twitter"></a></li>
+            <li><a href="#Instagram" className="social-icon fab fa-instagram"></a></li>
+            <li><a href="#LinkedIn" className="social-icon fab fa-linkedin-in"></a></li>
           </ul>
         </div>
         <div className="footer-column">

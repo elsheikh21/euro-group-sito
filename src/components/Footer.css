@@ -3,11 +3,12 @@
 .footer {
   background-color: #333; /* Dark background */
   color: #fff; /* White text color */
-  padding: 20px;
+  padding: 20px 40px;
   text-align: left;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  
 }
 
 .footer-upper {
@@ -31,6 +32,30 @@
   flex: 1 1 180px; /* Flex-grow and minimum width to make it responsive */
   margin-right: 20px;
 }
+
+
+/* Style for the unordered list */
+.social-media-list {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Aligns items horizontally */
+  gap: 10px; /* Space between icons */
+}
+
+/* Style for the social media icons */
+.social-icon {
+  font-size: 24px; /* Size of the icons */
+  color: #000; /* Black color for the icons */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect to change icons back to their normal colors */
+.social-icon:hover {
+  color: inherit; /* Use default color */
+}
+
 
 .footer-column h4 {
   margin-bottom: 10px;
