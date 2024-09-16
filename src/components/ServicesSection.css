@@ -3,7 +3,7 @@
 .services-section {
     position: relative; /* Position relative for overlapping elements */
     padding: 40px 20px;
-    background-color: #f9f9f9; /* Light background color for the section */
+    background-color: #f3f3f5; /* Light background color for the section */
     z-index: 1;
   }
   
@@ -12,15 +12,16 @@
     margin-bottom: 30px;
   }
   
-  .section-header h2 {
-    font-size: 2.5rem; /* Increased font size */
+  .section-header h3 {
+    font-size: 1.75rem; /* Increased font size */
     font-weight: 700;
     margin-bottom: 10px;
+    color: #19258b;
   }
   
   .section-header p {
     font-size: 1.2rem; /* Slightly increased font size for the subtitle */
-    color: #666;
+    color: #262628;
   }
   
   .services-cards {
@@ -30,19 +31,19 @@
     align-items: flex-start;
     gap: 20px; /* Gap between cards */
     z-index: 10; /* Bring cards to the front */
-    margin-bottom: -4.0rem; /* Adjust this to control the overlap */
+    margin-bottom: -8.5rem; /* Adjust this to control the overlap */
     flex-wrap: wrap; /* Allow wrapping for responsiveness */
   }
   
   .service-card {
-    background-color: #fff; /* White background for cards */
+    background-color: #f3f3f3; /* White background for cards */
     border-radius: 12px;
     padding: 30px; /* Increased padding */
     margin: 0;
     width: 220px; /* Increased width for larger cards */
     height: 220px; /* Increased height for larger cards */
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Default shadow */
+    box-shadow: 0 4px 15px rgba(38, 38, 40, 0.1); /* Default shadow */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,19 +55,23 @@
   .service-card:hover {
     transform: scale(1.05); /* Slightly enlarge on hover */
   }
-  
+  .service-card-text {
+    color: #19258b;
+  }
+
   .service-icon {
-    font-size: 3rem; /* Larger icon size */
-    color: #333; /* Icon color */
+    color: #19258b; /* Icon color */
     margin-bottom: 15px;
+    max-width: 45%;
+    align-items: center;
   }
   
   .statistics-section {
     position: relative; /* Position relative for background image */
-    background-image: url('https://picsum.photos/seed/picsums/1200/920'); /* Replace with your background image path */
+    background-image: url("../../public/images/home6.webp");
     background-size: cover;
     background-position: center;
-    color: #fff; /* White text color */
+    color: #f3f3f5; /* White text color */
     padding: 80px 20px; /* Increased padding to allow for overlap */
     display: flex;
     justify-content: space-around;
@@ -75,14 +80,30 @@
     z-index: 0; /* Ensure this is behind the cards */
     height: 70vh;
   }
+  .statistics-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.65); /* Cyan-Blue color with 50% opacity */
+    z-index: 1; /* Position the overlay above the background but below the content */
+    pointer-events: none; /* Make sure the overlay does not block mouse events */
+  }
   
+  /* Ensure content appears above the overlay */
+  .statistics-section > * {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+  }
   .statistics-text {
     max-width: 400px;
     text-align: left;
   }
   
   .statistics-text h2 {
-    font-size: 1.25rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
   }
@@ -91,11 +112,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1rem;
   }
   
   .stat-item {
     margin: 10px;
     text-align: center;
+    padding-right: 50px;
+  }
+  
+  .stat-item h1 {
+    font-size: 5rem; /* Replace with your desired size */
+    line-height: 1.2; /* Optional: Adjust line height for better spacing */
   }
   
   .stat-item h3 {
@@ -106,18 +134,18 @@
   
   .experience-box {
     background-color: transparent; /* Transparent background to match design */
-    border: 2px solid #fff; /* White border */
+    border: 10px solid #f3f3f5; /* White border */
     padding: 30px;
     text-align: center;
-    border-radius: 8px;
   }
   
   .experience-box h1 {
-    font-size: 4rem;
+    font-size: 7rem;
     margin: 0;
   }
   
   .experience-box p {
+    font-size: 1.5rem;
     margin: 0;
     font-weight: 700;
   }
