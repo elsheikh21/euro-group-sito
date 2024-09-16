@@ -6,26 +6,31 @@
     justify-content: space-between;
     align-items: center;
     background-color: #333; /* Dark background */
-    padding: 10px 20px;
+    padding: 20px 20px;
     color: #fff; /* White text color */
     position: relative;
     z-index: 1000; /* Ensure header stays on top */
+    height: 100px; /* Set a specific height for the header */
   }
   
   .header-logo img {
-    max-height: 50px; /* Adjust logo size */
+    max-height: 70px; /* Adjust logo size */
   }
   
   /* Navigation Links */
   .header-nav {
     display: flex;
-  }
+    height: 100%; /* Ensure the nav takes the full height of the header */
+    align-items: center; /* Center the items vertically */
+    }
   
   .nav-list {
     display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    height: 100%; /* Full height for nav list */
+    align-items: center;
   }
   
   .nav-list li {
@@ -35,9 +40,12 @@
   .nav-list a {
     color: #fff;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 20px 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center the text vertically */
+    height: 100%; /* Full height for anchor tags */
   }
   
   .nav-list a:hover {

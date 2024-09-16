@@ -13,12 +13,15 @@ const Header = () => {
       {/* Left Part: Logo */}
       <div className="header-logo">
       <Link to="/">
-      <img src="../logo192.png" alt="Logo" />        </Link>
+      <img src="../images/logos/logo_white.png" alt="Logo" />        </Link>
       </div>
 
       {/* Conditionally render the menu based on device size */}
       {isHandheldDevice ? (
         <Menu right>
+          <a className="menu-item" href="/">
+            Home
+          </a>
           <a className="menu-item" href="/About">
             About Us
           </a>
@@ -28,18 +31,23 @@ const Header = () => {
           <a className="menu-item" href="/Services">
             Services
           </a>
+          <a className="menu-item" href="/Careers">
+            Careers
+          </a>
           <a className="menu-item" href="/Contact">
-            Contact
+            Contact Us
           </a>
         </Menu>
       ) : (
         // Regular navigation links for larger screens
         <nav className="header-nav">
           <ul className="nav-list">
+            <li><a href="/">Home</a></li>
             <li><a href="/About">About Us</a></li>
             <li><a href="/Projects">Projects</a></li>
             <li><a href="/Services">Services</a></li>
-            <li><a href="/Contact">Contact</a></li>
+            <li><a href="/Careers">Careers</a></li>
+            <li><a href="/Contact">Contact Us</a></li>
           </ul>
         </nav>
       )}
