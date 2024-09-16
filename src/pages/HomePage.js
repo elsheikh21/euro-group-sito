@@ -1,7 +1,6 @@
 import React from 'react';
 import Landing from '../components/Landing';
-import IntroductionSection from '../components/IntroductionSection';
-import ContentSection from '../components/ContentSection';
+import HighlightSection from '../components/HighlightSection';
 import OverlaySection from '../components/OverlaySection';
 import ServicesSection from '../components/ServicesSection';
 import FeaturedProjects from '../components/FeaturedProjects';
@@ -12,8 +11,7 @@ const HomePage = () => {
     <>
       {/* Main page content */}
       <Landing />
-      <IntroductionSection />
-      <ContentSection />
+      <HighlightSection />
       <OverlaySection />
       <ServicesSection />
       <FeaturedProjects />      
