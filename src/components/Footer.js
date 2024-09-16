@@ -28,10 +28,10 @@ const Footer = () => {
         <div className="footer-column">
           <h4>Social Media</h4>
           <ul className="social-media-list">
-            <li><a href="#Facebook" className="social-icon fab fa-facebook-f"></a></li>
-            <li><a href="#Twitter" className="social-icon fab fa-twitter"></a></li>
-            <li><a href="#Instagram" className="social-icon fab fa-instagram"></a></li>
-            <li><a href="#LinkedIn" className="social-icon fab fa-linkedin-in"></a></li>
+            <li><a href="#Facebook" className="social-icon fab fa-facebook-f" aria-label="Facebook"></a></li>
+            <li><a href="#Twitter" className="social-icon fab fa-twitter" aria-label="Twitter"></a></li>
+            <li><a href="#Instagram" className="social-icon fab fa-instagram" aria-label="Instagram"></a></li>
+            <li><a href="#LinkedIn" className="social-icon fab fa-linkedin-in" aria-label="LinkedIn"></a></li>
           </ul>
         </div>
         <div className="footer-column">
