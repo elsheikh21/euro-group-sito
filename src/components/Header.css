@@ -1,83 +1,102 @@
-/* Header.css */
-
 /* Common header styles */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333; /* Dark background */
-    padding: 20px 20px;
-    color: #f3f3f5; /* White text color */
-    position: relative;
-    z-index: 1000; /* Ensure header stays on top */
-    height: 100px; /* Set a specific height for the header */
-  }
-  
-  .header-logo img {
-    max-height: 70px; /* Adjust logo size */
-  }
-  
-  /* Navigation Links */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333; /* Dark background */
+  padding: 10px 20px;
+  color: #f3f3f5; /* White text color */
+  position: fixed; /* Fixed position to stay at the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure header stays on top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+/* Logo Styles */
+.header-logo .logo {
+  max-height: 50px; /* Adjust logo size */
+  width: auto;
+}
+
+/* Navigation Links */
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin-left: 20px; /* Spacing between links */
+}
+
+.nav-list a {
+  color: #f3f3f5;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-list a:hover {
+  background-color: #262628; /* Hover effect */
+}
+
+/* Burger Menu Button Styles */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 20px;
+  top: 20px;
+  z-index: 2001; /* Ensure burger button is above other content */
+}
+
+.bm-burger-bars {
+  background: #f3f3f5; /* White lines for the burger icon */
+}
+
+.bm-burger-bars-hover {
+  background: #ddd; /* Lighter color on hover for burger icon */
+}
+
+/* Burger Menu Styles */
+.bm-menu {
+  background: #333;
+  padding-top: 2em; /* Space from the top */
+  padding-left: 1.5em; /* Space on the left side of the menu */
+}
+
+.menu-item {
+  color: #f3f3f5;
+  padding: 0.5em 0;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.menu-item:hover {
+  background-color: #262628; /* Hover effect for menu items */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .header-nav {
-    display: flex;
-    height: 100%; /* Ensure the nav takes the full height of the header */
-    align-items: center; /* Center the items vertically */
-    }
-  
-  .nav-list {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    height: 100%; /* Full height for nav list */
-    align-items: center;
+    display: none; /* Hide regular navigation links on smaller screens */
   }
-  
-  .nav-list li {
-    margin-left: 20px; /* Spacing between links */
-  }
-  
-  .nav-list a {
-    color: #f3f3f5;
-    text-decoration: none;
-    padding: 20px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    display: flex; /* Flexbox for centering */
-    align-items: center; /* Center the text vertically */
-    height: 100%; /* Full height for anchor tags */
-  }
-  
-  .nav-list a:hover {
-    background-color: #262628; /* Hover effect */
-  }
-  
-  /* Burger menu button styles */
+
   .bm-burger-button {
-    display: none; /* Hidden by default, shown only on smaller screens */
+    display: block; /* Show burger button on smaller screens */
   }
-  
-  .bm-burger-bars {
-    background: #f3f3f5; /* White lines for the burger icon */
+}
+
+@media (min-width: 769px) {
+  .bm-burger-button {
+    display: none; /* Hide burger button on larger screens */
   }
-  
-  .bm-burger-bars-hover {
-    background: #ddd; /* Lighter color on hover for burger icon */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .header-nav {
-      display: none; /* Hide regular navigation links on smaller screens */
-    }
-  
-    .bm-burger-button {
-      display: block !important; /* Show hamburger icon on smaller screens */
-      position: fixed;
-      width: 36px;
-      height: 30px;
-      right: 20px;
-      top: 20px;
-    }
-  }
-  
+}

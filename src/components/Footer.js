@@ -11,6 +11,9 @@ const Footer = () => {
 
       {/* Middle Row */}
       <div className="footer-middle">
+      {/* <div className="footer-column">
+        <img src="../images/logos/logo_white.png" alt="Logo" className="footer-logo" />
+      </div> */}
 
         <div className="footer-column">
           <h4>Projects</h4>

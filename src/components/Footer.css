@@ -29,7 +29,7 @@
 }
 
 .footer-column {
-  flex: 1 1 180px; /* Flex-grow and minimum width to make it responsive */
+  flex: 1 1 90px; /* Flex-grow and minimum width to make it responsive */
   margin-right: 20px;
 }
 
