@@ -1,0 +1,184 @@
+/* ContactBody.css */
+.contact-body {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f3f3f5;
+    padding: 40px;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .contact-left {
+    flex: 1;
+    padding: 20px;
+    max-width: 45%;
+    text-align: left;
+  }
+  #contact-us-first-text {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-left h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #233876;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-left p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background-color: transparent;
+    outline: none;
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .contact-right {
+    flex: 1;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 80px 40px;
+    max-width: 45%;
+    min-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; /* Add Flexbox for centering */
+    flex-direction: column; /* Align content in a column */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+  }
+  
+  .location {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f3f3f5;
+    text-align: left;
+  }
+  
+  .location h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .location p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    text-align: center; /* Center align paragraphs */
+    text-align: left;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .contact-body {
+      flex-direction: column;
+    }
+  
+    .contact-left,
+    .contact-right {
+      max-width: 100%;
+      margin: 0;
+      padding: 20px;
+    }
+  
+    .contact-right {
+      margin-top: 20px;
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .form-group.double {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .form-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    color: #233876; /* Blue color for labels */
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  
+  input:focus,
+  textarea:focus {
+    border-bottom: 1px solid #233876; /* Blue bottom border on focus */
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .character-count {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 5px;
+  }
+  
+  .contact-form-button {
+    padding: 10px 20px; /* Add more horizontal padding for a rounded effect */
+    font-size: 1rem;
+    background-color: #233876; /* Blue button color */
+    color: #ffffff;
+    border: 2px solid #e0e0e0; /* Light gray border */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
+    align-self: flex-start;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+  
+.contact-form-button:hover {
+    background-color: #19258b; /* Slightly darker gray on hover */
+    color: #ffffff; /* Ensure text stays white */
+    border-color: #d0d0d0; /* Slightly darker border on hover */  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .contact-body {
+      flex-direction: column;
+    }
+  
+    .contact-left {
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+  @media (min-width: 768px) {
+    .contact-right {
+        margin-top: -7rem;
+    }
+  }

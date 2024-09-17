@@ -1,11 +1,13 @@
 import React from 'react';
+import ContactHeader from '../components/ContactHeader';
+import ContactBody from '../components/ContactBody';
 
 const Contact = () => {
   return (
-    <div className="page-content">
-      <h1>Contact Us</h1>
-      <p>This is the Contact page content.</p>
-    </div>
+    <>
+      <ContactHeader />
+      <ContactBody />
+    </>
   );
 };
 
