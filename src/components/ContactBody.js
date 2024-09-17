@@ -70,6 +70,7 @@ const ContactBody = () => {
             Have questions or want to chat? Fill out our contact form, and we’ll put you in touch with the right people.
             </p>
         </div>
+        <div class="contact-form-div">
         <form className="contact-form">
           <div className="form-group double">
             <div className="form-item">
@@ -97,6 +98,7 @@ const ContactBody = () => {
           </div>
           <button class="contact-form-button" type="submit">Submit</button>
         </form>
+        </div>
       </div>
 
       <div className="contact-right">
