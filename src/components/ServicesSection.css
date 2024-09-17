@@ -31,7 +31,7 @@
     align-items: flex-start;
     gap: 20px; /* Gap between cards */
     z-index: 10; /* Bring cards to the front */
-    margin-bottom: -8.5rem; /* Adjust this to control the overlap */
+    margin-bottom: -6.5rem; /* Adjust this to control the overlap */
     flex-wrap: wrap; /* Allow wrapping for responsiveness */
   }
   
@@ -72,13 +72,12 @@
     background-size: cover;
     background-position: center;
     color: #f3f3f5; /* White text color */
-    padding: 80px 20px; /* Increased padding to allow for overlap */
+    padding: 110px 20px; /* Increased padding to allow for overlap */
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap; /* Allows wrapping for responsiveness */
     z-index: 0; /* Ensure this is behind the cards */
-    height: 70vh;
   }
   .statistics-section::before {
     content: '';
@@ -166,23 +165,37 @@
   
     .service-icon {
       font-size: 2.5rem; /* Adjust icon size for smaller screens */
-    }  
+    }
+  
     .stat-item h3 {
       font-size: 1.2rem;
       font-weight: 700;
       margin: 0;
     }
+  
+    /* New responsive styles for .statistics-info */
+    .statistics-info {
+      flex-direction: column; /* Stack the stat items vertically */
+      align-items: center; /* Center align for vertical stacking */
+    }
+  
+    .stat-item {
+      margin: 10px 0; /* Adjust margin to add spacing between stacked items */
+      padding-right: 0; /* Remove right padding for centered items */
+      width: 100%; /* Make each stat item take full width */
+      text-align: center; /* Center-align text for each item */
+    }
   }
   
   @media (max-width: 480px) {
     .service-card {
-      width: 90%; /* Make the cards even narrower for small devices */
+      width: 70%; /* Make the cards even narrower for small devices */
     }
   
-    .section-header h2 {
-      font-size: 2rem; /* Reduce title size on smaller screens */
+    .section-header h1 {
+      font-size: 1rem; /* Reduce title size on smaller screens */
     }
-  
+    
     .section-header p {
       font-size: 1rem; /* Adjust subtitle size */
     }

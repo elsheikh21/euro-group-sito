@@ -1,84 +1,106 @@
-import React, { useEffect, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css'; // Correct import for Swiper core styles
-import 'swiper/css/navigation'; // Import for Swiper navigation styles
-import 'swiper/css/pagination'; // Import for Swiper pagination styles
-import './FeaturedProjects.css'; // Your custom CSS file
+import React from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import './FeaturedProjects.css'; // Your custom styles
 
 const FeaturedProjects = () => {
-  // Simulate fetching data from backend
-  const [projects, setProjects] = useState([]);
+  // Dummy data for projects
+  const projects = [
+    { id: 1, title: 'Third Ring Road', imageUrl: 'https://picsum.photos/300/200?random=1' },
+    { id: 2, title: 'Al Akhal - Mahd Al Thahab Road', imageUrl: 'https://picsum.photos/300/200?random=2' },
+    { id: 3, title: 'Al Hijra Road Tunnel', imageUrl: 'https://picsum.photos/300/200?random=3' },
+    { id: 4, title: 'Al Hijra Road Tunnel', imageUrl: 'https://picsum.photos/300/200?random=4' },
+  ];
 
-  useEffect(() => {
-    // Simulated fetch call to get project data
-    const fetchedProjects = [
+  // Slick carousel settings
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3.5, // Number of slides to show at a time
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
       {
-        id: 1,
-        title: 'Third Ring Road',
-        service: 'Construction',
-        image: 'https://picsum.photos/seed/thirdringroad/600/600',
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
       },
       {
-        id: 2,
-        title: 'Al Ahfad - Wad El Turabi Road',
-        service: 'Engineering',
-        image: 'https://picsum.photos/seed/alahfadroad/300/200',
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
       },
-      {
-        id: 3,
-        title: 'Al Hilay Road Tunnel',
-        service: 'Infrastructure',
-        image: 'https://picsum.photos/seed/alhilaytunnel/300/200',
-      },
-      {
-        id: 4,
-        title: 'Al Fula Road Tunnel',
-        service: 'Construction',
-        image: 'https://picsum.photos/seed/alfulatunnel/300/200',
-      },
-      // Add more projects if needed
-    ];
-
-    setProjects(fetchedProjects); // Set fetched data to state
-  }, []);
+    ],
+  };
 
   return (
-    <section className="featured-projects-section">
-      <h2 className="section-title">Featured Projects</h2>
-      <Swiper
-        spaceBetween={20} // Space between slides
-        slidesPerView={2} // Default: show 3 slides at a time
-        loop={true} // Enable infinite loop
-        centeredSlides={true   } // Center the active slide
-        grabCursor={true} // Change cursor to grabbing hand
-        pagination={{ clickable: true }} // Pagination dots
-        breakpoints={{
-          0: { // When viewport is 0px or larger (all sizes)
-            slidesPerView: 1, // Show 1 card
-            centeredSlides: false, // Don't center single card
-          },
-          640: { // When viewport is 640px or larger
-            slidesPerView: 2, // Show 2 cards on small devices
-            centeredSlides: false, // Don't center two cards
-          },
-          1024: { // When viewport is 1024px or larger
-            slidesPerView: 3, // Show 3 cards on larger screens
-            centeredSlides: true, // Center the active slide
-          },
-        }}
-      >
+    <div className="featured-projects">
+      <h2 className="featured-projects__title">Featured Projects</h2>
+      <Slider {...settings}>
         {projects.map((project) => (
-          <SwiperSlide key={project.id}>
-            <div className="project-card">
-              <img src={project.image} alt={project.title} className="project-image" />
-              <h3 className="project-title">{project.title}</h3>
-              <p className="project-service">{project.service}</p>
-            </div>
-          </SwiperSlide>
+          <div key={project.id} className="project-card">
+            <img src={project.imageUrl} alt={project.title} className="project-card__image" />
+            <div className="project-card__title">{project.title}</div>
+          </div>
         ))}
-      </Swiper>
-    </section>
+      </Slider>
+    </div>
   );
 };
+
+// Custom Arrow Components
+const SampleNextArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="arrow next-arrow" onClick={onClick}>
+      {/* Right Arrow SVG */}
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8 4L16 12L8 20"
+          stroke="#233876"  /* Match the color from your design */
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </div>
+  );
+};
+
+const SamplePrevArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="arrow prev-arrow" onClick={onClick}>
+      {/* Left Arrow SVG */}
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 4L8 12L16 20"
+          stroke="#233876"  /* Match the color from your design */
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </div>
+  );
+};
+
 
 export default FeaturedProjects;

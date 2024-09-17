@@ -1,86 +1,96 @@
-/* JoinUsSection.css */
+/* Container for multiple Join Us sections */
+.join-us-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f5; /* Matches the overall style */
+}
 
+/* Styles for individual Join Us section */
 .join-us-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    background-color: #f5f5f5; /* Light gray background to match the overall style */
-    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5; /* Light gray background */
+  flex-wrap: wrap; /* Allows wrapping for responsiveness */
+}
+
+.join-us-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.join-us-image img {
+  width: 100%;
+  height: auto;
+}
+
+.join-us-content {
+  flex: 1;
+  /* Remove left padding */
+  text-align: center;
+}
+
+.join-us-content h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+.join-us-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.join-us-button {
+  padding: 10px 20px;
+  background-color: #2e3b84;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-us-button:hover {
+  background-color: #1a2560;
+}
+
+/* Reversed Layout for the second Join Us section */
+.reverse-layout {
+  flex-direction: row-reverse; /* Reverses the order of the image and content */
+  text-align: left; /* Align text to the left for reversed section */
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .join-us-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 10px;
   }
-  
+
   .join-us-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end; /* Align image to the right within its flex container */
-    margin-bottom: 20px; /* Margin for spacing when wrapping */
+    justify-content: center;
+    margin-bottom: 20px;
   }
-  
-  .join-us-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Optional: Rounded corners for the image */
-  }
-  
-  .join-us-content {
-    flex: 1;
-    padding-left: 40px; /* Space between image and text */
-    text-align: center; /* Center text for smaller screens */
-  }
-  
+
+
   .join-us-content h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #333; /* Dark text color */
-    font-family: 'Arial', sans-serif; /* Match the font family */
+    font-size: 1.5rem;
   }
-  
-  .join-us-content p {
-    font-size: 1rem;
-    color: #555; /* Slightly lighter text color for subtitle */
-    margin-bottom: 20px;
-    font-weight: 400;
+
+  .join-us-content {
+    margin-bottom: 1.5rem;
   }
-  
+
   .join-us-button {
-    padding: 10px 20px;
-    background-color: #2e3b84; /* Blue button background */
-    color: #fff; /* White text color for button */
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: auto;
+    margin-top: 20px;
   }
-  
-  .join-us-button:hover {
-    background-color: #1a2560; /* Darker blue on hover */
-  }
-  
-  /* Responsive Styles for Mobile */
-  @media (max-width: 768px) {
-    .join-us-section {
-      flex-direction: column; /* Stack the image and text vertically */
-      text-align: center; /* Center text and image */
-    }
-  
-    .join-us-image {
-      justify-content: center; /* Center image */
-      margin-bottom: 20px; /* Margin below image for spacing */
-    }
-  
-    .join-us-content {
-      padding-left: 0; /* Remove left padding on smaller screens */
-    }
-  
-    .join-us-content h2 {
-      font-size: 1.5rem; /* Adjust font size for smaller screens */
-    }
-  
-    .join-us-button {
-      width: auto; /* Ensure button is not too wide */
-      margin-top: 20px; /* Add margin above button */
-    }
-  }
-  
+}
