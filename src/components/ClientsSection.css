@@ -1,62 +1,92 @@
-/* ClientsSection.css */
-
+/* Clients Section Styles */
 .clients-section {
-    background-color: #333; /* Dark gray background */
-    padding: 60px 20px;
-    text-align: center;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #262628; /* Dark background color to match the palette */
+  color: #ffffff; /* White text color */
+}
+
+.clients-section-title {
+  font-size: 1.8rem;
+  color: #ffffff; /* White color for the title */
+  margin-bottom: 1.5rem;
+}
+
+.clients-slide {
+  padding: 20px;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns per row */
+  grid-template-rows: repeat(3, auto); /* 3 rows */
+  gap: 10px;
+  height: 100%;
+  justify-items: center;
+  align-items: center;
+}
+
+.client-logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background-color: transparent; /* No background color around logos */
+  filter: grayscale(100%); /* Apply black and white filter */
+  box-shadow: none; /* Remove any shadow around logos */
+  border-radius: 0; /* No border radius */
+}
+.client-logo img:hover {
+  filter: grayscale(0%); /* Apply black and white filter */
+}
+
+/* Slick Carousel custom styles for arrows */
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  background-color: transparent; /* Transparent background to match the example */
+  border: none; /* No border */
+  color: #ffffff; /* White color for the arrow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none; /* Remove any box shadow */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #ffffff; /* White color for arrows */
+  font-size: 24px;
+  content: ''; /* Override the default content */
+  display: block;
+}
+
+.slick-prev:before {
+  content: ''; /* Left arrow */
+}
+
+.slick-next:before {
+  content: ''; /* Right arrow */
+}
+
+@media (min-width: 769px) {
+  .slick-prev {
+    left: 0;
   }
   
-  .clients-section-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #fff; /* White text */
-    margin-bottom: 5rem;
+  .slick-next {
+    right: 0;
   }
-  
-  .clients-logos-container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 logos per row */
-    gap: 20px;
-    justify-items: center;
-    width: 80%; /* Set the container width to 80% of the page */
-    max-width: 1200px; /* Set a maximum width */
-    margin: 0 auto; /* Center the container */
-  }
-  
-  .client-logo {
-    filter: grayscale(100%); /* Make logos grayscale by default */
-    transition: filter 0.3s ease; /* Smooth transition on hover */
-  }
-  
-  .client-logo:hover {
-    filter: none; /* Show the original colors on hover */
-  }
-  
-  .client-logo img {
-    width: 100%;
-    height: auto;
-    max-width: 100px; /* Adjust as needed */
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .clients-logos-container {
-      grid-template-columns: repeat(3, 1fr); /* 3 logos per row on smaller screens */
-      width: 90%; /* Slightly wider on smaller screens */
-    }
-  
-    .client-logo img {
-      max-width: 80px; /* Adjust logo size for smaller screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .clients-logos-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 logos per row on very small screens */
-    }
-  
-    .clients-section-title {
-      font-size: 1.8rem; /* Adjust font size for smaller screens */
-    }
-  }
-  
+}
+
+
+/* Light gray color for dots */
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #cccccc; /* Light gray color for dots */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ffffff; /* White color for the active dot */
+}

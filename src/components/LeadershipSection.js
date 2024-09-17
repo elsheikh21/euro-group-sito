@@ -1,53 +1,30 @@
-// src/components/LeadershipSection.js
-
 import React from 'react';
-import './LeadershipSection.css'; // Import CSS specific to this component
+import './LeadershipSection.css'; // Import the CSS file for custom styles
 
 const LeadershipSection = () => {
+  // Dummy data for the leadership team
+  const leaders = [
+    { name: 'Ibrahim Mourad', title: 'Managing Director', imageUrl: '../images/leadership/ibrahim.webp' },
+    { name: 'Dr. Ayman Abourgila', title: 'Chief Executive Officer', imageUrl: '../images/leadership/ayman.webp' },
+    { name: 'Hassan Maltawi', title: 'Chief Projects Officer', imageUrl: '../images/leadership/hassan.webp' },
+  ];
+
   return (
     <section className="leadership-section">
-      <h2 className="section-title">Meet our Leadership</h2>
-      <p className="section-description">
-        The leadership team at Euro Group has the breadth of expertise and depth of experience necessary
-        to drive our strategy and continue to deliver profitable performance.
+      <h2 className="leadership-title">Meet our Leadership</h2>
+      <p className="leadership-description">
+        The leadership team at Euro Group has the breadth of expertise and depth of experience necessary to drive our strategy and continue to deliver profitable performances.
       </p>
-      <div className="leadership-cards-container">
-        {/* Card 1 */}
-        <div className="leadership-card">
-          <div
-            className="card-image"
-            style={{ backgroundImage: "url('https://picsum.photos/220/200?random=1')" }} // Random image
-          ></div>
-          <h3 className="card-name">Ibrahim Mourad</h3>
-          <p className="card-position">Managing Director</p>
-        </div>
-        {/* Card 2 */}
-        <div className="leadership-card">
-          <div
-            className="card-image"
-            style={{ backgroundImage: "url('https://picsum.photos/220/200?random=2')" }} // Random image
-          ></div>
-          <h3 className="card-name">Dr. Ayman Abourgila</h3>
-          <p className="card-position">Chief Executive Officer</p>
-        </div>
-        {/* Card 3 */}
-        <div className="leadership-card">
-          <div
-            className="card-image"
-            style={{ backgroundImage: "url('https://picsum.photos/220/200?random=3')" }} // Random image
-          ></div>
-          <h3 className="card-name">Hassan Mahrani</h3>
-          <p className="card-position">Chief Projects Officer</p>
-        </div>
-        {/* Card 4 */}
-        <div className="leadership-card">
-          <div
-            className="card-image"
-            style={{ backgroundImage: "url('https://picsum.photos/220/200?random=4')" }} // Random image
-          ></div>
-          <h3 className="card-name">Mansour Sahne</h3>
-          <p className="card-position">Vice President</p>
-        </div>
+      <div className="leadership-cards">
+        {leaders.map((leader, index) => (
+          <div className="leadership-card" key={index}>
+            <div className="card-image">
+              <img src={leader.imageUrl} alt={leader.name} />
+            </div>
+            <h3 className="leader-name">{leader.name}</h3>
+            <p className="leader-title">{leader.title}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

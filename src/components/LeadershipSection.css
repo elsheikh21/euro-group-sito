@@ -1,96 +1,78 @@
-/* LeadershipSection.css */
-
+/* Leadership Section Styles */
 .leadership-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #fff; /* White background */
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff; /* White background */
+  color: #333; /* Dark text color */
+}
+
+.leadership-title {
+  font-size: 1.8rem;
+  color: #233876; /* Matching the color of the title */
+  margin-bottom: 10px;
+}
+
+.leadership-description {
+  font-size: 1rem;
+  color: #555; /* Slightly lighter text color */
+  margin-bottom: 40px;
+}
+
+.leadership-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows wrapping for responsiveness */
+}
+
+.leadership-card {
+  border-radius: 8px;
+  width: 25%;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.leadership-card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.card-image {
+  width: 100%;
+  height: 80%; /* Image takes 80% of the card height */
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+.leader-name {
+  font-size: 1rem;
+  color: #233876; /* Matching the text color */
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.leader-title {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .leadership-cards {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .section-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #2e3b84; /* Dark blue color */
-    margin-bottom: 10px;
-  }
-  
-  .section-description {
-    font-size: 1rem;
-    color: #555; /* Dark gray color */
-    margin-bottom: 40px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .leadership-cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* Gap between the cards */
-  }
-  
+
   .leadership-card {
-    background-color: #f7f7f7; /* Light gray background */
-    width: 220px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    width: 80%;
+    margin-bottom: 20px; /* Add space between cards */
   }
-  
-  .leadership-card:hover {
-    transform: translateY(-5px); /* Slightly move up on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-  }
-  
-  .card-image {
-    width: 100%;
-    height: 200px; /* Increased height for the image */
-    background-color: #eaeaea; /* Placeholder color for image */
-    margin-bottom: 15px;
-    border-radius: 4px;
-  }
-  
-  .card-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #2e3b84; /* Dark blue color */
-    margin-bottom: 5px;
-  }
-  
-  .card-position {
-    font-size: 0.9rem;
-    color: #777; /* Lighter gray color */
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .leadership-cards-container {
-      flex-direction: column; /* Stack cards vertically on smaller screens */
-    }
-  
-    .leadership-card {
-      width: 80%; /* Adjust card width for smaller screens */
-      margin: 0 auto 20px; /* Center cards and add space at the bottom */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .section-title {
-      font-size: 1.8rem; /* Adjust font size for smaller screens */
-    }
-  
-    .section-description {
-      font-size: 0.9rem; /* Adjust description size */
-    }
-  
-    .card-name {
-      font-size: 1rem; /* Adjust name size */
-    }
-  
-    .card-position {
-      font-size: 0.8rem; /* Adjust position size */
-    }
-  }
-  
+}

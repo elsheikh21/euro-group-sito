@@ -12,7 +12,7 @@
   .story-box {
     max-width: 800px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 40px;
     background-color: #fff; /* White background for the story box */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     border-radius: 12px;
@@ -40,7 +40,7 @@
   }
   
   .quote {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: #333;
     margin-top: 30px;
     font-weight: bold;
@@ -58,7 +58,7 @@
   .quote::before,
   .quote::after {
     content: '"'; /* Add double quote character */
-    font-size: 5rem; /* Increased size of quotes */
+    font-size: 7rem; /* Increased size of quotes */
     color: #ccc; /* Light gray color for quotes */
     position: absolute;
     font-family: 'Arial', sans-serif; /* Ensure font matches the content */
@@ -74,3 +74,8 @@
     bottom: -20px; /* Adjust vertical alignment for larger size */
   }
   
+
+  @media (max-width: 768px) {
+    .quote::before,
+    .quote::after {padding: 0 20px;}
+}

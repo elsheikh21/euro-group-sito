@@ -5,6 +5,7 @@ import MissionVisionSection from '../components/MissionVisionSection';
 import LeadershipSection from '../components/LeadershipSection'; 
 import ClientsSection from '../components/ClientsSection'; 
 import CoreValuesSection from '../components/CoreValuesSection'; 
+import CertificatesSection from '../components/CertificatesSection'; 
 
 const About = () => {
   return (
@@ -14,6 +15,7 @@ const About = () => {
       <MissionVisionSection />
       <LeadershipSection />
       <ClientsSection />
+      <CertificatesSection />
       <CoreValuesSection />
     </div>
   );

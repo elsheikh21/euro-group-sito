@@ -39,8 +39,7 @@
   .core-value-title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #2e3b84; /* Title color */
-    margin-bottom: 10px;
+    margin: 0.75rem 0;
   }
   
   .core-value-description {
