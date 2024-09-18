@@ -47,19 +47,23 @@
 }
 
 .join-us-button {
-  padding: 10px 20px;
-  background-color: #2e3b84;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  padding: 10px 30px; /* Increased padding for a wider button */
+  background-color: #19258b; /* Transparent background */
+  color: #fff; /* White text */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+  border-radius: 50px; /* Full rounded corners (pill-shaped) */
+  font-size: 1rem; /* Adjust font size */
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .join-us-button:hover {
-  background-color: #1a2560;
+  background-color: transparent; /* Light white background on hover */
+  color: #19258b; /* Keep text white */
+  border: 2px solid #19258b; /* Full opaque border on hover */
 }
+
 
 /* Reversed Layout for the second Join Us section */
 .reverse-layout {
