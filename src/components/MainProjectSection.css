@@ -1,6 +1,7 @@
 /* MainProjectSection.css */
 
 .main-project-section {
+    background-image: url('../../public/images/projects1.webp');
     background-size: cover; /* Ensure the image covers the whole section */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background from repeating */
@@ -16,11 +17,12 @@
   .main-project-section-heading {
     font-size: 2rem;
     font-weight: bold;
-    color: #f3f4f5; /* Dark blue color */
+    color: #19258b; /* Dark blue color */
     z-index: 2; /* Ensure the text is above the background */
   }
   
-  /* Optional: Overlay effect for better text readability */
+  /* 
+  // Optional: Overlay effect for better text readability
   .main-project-section::before {
     content: '';
     position: absolute;
@@ -28,7 +30,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.35); /* White overlay with transparency */
-    z-index: 1; /* Behind the text but above the background image */
+    background-color: rgba(0, 0, 0, 0.0); 
+    z-index: 1;
   }
-  
+   */

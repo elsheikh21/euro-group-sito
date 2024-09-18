@@ -7,10 +7,7 @@ import ProjectsSection from '../components/ProjectsSection';
 const Projects = () => {
   return (
     <div>
-      <MainProjectSection
-        heading="OUR PROJECTS"
-        backgroundImage="https://picsum.photos/seed/picsum/1200/900" // Replace with the actual image URL
-      />
+      <MainProjectSection/>
       <ProjectsSection />
     </div>
   );

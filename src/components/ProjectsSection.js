@@ -77,7 +77,7 @@ const ProjectsSection = () => {
             className="project-card"
             onClick={() => handleProjectClick(project.id)} // Add onClick handler
           >
-            <img src={project.image} alt={project.name} className="project-image" />
+            <img src={project.image} alt={project.name} className="projects-image" />
             <h3 className="project-name">{project.name}</h3>
             <p className="project-location">{project.location}</p>
           </div>

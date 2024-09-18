@@ -1,8 +1,8 @@
-// src/components/ProjectPage.js
+// src/components/SingleProjectPage.js
 
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import './ProjectPage.css'; // Import CSS specific to this component
+import './SingleProjectPage.css'; // Import CSS specific to this component
 
 // Dummy data for projects (use actual data or fetch from a backend)
 const projects = [
@@ -12,7 +12,7 @@ const projects = [
   { id: 4, name: 'Red Sea Development Roads', location: 'Tabuk, KSA', description: 'This project is one of the most significant ...', client: 'Red Sea Development Company', services: ['Engineering', 'Project Management', 'Sustainability'], mainImage: 'https://picsum.photos/seed/pics/2400/1200', image1: 'https://picsum.photos/seed/2/1200/600', image2: 'https://picsum.photos/seed/3/600/400', image3: 'https://picsum.photos/seed/4/600/400', image4: 'https://picsum.photos/seed/5/1200/600' },
   { id: 5, name: 'Hilton DoubleTree', location: 'Al Khobar, KSA', description: 'A luxurious hotel development ...', client: 'Hilton Worldwide', services: ['Architecture', 'Sustainability'], mainImage: 'https://picsum.photos/seed/2/2400/1200', image1: 'https://picsum.photos/seed/6/1200/600', image2: 'https://picsum.photos/seed/7/600/400', image3: 'https://picsum.photos/seed/8/600/400', image4: 'https://picsum.photos/seed/9/1200/600' },
   { id: 6, name: 'Madinah Scheme Development', location: 'Lugbe, Nigeria', description: 'The Red Sea Project is one of three giga-projects announced by Prince Mohammad bin Salman bin Abdulaziz Al Saud in 2017. Extending over 28,000 km² on Saudi Arabia\'s Red Sea coast, the destination offers a unique luxurious range of experiences, from island getaways to resort holidays, mountain retreats, and desert adventures, focusing on the wellness and ecology for local and international visitors.', client: 'Madinah Developers', services: ['Urban Planning', 'Engineering', "Consultancy"], sector: "Construction", mainImage: 'https://picsum.photos/seed/pc3s/2400/1200', image1: 'https://picsum.photos/seed/10/1200/600', image2: 'https://picsum.photos/seed/11/600/400', image3: 'https://picsum.photos/seed/12/600/400', image4: 'https://picsum.photos/seed/13/1200/600' },
-  { id: 7, name: 'Red Sea Development Roads', location: 'Tabuk, KSA', description: 'This project is one of the most significant ...', client: 'Red Sea Development Company', services: ['Engineering', 'Project Management', 'Sustainability'], mainImage: 'https://picsum.photos/seed/pics/2400/1200', image1: 'https://picsum.photos/seed/2/1200/600', image2: 'https://picsum.photos/seed/3/600/400', image3: 'https://picsum.photos/seed/4/600/400', image4: 'https://picsum.photos/seed/5/1200/600' },
+  { id: 7, name: 'Red Sea Development Roads', location: 'Tabuk, KSA', description: 'The Red Sea Project is one of three giga-projects announced by Prince Mohammad bin Selman bin Abdulaziz Al Saud in 2017. Extending over 28,000 km2 on Saudi Arabia\'s Red Sea coast, the destination offers a unique luxurious range of experiences, from island getaways to resort holidays, mountain retreats and desert adventures, focusing on the wellness and ecology for local and international visitors.', client: 'Red Sea Development Company', services: ['Engineering', 'Project Management', 'Sustainability'], sector: "Construction", mainImage: 'https://picsum.photos/seed/pics/2400/1200', image1: 'https://picsum.photos/seed/2/1200/600', image2: 'https://picsum.photos/seed/3/600/400', image3: 'https://picsum.photos/seed/4/600/400', image4: 'https://picsum.photos/seed/5/1200/600' },
   { id: 8, name: 'Hilton DoubleTree', location: 'Al Khobar, KSA', description: 'A luxurious hotel development ...', client: 'Hilton Worldwide', services: ['Architecture', 'Sustainability'], mainImage: 'https://picsum.photos/seed/2/2400/1200', image1: 'https://picsum.photos/seed/6/1200/600', image2: 'https://picsum.photos/seed/7/600/400', image3: 'https://picsum.photos/seed/8/600/400', image4: 'https://picsum.photos/seed/9/1200/600' },
   { id: 9, name: 'Madinah Scheme Development', location: 'Lugbe, Nigeria', description: 'The Red Sea Project is one of three giga-projects announced by Prince Mohammad bin Salman bin Abdulaziz Al Saud in 2017. Extending over 28,000 km² on Saudi Arabia\'s Red Sea coast, the destination offers a unique luxurious range of experiences, from island getaways to resort holidays, mountain retreats, and desert adventures, focusing on the wellness and ecology for local and international visitors.', client: 'Madinah Developers', services: ['Urban Planning', 'Engineering', "Consultancy"], sector: "Construction", mainImage: 'https://picsum.photos/seed/pc3s/2400/1200', image1: 'https://picsum.photos/seed/10/1200/600', image2: 'https://picsum.photos/seed/11/600/400', image3: 'https://picsum.photos/seed/12/600/400', image4: 'https://picsum.photos/seed/13/1200/600' },
   { id: 10, name: 'Red Sea Development Roads', location: 'Tabuk, KSA', description: 'This project is one of the most significant ...', client: 'Red Sea Development Company', services: ['Engineering', 'Project Management', 'Sustainability'], mainImage: 'https://picsum.photos/seed/pics/2400/1200', image1: 'https://picsum.photos/seed/2/1200/600', image2: 'https://picsum.photos/seed/3/600/400', image3: 'https://picsum.photos/seed/4/600/400', image4: 'https://picsum.photos/seed/5/1200/600' },
@@ -21,7 +21,7 @@ const projects = [
   { id: 13, name: 'Madinah Scheme Development', location: 'Lugbe, Nigeria', description: 'The Red Sea Project is one of three giga-projects announced by Prince Mohammad bin Salman bin Abdulaziz Al Saud in 2017. Extending over 28,000 km² on Saudi Arabia\'s Red Sea coast, the destination offers a unique luxurious range of experiences, from island getaways to resort holidays, mountain retreats, and desert adventures, focusing on the wellness and ecology for local and international visitors.', client: 'Madinah Developers', services: ['Urban Planning', 'Engineering', "Consultancy"], sector: "Construction", mainImage: 'https://picsum.photos/seed/pc3s/2400/1200', image1: 'https://picsum.photos/seed/10/1200/600', image2: 'https://picsum.photos/seed/11/600/400', image3: 'https://picsum.photos/seed/12/600/400', image4: 'https://picsum.photos/seed/13/1200/600' },
 ];
 
-const ProjectPage = () => {
+const SingleProjectPage = () => {
   const { projectId } = useParams(); // Extract projectId from URL parameters
 
   // Find the project based on the ID from the URL
@@ -47,11 +47,11 @@ const ProjectPage = () => {
         </div>
       </div>
 
-{/* Project Info Section */}
-<div className="project-info-section">
+      <div className="project-info-section">
   {/* Left Column: Main Project Information */}
   <div className="project-info-left">
     <p>{project.description}</p>
+    <br/>
     <p>Scope of work includes:</p>
     <ul>
       <li>Access Roads to Shurayrah, North Jetty and Airport Road</li>
@@ -59,22 +59,37 @@ const ProjectPage = () => {
     </ul>
   </div>
 
-  {/* Right Column: Client, Services, and Sector */}
   <div className="project-info-right">
-    <div className="info-item">
-      <i className="fas fa-user"></i> {/* FontAwesome icon for client */}
-      <span>Client: {project.client}</span>
+  <div className="info-item">
+    <div className="info-label">
+      <img src="../icons/customer.png" alt="Client Icon" className="info-icon" />
+      <span>Client</span>
     </div>
-    <div className="info-item">
-      <i className="fas fa-cog"></i> {/* FontAwesome icon for services */}
-      <span>Service: {project.services.join(', ')}</span>
+    <div className="info-value">{project.client}</div> {/* Display value below the label */}
+  </div>
+  <div className="info-item">
+    <div className="info-label">
+      <img src="../icons/gears.png" alt="Service Icon" className="info-icon" />
+      <span>Service</span>
     </div>
-    <div className="info-item">
-      <i className="fas fa-industry"></i> {/* FontAwesome icon for sector */}
-      <span>Sector: {project.sector}</span>
+    <div className="service-list">
+      {project.services.map((service, index) => (
+        <div key={index}>{service}</div>
+      ))}
     </div>
   </div>
+  <div className="info-item">
+    <div className="info-label">
+      <img src="../icons/engineer.png" alt="Sector Icon" className="info-icon" />
+      <span>Sector</span>
+    </div>
+    <div className="info-value">{project.sector}</div>
+  </div>
 </div>
+
+
+</div>
+
 
       {/* Project Images Section */}
       <div className="project-images-section">
@@ -105,4 +120,4 @@ const ProjectPage = () => {
   );
 };
 
-export default ProjectPage;
+export default SingleProjectPage;
