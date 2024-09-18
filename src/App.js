@@ -8,6 +8,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Careers from './pages/Careers';
 import SingleProjectPage from './components/SingleProjectPage'; // Import the ScrollToTopButton component
 import ScrollToTopButton from './components/ScrollToTopButton'; // Import the ScrollToTopButton component
 import './App.css';
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/project/:projectId" element={<SingleProjectPage />} /> {/* Dynamic route for each project */}

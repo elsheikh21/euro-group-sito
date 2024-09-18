@@ -1,0 +1,42 @@
+.careers-hero-section {
+    background-image: url('../../public/images/careers.webp'); /* Use the actual path */
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative; /* Parent needs relative positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .careers-overlay {
+    position: absolute; /* Make the overlay fill the entire section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full height and width */
+    background-color: rgba(38, 38, 40, 0.7); /* Dark gray overlay */
+    display: flex; /* Center the content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff; /* White text */
+  }
+  
+  .careers-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #19258b; /* Midnight blue */
+    margin-bottom: 15px;
+  }
+  
+  .careers-description {
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
