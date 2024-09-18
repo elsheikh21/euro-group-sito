@@ -1,10 +1,10 @@
 import React from 'react';
+import MainServicesSection from '../components/MainServicesSection.js';
 
 const Services = () => {
   return (
-    <div className="page-content">
-      <h1>Services </h1>
-      <p>This is the Services page content.</p>
+    <div>
+      <MainServicesSection/>
     </div>
   );
 };
