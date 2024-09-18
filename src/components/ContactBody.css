@@ -56,7 +56,7 @@
     min-width: 200px;
     margin-left: auto;
     margin-right: auto;
-    display: flex; /* Add Flexbox for centering */
+    /* display: flex; Add Flexbox for centering */
     flex-direction: column; /* Align content in a column */
     align-items: center; /* Center content horizontally */
     justify-content: center; /* Center content vertically */
@@ -162,9 +162,9 @@
 }
   
 .contact-form-button:hover {
-    background-color: #19258b; /* Slightly darker gray on hover */
-    color: #ffffff; /* Ensure text stays white */
-    border-color: #d0d0d0; /* Slightly darker border on hover */  }
+    background-color: transparent; /* Slightly darker gray on hover */
+    color: #19258b; /* Ensure text stays white */
+    border-color: #19258b; /* Slightly darker border on hover */  }
   
   /* Responsive Styles */
   @media (max-width: 768px) {
@@ -231,9 +231,4 @@
     z-index: 2; /* Keeps button above overlay */
   }
   
-  .contact-form-button:hover {
-    background-color: #19258b;
-    color: #ffffff;
-    border-color: #d0d0d0;
-  }
   
