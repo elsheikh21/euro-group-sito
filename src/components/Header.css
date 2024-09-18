@@ -3,20 +3,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333; /* Dark background */
+  background-color: #333;
   padding: 10px 20px;
-  color: #f3f3f5; /* White text color */
-  position: fixed; /* Fixed position to stay at the top */
+  color: #f3f3f5;
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Ensure header stays on top */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo Styles */
+/* Logo Styles - Bigger and aligned left */
 .header-logo .logo {
-  max-height: 50px; /* Adjust logo size */
+  max-height: 60px; /* Increase logo size */
   width: auto;
+  margin-left: 10px; /* Align logo to the left */
 }
 
 /* Navigation Links */
@@ -33,7 +34,7 @@
 }
 
 .nav-list li {
-  margin-left: 20px; /* Spacing between links */
+  margin-left: 20px;
 }
 
 .nav-list a {
@@ -45,7 +46,7 @@
 }
 
 .nav-list a:hover {
-  background-color: #262628; /* Hover effect */
+  background-color: #262628;
 }
 
 /* Burger Menu Button Styles */
@@ -55,48 +56,102 @@
   height: 30px;
   right: 20px;
   top: 20px;
-  z-index: 2001; /* Ensure burger button is above other content */
+  z-index: 2001;
 }
 
 .bm-burger-bars {
-  background: #f3f3f5; /* White lines for the burger icon */
+  background: #f3f3f5;
 }
 
 .bm-burger-bars-hover {
-  background: #ddd; /* Lighter color on hover for burger icon */
+  background: #ddd;
 }
 
 /* Burger Menu Styles */
 .bm-menu {
   background: #333;
-  padding-top: 2em; /* Space from the top */
-  padding-left: 1.5em; /* Space on the left side of the menu */
+  padding-top: 5rem;
+  padding-left: 1.5em;
+  border-radius: 10px;
 }
 
+/* Left-align the menu items */
 .menu-item {
   color: #f3f3f5;
   padding: 0.5em 0;
   text-decoration: none;
-  font-size: 1.2em;
+  text-align: left; /* Left-align menu items */
 }
 
 .menu-item:hover {
-  background-color: #262628; /* Hover effect for menu items */
+  border-radius: 10px;
+}
+
+/* Close Button - styled and positioned on the right */
+.close-button {
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  right: 20px; /* Positioned on the right */
+  top: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Arial', sans-serif;
+  transition: opacity 0.3s ease;
+}
+
+.close-button:hover {
+  opacity: 0.7;
+}
+
+/* Social Media Icons - Aligned to the left and reduced size */
+.social-media-icons ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start; /* Align social media icons to the left */
+  margin: 30px 0;
+}
+
+.social-icon {
+  color: #fff !important; /* Ensure the icons are white */
+  font-size: 1.2rem; /* Reduced size */
+  margin: 0 10px; /* Adjust spacing between icons */
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #1da1f2;
+}
+
+/* Mobile Menu Company Logo - Aligned left and bigger */
+.menu-logo {
+  margin-top: 40px; /* Increased gap between logo and social media icons */
+  text-align: left; /* Align logo to the left */
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  padding: 1rem;
+}
+
+.menu-company-logo {
+  max-height: 60px; /* Increase the logo size */
+  width: auto;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .header-nav {
-    display: none; /* Hide regular navigation links on smaller screens */
+    display: none;
   }
 
   .bm-burger-button {
-    display: block; /* Show burger button on smaller screens */
+    display: block;
   }
 }
 
 @media (min-width: 769px) {
   .bm-burger-button {
-    display: none; /* Hide burger button on larger screens */
+    display: none;
   }
 }
