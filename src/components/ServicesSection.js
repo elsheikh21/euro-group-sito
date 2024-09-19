@@ -41,15 +41,15 @@ const ServicesSection = () => {
           <h2>We are always ready to help you.</h2>
           <div className="statistics-info">
             <div className="stat-item">
-              <h1>60+</h1>
+              <h1>60<span class="superscript">+</span></h1>
               <p>ENGINEERING PROJECTS</p>
             </div>
             <div className="stat-item">
-              <h1>10+</h1>
+              <h1>10<span class="superscript">+</span></h1>
               <p>DIFFERENT COUNTRIES</p>
             </div>
             <div className="stat-item">
-              <h1>{yearsOfExperience}+</h1>
+              <h1>{yearsOfExperience}<span class="superscript">+</span></h1>
               <p>YEARS OF EXPERIENCE</p>
             </div>
           </div>

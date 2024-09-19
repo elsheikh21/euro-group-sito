@@ -26,7 +26,7 @@
   }
   
   .contact-left p {
-    font-size: 1rem;
+    font-size: 1.15rem;
     color: #555;
     margin-bottom: 20px;
   }
@@ -153,7 +153,6 @@
     font-size: 1rem;
     background-color: #233876; /* Blue button color */
     color: #ffffff;
-    border: 2px solid #e0e0e0; /* Light gray border */
     border-radius: 30px; /* Rounded corners */
     cursor: pointer;
     align-self: flex-start;
@@ -222,7 +221,6 @@
     font-size: 1rem;
     background-color: #233876;
     color: #ffffff;
-    border: 2px solid #e0e0e0;
     border-radius: 30px;
     cursor: pointer;
     align-self: flex-start;

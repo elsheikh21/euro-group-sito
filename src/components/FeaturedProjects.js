@@ -7,11 +7,11 @@ import './FeaturedProjects.css'; // Your custom styles
 const FeaturedProjects = () => {
   // Dummy data for projects
   const projects = [
-    { id: 1, title: 'Third Ring Road',location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=1' },
-    { id: 2, title: 'Al Akhal - Mahd Al Thahab Road',location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=2' },
-    { id: 3, title: 'Al Hijra Road Tunnel',location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=3' },
-    { id: 4, title: 'Al Hijra Road Tunnel',location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=4' },
-    { id: 5, title: 'Al Hijra Road Tunnel',location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=4' },
+    { id: 1, title: 'Third Ring Road', location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=1' },
+    { id: 2, title: 'Al Akhal - Mahd Al Thahab Road', location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=2' },
+    { id: 3, title: 'Al Hijra Road Tunnel', location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=3' },
+    { id: 4, title: 'Al Hijra Road Tunnel', location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=4' },
+    { id: 5, title: 'Al Hijra Road Tunnel', location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=4' },
   ];
 
   // Slick carousel settings
@@ -44,9 +44,10 @@ const FeaturedProjects = () => {
       <h2 className="featured-projects__title">Featured Projects</h2>
       <Slider {...settings}>
         {projects.map((project) => (
-          <div key={project.id} className="project-card">
+          <div key={project.id} className="home-project-card">
             <img src={project.imageUrl} alt={project.title} className="project-card__image" />
             <div className="project-card__title">{project.title}</div>
+            <div className="project-card__location">{project.location}</div>
           </div>
         ))}
       </Slider>

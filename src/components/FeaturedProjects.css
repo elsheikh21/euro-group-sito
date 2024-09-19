@@ -9,7 +9,7 @@
   margin-bottom: 4rem;
 }
 
-.project-card {
+.home-project-card {
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
@@ -18,8 +18,8 @@
   margin: 0 10px; /* Adds margin between cards to create space for half of the next card */
   display: flex;
   flex-direction: column;
-  height: 800px; /* Make the card taller */
-  max-width: 80%; /* Make the card slimmer */
+  height: 55vh; 
+  max-width: 75%; /* Make the card slimmer */
   padding: 0px !important;
 }
 
@@ -30,7 +30,6 @@
 }
 
 .project-card__title {
-  height: 25%; /* Takes 1/4th of the card's height */
   padding: 10px;
   font-size: 16px;
   color: #262628;
@@ -39,6 +38,13 @@
   justify-content: center; /* Center the text horizontally */
   background-color: #f3f3f5; /* Optional: a light background to distinguish the text area */
 }
+
+.project-card__location {
+  font-size: 14px;
+  color: #555; /* Light gray for the location text */
+  margin-top: 0px; /* Add a small margin above the location text */
+  text-align: center; /* Center the location text */
+} 
 
 .arrow {
   cursor: pointer;

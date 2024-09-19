@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   background-color: #f3f3f5; /* Matches the overall style */
+  margin-top:120px;
 }
 
 /* Styles for individual Join Us section */
@@ -18,7 +19,21 @@
   flex: 1;
   display: flex;
   justify-content: flex-end;
+  position: relative; /* Ensure the pseudo-element is positioned relative to the image container */
 }
+
+.join-us-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(38, 38, 40, 0.7); /* RGBA for 80% transparency */
+  z-index: 3; /* Ensure it covers the image */
+  pointer-events: none; /* Allow interaction with the image if needed */
+}
+
 
 .join-us-image img {
   width: 100%;
@@ -40,7 +55,7 @@
 }
 
 .join-us-content p {
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: #555;
   margin-bottom: 20px;
   font-weight: 400;
@@ -50,7 +65,6 @@
   padding: 10px 30px; /* Increased padding for a wider button */
   background-color: #19258b; /* Transparent background */
   color: #fff; /* White text */
-  border: 2px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
   border-radius: 50px; /* Full rounded corners (pill-shaped) */
   font-size: 1rem; /* Adjust font size */
   cursor: pointer;

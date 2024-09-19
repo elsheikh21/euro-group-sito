@@ -2,6 +2,7 @@
 
 html, body {
   font-family: 'Archivo', 'Arial', sans-serif;
+  background-color: #f3f3f5 !important;
 }
 
 .App {

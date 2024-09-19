@@ -20,9 +20,9 @@ const HighlightSection = () => {
         {/* First Row: Image Left, Text Right */}
         <div className="content-row">
           <div className="content-image">
-            <img src="../images/home3.webp" alt="Construction work" />
+            <img src="../images/home3.webp" class="no-margin-left" alt="Construction work" />
           </div>
-          <div className="content-text">
+          <div className="content-text right-align">
             <h3>We provide the <strong>highest quality of engineering consulting services</strong> that meet your expectations.</h3>
             <p>We help clients from both public and private development sectors to meet their design and construction needs and execute them with creativity and knowledge.</p>
           </div>
@@ -35,7 +35,7 @@ const HighlightSection = () => {
             <p>We elevate the power of your projects beyond the impact they deliver. We are committed to the social, technological, and economic performance of our projects.</p>
           </div>
           <div className="content-image img right-aligned">
-            <img src="../images/home9.jpg" alt="Machinery in action" />
+            <img src="../images/home9.jpg" class="no-margin-right" alt="Machinery in action" />
           </div>
         </div>
       </div>

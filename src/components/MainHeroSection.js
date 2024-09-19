@@ -7,7 +7,7 @@ const MainHeroSection = () => {
   return (
     <section className="hero-section">
       <div className="overlay">
-        <h1>ALL YOU NEED TO KNOW ABOUT US</h1>
+        <h1>All you need to know about us</h1>
       </div>
     </section>
   );

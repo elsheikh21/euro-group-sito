@@ -23,7 +23,11 @@
     color: #262628;
   }
 
-  
+  .superscript {
+    font-size: 0.6em;  
+    vertical-align: super; 
+  }
+
   .services-cards {
     position: relative; /* Enables positioning of children */
     display: flex;
