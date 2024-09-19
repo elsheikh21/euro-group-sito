@@ -15,9 +15,9 @@
 
 /* Logo Styles - Bigger and aligned left */
 .header-logo .logo {
-  max-height: 60px; /* Increase logo size */
+  max-height: 55px; /* Increase logo size */
   width: auto;
-  margin-left: 10px; /* Align logo to the left */
+  margin-left: 20px; /* Align logo to the left */
 }
 
 /* Navigation Links */

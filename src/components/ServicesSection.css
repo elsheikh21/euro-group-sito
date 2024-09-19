@@ -14,15 +14,15 @@
   
   .section-header h3 {
     font-size: 1.75rem; /* Increased font size */
-    font-weight: 700;
     margin-bottom: 10px;
-    color: #19258b;
+    color: #000;
   }
   
   .section-header p {
-    font-size: 1.2rem; /* Slightly increased font size for the subtitle */
+    font-size: 1.15rem; /* Slightly increased font size for the subtitle */
     color: #262628;
   }
+
   
   .services-cards {
     position: relative; /* Enables positioning of children */
@@ -55,9 +55,6 @@
   .service-card:hover {
     transform: scale(1.05); /* Slightly enlarge on hover */
   }
-  .service-card-text {
-    color: #19258b;
-  }
 
   .service-icon {
     color: #19258b; /* Icon color */
@@ -72,12 +69,13 @@
     background-size: cover;
     background-position: center;
     color: #f3f3f5; /* White text color */
-    padding: 110px 20px; /* Increased padding to allow for overlap */
+    padding: 120px 20px; /* Increased padding to allow for overlap */
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap; /* Allows wrapping for responsiveness */
     z-index: 0; /* Ensure this is behind the cards */
+    height: 75vh;
   }
   .statistics-section::before {
     content: '';
@@ -97,14 +95,14 @@
     z-index: 2; /* Ensure content is above the overlay */
   }
   .statistics-text {
-    max-width: 400px;
+    max-width: 450px;
     text-align: left;
   }
   
   .statistics-text h2 {
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
   
   .statistics-info {
@@ -139,7 +137,7 @@
   }
   
   .experience-box h1 {
-    font-size: 7rem;
+    font-size: 5rem;
     margin: 0;
   }
   
@@ -172,7 +170,7 @@
       font-weight: 700;
       margin: 0;
     }
-  
+
     /* New responsive styles for .statistics-info */
     .statistics-info {
       flex-direction: column; /* Stack the stat items vertically */

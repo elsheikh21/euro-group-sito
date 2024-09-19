@@ -2,11 +2,12 @@
 
 /* Section styles */
 .highlight-section {
+  /* TODO: CHECK THE BACKGROUND OVERLAY */
   background-image: url("../../public/images/favicon.png"); /* Replace with your image path */
   background-size: initial; /* Make the background cover the entire section */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent the background from repeating */
-  padding: 100px 20px; /* Padding for the section */
+  padding: 120px 20px; /* Padding for the section */
   text-align: center; /* Center-align text content */
   background-color: #f3f3f5;
 }
@@ -30,11 +31,9 @@
 }
 
 .introduction-content p {
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 1.15rem;
   line-height: 1.6;
   margin: 0;
-  width:50%
 }
 
 /* Call to Action Button styles */
@@ -81,7 +80,7 @@
     object-fit: cover; /* Crop the image to fill the space */
     aspect-ratio: 3 / 4; /* Portrait aspect ratio */
     display: block;
-    margin: 0 auto; /* Center align the image */
+    margin: 20px auto; /* Center align the image */
   }
   
   /* Container styles to keep portrait mode */

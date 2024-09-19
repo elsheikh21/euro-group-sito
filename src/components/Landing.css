@@ -6,7 +6,7 @@
   
   .carousel-image {
     position: relative;
-    height: 85vh; /* Set the height to 60% of the viewport */
+    height: 100vh; /* Set the height to 60% of the viewport */
     overflow: hidden; /* Hide overflow to keep the aspect ratio */
   }
   
@@ -31,8 +31,9 @@
   .carousel-content {
     color: #f3f3f5;
     padding: 20px;
-    max-width: 400px;
+    max-width: 50%;
     margin-left: 10%;
+    margin-top: 30%;
     text-align: left;
   }
   
@@ -55,11 +56,10 @@
   .carousel-content .btn {
     background-color: rgba(243, 243, 245, 0.3); /* Semi-transparent background */
     color: #f3f3f5; /* #f3f3f5 text color */
-    border: 2px solid rgba(243, 243, 245, 0.5); /* Semi-transparent white border */
+    border: 2px solid rgba(243, 243, 245, 0.0); /* Semi-transparent white border */
     padding: 10px 20px; /* Padding inside the button */
     font-size: 16px; /* Font size */
     border-radius: 25px; /* Rounded corners */
-    text-transform: uppercase; /* Uppercase text */
     font-weight: 600; /* Bold text */
     cursor: pointer; /* Pointer cursor on hover */
     transition: all 0.3s ease; /* Smooth transition for hover effects */

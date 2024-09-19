@@ -8,7 +8,7 @@ const ServicesSection = () => {
     <section className="services-section">
       {/* Section Title and Subtitle */}
       <div className="section-header">
-        <h3>We offer wide span of service to help you <br/> turn your ambitions <strong>Concept Into Reality</strong></h3>
+        <h3>We offer wide span of service to help you <br/> turn your ambitions <strong>concept into reality</strong></h3>
         <p>We provide best value services by focusing on quality, creativity, innovation and <br/> professional exellence</p>
       </div>
       {/* Top part with service cards */}
@@ -38,7 +38,7 @@ const ServicesSection = () => {
       {/* Bottom part with statistics */}
       <div className="statistics-section">
         <div className="statistics-text">
-          <h2>WE ARE ALWAYS READY TO HELP YOU.</h2>
+          <h2>We are always ready to help you.</h2>
           <div className="statistics-info">
             <div className="stat-item">
               <h1>60+</h1>
@@ -49,13 +49,13 @@ const ServicesSection = () => {
               <p>DIFFERENT COUNTRIES</p>
             </div>
             <div className="stat-item">
-              <h1>{yearsOfExperience}</h1>
+              <h1>{yearsOfExperience}+</h1>
               <p>YEARS OF EXPERIENCE</p>
             </div>
           </div>
         </div>
         <div className="experience-box">
-          <h1>72</h1>
+          <h1>#142</h1>
           <p>ENR Ranking</p>
         </div>
       </div>

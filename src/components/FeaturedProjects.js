@@ -7,10 +7,11 @@ import './FeaturedProjects.css'; // Your custom styles
 const FeaturedProjects = () => {
   // Dummy data for projects
   const projects = [
-    { id: 1, title: 'Third Ring Road', imageUrl: 'https://picsum.photos/300/200?random=1' },
-    { id: 2, title: 'Al Akhal - Mahd Al Thahab Road', imageUrl: 'https://picsum.photos/300/200?random=2' },
-    { id: 3, title: 'Al Hijra Road Tunnel', imageUrl: 'https://picsum.photos/300/200?random=3' },
-    { id: 4, title: 'Al Hijra Road Tunnel', imageUrl: 'https://picsum.photos/300/200?random=4' },
+    { id: 1, title: 'Third Ring Road',location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=1' },
+    { id: 2, title: 'Al Akhal - Mahd Al Thahab Road',location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=2' },
+    { id: 3, title: 'Al Hijra Road Tunnel',location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=3' },
+    { id: 4, title: 'Al Hijra Road Tunnel',location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=4' },
+    { id: 5, title: 'Al Hijra Road Tunnel',location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=4' },
   ];
 
   // Slick carousel settings
@@ -18,7 +19,7 @@ const FeaturedProjects = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3.5, // Number of slides to show at a time
+    slidesToShow: 3.2, // Number of slides to show at a time
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
