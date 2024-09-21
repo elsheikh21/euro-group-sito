@@ -1,19 +1,33 @@
-import React from 'react';
-import './LeadershipSection.css'; // Import the CSS file for custom styles
+import React from "react";
+import "./LeadershipSection.css"; // Import the CSS file for custom styles
 
 const LeadershipSection = () => {
   // Dummy data for the leadership team
   const leaders = [
-    { name: 'Ibrahim Mourad', title: 'Managing Director', imageUrl: '../images/leadership/ibrahim.webp' },
-    { name: 'Ayman Abourgila', title: 'Chief Executive Officer', imageUrl: '../images/leadership/ayman.webp' },
-    { name: 'Hassan Maltawi', title: 'Chief Projects Officer', imageUrl: '../images/leadership/hassan.webp' },
+    {
+      name: "Ibrahim Mourad",
+      title: "Managing Director",
+      imageUrl: "../images/leadership/ibrahim.webp",
+    },
+    {
+      name: "Ayman Abourgila",
+      title: "Chief Executive Officer",
+      imageUrl: "../images/leadership/ayman.webp",
+    },
+    {
+      name: "Hassan Maltawi",
+      title: "Chief Projects Officer",
+      imageUrl: "../images/leadership/hassan.webp",
+    },
   ];
 
   return (
     <section className="leadership-section">
       <h2 className="leadership-title">Meet our Leadership</h2>
       <p className="leadership-description">
-        The leadership team at Euro Group has the breadth of expertise and depth of experience necessary to drive our strategy and continue to deliver profitable performances.
+        The leadership team at Euro Group has the breadth of expertise and depth
+        of experience necessary to drive our strategy and continue to deliver
+        profitable performances.
       </p>
       <div className="leadership-cards">
         {leaders.map((leader, index) => (

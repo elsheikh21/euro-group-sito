@@ -1,23 +1,22 @@
 .careers-application-section {
-    padding: 60px 20px;
-    background-color: #f3f3f5; /* Light gray background */
-    text-align: center;
-  }
-  
-  .application-container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .application-container h2 {
-    font-size: 1.8rem;
-    color: #19258b; /* Midnight blue */
-    margin-bottom: 20px;
-  }
-  
-  .application-container p {
-    font-size: 1.15rem;
-    color: #333; /* Dark text */
-    margin-bottom: 40px;
-  }
-  
+  padding: 60px 20px;
+  background-color: #f3f3f5; /* Light gray background */
+  text-align: center;
+}
+
+.application-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.application-container h2 {
+  font-size: 1.8rem;
+  color: #19258b; /* Midnight blue */
+  margin-bottom: 20px;
+}
+
+.application-container p {
+  font-size: 1.15rem;
+  color: #333; /* Dark text */
+  margin-bottom: 40px;
+}

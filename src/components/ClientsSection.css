@@ -59,28 +59,27 @@
 .slick-next:before {
   color: #f3f3f5; /* White color for arrows */
   font-size: 24px;
-  content: ''; /* Override the default content */
+  content: ""; /* Override the default content */
   display: block;
 }
 
 .slick-prev:before {
-  content: ''; /* Left arrow */
+  content: ""; /* Left arrow */
 }
 
 .slick-next:before {
-  content: ''; /* Right arrow */
+  content: ""; /* Right arrow */
 }
 
 @media (min-width: 769px) {
   .slick-prev {
     left: 0;
   }
-  
+
   .slick-next {
     right: 0;
   }
 }
-
 
 /* Light gray color for dots */
 .slick-dots li button:before {

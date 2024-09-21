@@ -1,17 +1,42 @@
-import React from 'react';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css"; 
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './FeaturedProjects.css'; // Your custom styles
+import "./FeaturedProjects.css"; // Your custom styles
 
 const FeaturedProjects = () => {
   // Dummy data for projects
   const projects = [
-    { id: 1, title: 'Third Ring Road', location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=1' },
-    { id: 2, title: 'Al Akhal - Mahd Al Thahab Road', location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=2' },
-    { id: 3, title: 'Al Hijra Road Tunnel', location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=3' },
-    { id: 4, title: 'Al Hijra Road Tunnel', location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=4' },
-    { id: 5, title: 'Al Hijra Road Tunnel', location: 'UAE',  imageUrl: 'https://picsum.photos/300/200?random=4' },
+    {
+      id: 1,
+      title: "Third Ring Road",
+      location: "UAE",
+      imageUrl: "https://picsum.photos/300/200?random=1",
+    },
+    {
+      id: 2,
+      title: "Al Akhal - Mahd Al Thahab Road",
+      location: "UAE",
+      imageUrl: "https://picsum.photos/300/200?random=2",
+    },
+    {
+      id: 3,
+      title: "Al Hijra Road Tunnel",
+      location: "UAE",
+      imageUrl: "https://picsum.photos/300/200?random=3",
+    },
+    {
+      id: 4,
+      title: "Al Hijra Road Tunnel",
+      location: "UAE",
+      imageUrl: "https://picsum.photos/300/200?random=4",
+    },
+    {
+      id: 5,
+      title: "Al Hijra Road Tunnel",
+      location: "UAE",
+      imageUrl: "https://picsum.photos/300/200?random=4",
+    },
   ];
 
   // Slick carousel settings
@@ -45,7 +70,11 @@ const FeaturedProjects = () => {
       <Slider {...settings}>
         {projects.map((project) => (
           <div key={project.id} className="home-project-card">
-            <img src={project.imageUrl} alt={project.title} className="project-card__image" />
+            <img
+              src={project.imageUrl}
+              alt={project.title}
+              className="project-card__image"
+            />
             <div className="project-card__title">{project.title}</div>
             <div className="project-card__location">{project.location}</div>
           </div>
@@ -70,7 +99,7 @@ const SampleNextArrow = (props) => {
       >
         <path
           d="M8 4L16 12L8 20"
-          stroke="#233876"  /* Match the color from your design */
+          stroke="#233876" /* Match the color from your design */
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -94,7 +123,7 @@ const SamplePrevArrow = (props) => {
       >
         <path
           d="M16 4L8 12L16 20"
-          stroke="#233876"  /* Match the color from your design */
+          stroke="#233876" /* Match the color from your design */
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -103,6 +132,5 @@ const SamplePrevArrow = (props) => {
     </div>
   );
 };
-
 
 export default FeaturedProjects;

@@ -1,7 +1,7 @@
 // src/components/MainProjectSection.js
 
-import React from 'react';
-import './MainServicesSection.css';
+import React from "react";
+import "./MainServicesSection.css";
 
 const MainServicesSection = () => {
   return (

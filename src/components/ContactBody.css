@@ -1,218 +1,216 @@
 /* ContactBody.css */
 .contact-body {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #f3f3f5;
-    padding: 40px;
-    z-index: 2;
-    position: relative;
-  }
-  
-  .contact-left {
-    flex: 1;
-    padding: 20px;
-    max-width: 45%;
-    text-align: left;
-  }
-  #contact-us-first-text {
-    margin-bottom: 2rem;
-  }
-  
-  .contact-left h2 {
-    font-size: 1.75rem;
-    font-weight: bold;
-    color: #262628;
-    margin-bottom: 1.5rem;
-  }
-  
-  .contact-left p {
-    font-size: 1.15rem;
-    color: #262628;
-    margin-bottom: 20px;
-  }
-  
-  input,
-  textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: none;
-    border-bottom: 1px solid #f3f3f5;
-    background-color: transparent;
-    outline: none;
-  }
-  
-  textarea {
-    resize: none;
-    height: 100px;
-  }
-  
-  .contact-right {
-    flex: 1;
-    background-color: rgba(38, 38, 40, 0.95);
-    color: #f3f3f5;
-    padding: 80px 50px;
-    max-width: 40%;
-    min-width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    /* display: flex; Add Flexbox for centering */
-    flex-direction: column; /* Align content in a column */
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-  }
-  
-  .location {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #f3f3f5;
-    text-align: left;
-  }
-  
-  .location h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.625rem;
-    text-align: left;
-  }
-  
-  .location p {
-    font-size: 0.9rem;
-    margin: 5px 0;
-    text-align: center; /* Center align paragraphs */
-    text-align: left;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .contact-body {
-      flex-direction: column;
-    }
-  
-    .contact-left,
-    .contact-right {
-      max-width: 100%;
-      margin: 0;
-      padding: 20px;
-    }
-  
-    .contact-right {
-      margin-top: 20px;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f3f3f5;
+  padding: 40px;
+  z-index: 2;
+  position: relative;
+}
+
+.contact-left {
+  flex: 1;
+  padding: 20px;
+  max-width: 45%;
+  text-align: left;
+}
+#contact-us-first-text {
+  margin-bottom: 2rem;
+}
+
+.contact-left h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #262628;
+  margin-bottom: 1.5rem;
+}
+
+.contact-left p {
+  font-size: 1.15rem;
+  color: #262628;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #f3f3f5;
+  background-color: transparent;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.contact-right {
+  flex: 1;
+  background-color: rgba(38, 38, 40, 0.95);
+  color: #f3f3f5;
+  padding: 80px 50px;
+  max-width: 40%;
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  /* display: flex; Add Flexbox for centering */
+  flex-direction: column; /* Align content in a column */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+}
+
+.location {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f3f3f5;
+  text-align: left;
+}
+
+.location h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.625rem;
+  text-align: left;
+}
+
+.location p {
+  font-size: 0.9rem;
+  margin: 5px 0;
+  text-align: center; /* Center align paragraphs */
+  text-align: left;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-body {
+    flex-direction: column;
   }
 
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  .contact-left,
+  .contact-right {
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
   }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .form-group.double {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .form-item {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    margin-right: 10px;
-  }
-  
-  label {
-    font-size: 0.9rem;
-    color: #262628; /* Blue color for labels */
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  
-  input:focus,
-  textarea:focus {
-    border-bottom: 1px solid #19258b; /* Blue bottom border on focus */
-  }
-  
-  textarea {
-    resize: none;
-    height: 100px;
-  }
-  
-  .character-count {
-    font-size: 0.8rem;
-    color: #262628;
-    margin-top: 5px;
-  }
-  
-  .contact-form-button {
-    padding: 10px 20px; /* Add more horizontal padding for a rounded effect */
-    font-size: 1rem;
-    background-color: #262628; /* Blue button color */
-    color: #f3f3f5;
-    border-radius: 30px; /* Rounded corners */
-    border: 1px solid transparent; /* Rounded corners */
-    cursor: pointer;
-    font-weight: 600;
-    align-self: flex-start;
+
+  .contact-right {
     margin-top: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover effect */
+  }
 }
-  
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group.double {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 10px;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #262628; /* Blue color for labels */
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input:focus,
+textarea:focus {
+  border-bottom: 1px solid #19258b; /* Blue bottom border on focus */
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.character-count {
+  font-size: 0.8rem;
+  color: #262628;
+  margin-top: 5px;
+}
+
+.contact-form-button {
+  padding: 10px 20px; /* Add more horizontal padding for a rounded effect */
+  font-size: 1rem;
+  background-color: #262628; /* Blue button color */
+  color: #f3f3f5;
+  border-radius: 30px; /* Rounded corners */
+  border: 1px solid transparent; /* Rounded corners */
+  cursor: pointer;
+  font-weight: 600;
+  align-self: flex-start;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
 .contact-form-button:hover {
   background-color: rgba(243, 243, 245, 1); /* Light white overlay on hover */
   color: rgba(38, 38, 40, 0.8); /* White text */
   border: 2px solid #262628; /* Solid white border on hover */
- }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .contact-body {
-      flex-direction: column;
-    }
-  
-    .contact-left {
-      max-width: 100%;
-      margin: 0;
-    }
-  }
-  @media (min-width: 768px) {
-    .contact-right {
-        margin-top: -7rem;
-    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-body {
+    flex-direction: column;
   }
 
-  /* Updated Contact Form Section with Background Image */
+  .contact-left {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+@media (min-width: 768px) {
+  .contact-right {
+    margin-top: -7rem;
+  }
+}
+
+/* Updated Contact Form Section with Background Image */
 .contact-form-div {
-    flex: 1;
-    padding: 20px;
-    text-align: left;
-    color: #f3f3f5; /* Sets text color to white for better contrast against the background */
-  }
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  color: #f3f3f5; /* Sets text color to white for better contrast against the background */
+}
 
-  
-  /* Ensure text and other elements are above the background and overlay */
-  .contact-left h2,
-  .contact-left p,
-  .contact-form-div {
-    position: relative; /* Ensures text and form are above the overlay */
-    z-index: 2; /* Stacks the text above the overlay */
-  }
-  
-  /* Adjust the button styles to ensure visibility */
-  .contact-form-button {
-    padding: 10px 30px; /* Adjust padding for a wider button */
-    background-color: rgba(38, 38, 40, 0.8); /* Semi-transparent background */
-    color: #f3f3f5; /* #f3f3f5 text color */
-    border: 1px solid transparent; /* Semi-transparent white border */
-    border-radius: 25px; /* Rounded corners */
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-    box-shadow: 0 4px 6px rgba(38, 38, 40, 0.1); /* Subtle shadow effect */
-  }
-  
+/* Ensure text and other elements are above the background and overlay */
+.contact-left h2,
+.contact-left p,
+.contact-form-div {
+  position: relative; /* Ensures text and form are above the overlay */
+  z-index: 2; /* Stacks the text above the overlay */
+}
+
+/* Adjust the button styles to ensure visibility */
+.contact-form-button {
+  padding: 10px 30px; /* Adjust padding for a wider button */
+  background-color: rgba(38, 38, 40, 0.8); /* Semi-transparent background */
+  color: #f3f3f5; /* #f3f3f5 text color */
+  border: 1px solid transparent; /* Semi-transparent white border */
+  border-radius: 25px; /* Rounded corners */
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 6px rgba(38, 38, 40, 0.1); /* Subtle shadow effect */
+}

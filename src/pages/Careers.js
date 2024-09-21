@@ -1,6 +1,6 @@
-import React from 'react';
-import CareersHeroSection from '../components/CareersHeroSection'; // Import the updated CareersHeroSection component
-import CareersApplicationSection from '../components/CareersApplicationSection'; // Import the updated CareersApplicationSection component
+import React from "react";
+import CareersHeroSection from "../components/CareersHeroSection"; // Import the updated CareersHeroSection component
+import CareersApplicationSection from "../components/CareersApplicationSection"; // Import the updated CareersApplicationSection component
 
 const Careers = () => {
   return (

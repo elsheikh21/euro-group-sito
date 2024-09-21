@@ -1,33 +1,33 @@
 // src/components/ClientsSection.js
 
-import React from 'react';
-import Slider from 'react-slick';
-import './ClientsSection.css'; // Import CSS specific to this component
+import React from "react";
+import Slider from "react-slick";
+import "./ClientsSection.css"; // Import CSS specific to this component
 
 const ClientsSection = () => {
   // Sample list of client logos - Replace the image URLs with the actual logo URLs you have
   const clients = [
-    'https://picsum.photos/175/175?random=1',
-    'https://picsum.photos/175/175?random=2',
-    'https://picsum.photos/175/175?random=3',
-    'https://picsum.photos/175/175?random=4',
-    'https://picsum.photos/175/175?random=5',
-    'https://picsum.photos/175/175?random=6',
-    'https://picsum.photos/175/175?random=7',
-    'https://picsum.photos/175/175?random=8',
-    'https://picsum.photos/175/175?random=9',
-    'https://picsum.photos/175/175?random=10',
-    'https://picsum.photos/175/175?random=11',
-    'https://picsum.photos/175/175?random=12',
-    'https://picsum.photos/175/175?random=13',
-    'https://picsum.photos/175/175?random=14',
-    'https://picsum.photos/175/175?random=15',
-    'https://picsum.photos/175/175?random=16',
-    'https://picsum.photos/175/175?random=17',
-    'https://picsum.photos/175/175?random=18',
-    'https://picsum.photos/175/175?random=19',
-    'https://picsum.photos/175/175?random=20',
-    'https://picsum.photos/175/175?random=21',
+    "https://picsum.photos/175/175?random=1",
+    "https://picsum.photos/175/175?random=2",
+    "https://picsum.photos/175/175?random=3",
+    "https://picsum.photos/175/175?random=4",
+    "https://picsum.photos/175/175?random=5",
+    "https://picsum.photos/175/175?random=6",
+    "https://picsum.photos/175/175?random=7",
+    "https://picsum.photos/175/175?random=8",
+    "https://picsum.photos/175/175?random=9",
+    "https://picsum.photos/175/175?random=10",
+    "https://picsum.photos/175/175?random=11",
+    "https://picsum.photos/175/175?random=12",
+    "https://picsum.photos/175/175?random=13",
+    "https://picsum.photos/175/175?random=14",
+    "https://picsum.photos/175/175?random=15",
+    "https://picsum.photos/175/175?random=16",
+    "https://picsum.photos/175/175?random=17",
+    "https://picsum.photos/175/175?random=18",
+    "https://picsum.photos/175/175?random=19",
+    "https://picsum.photos/175/175?random=20",
+    "https://picsum.photos/175/175?random=21",
   ];
   // Custom Next Arrow
   const NextArrow = (props) => {

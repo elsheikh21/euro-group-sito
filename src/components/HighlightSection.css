@@ -32,7 +32,6 @@
   margin: 0;
 }
 
-
 /* Content section styles (reuse from previous content section) */
 .content-section {
   padding: 0px 20px;
@@ -48,67 +47,66 @@
   flex-wrap: wrap;
 }
 
-
-.right-align  {
+.right-align {
   text-align: right !important;
 }
 
-
-.no-margin-left  {
+.no-margin-left {
   margin-left: 0 !important;
 }
 
-.no-margin-right  {
+.no-margin-right {
   margin-right: 0 !important;
 }
 
 .content-image img {
-    width: auto; /* Let the width adjust automatically */
-    height: 100%; /* Set height to fill the container */
-    max-height: 40vw; /* Optional: limit maximum height */
-    object-fit: cover; /* Crop the image to fill the space */
-    aspect-ratio: 3 / 4; /* Portrait aspect ratio */
-    display: block;
-    margin: 0 auto; /* Center align the image */
-  }
-  
-  /* Container styles to keep portrait mode */
-  .content-image {
-    flex: 1; /* Image takes half of the row */
-    padding: 0 0; /* Padding around the image */
-    display: flex; /* Use flexbox to control alignment */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: auto; /* Allow height to adjust */
-  }
+  width: auto; /* Let the width adjust automatically */
+  height: 100%; /* Set height to fill the container */
+  max-height: 40vw; /* Optional: limit maximum height */
+  object-fit: cover; /* Crop the image to fill the space */
+  aspect-ratio: 3 / 4; /* Portrait aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center align the image */
+}
+
+/* Container styles to keep portrait mode */
+.content-image {
+  flex: 1; /* Image takes half of the row */
+  padding: 0 0; /* Padding around the image */
+  display: flex; /* Use flexbox to control alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: auto; /* Allow height to adjust */
+}
 
 .content-image.right-aligned {
-    width: auto; /* Let the width adjust automatically */
-    height: 100%; /* Set height to fill the container */
-    max-height: 500px; /* Optional: limit maximum height */
-    object-fit: cover; /* Crop the image to fill the space */
-    aspect-ratio: 3 / 4; /* Portrait aspect ratio */
-    display: block;
-    margin: 0 auto; /* Center align the image */    order: 2;
+  width: auto; /* Let the width adjust automatically */
+  height: 100%; /* Set height to fill the container */
+  max-height: 500px; /* Optional: limit maximum height */
+  object-fit: cover; /* Crop the image to fill the space */
+  aspect-ratio: 3 / 4; /* Portrait aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center align the image */
+  order: 2;
 }
 
 .content-text {
-    flex: 1; /* Text takes half of the row */
-    color: #262628; /* Dark text color */
-    max-width: 40%; /* Limit the width to 50% of the container */
-    text-align: left; /* Align text to the left */
-    margin: 0 auto; /* Center align the text block */
-    box-sizing: border-box; /* Include padding in the width calculation */
-  }
-  
-  .content-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distribute space between items */
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-    padding: 0 60px;
-  }
+  flex: 1; /* Text takes half of the row */
+  color: #262628; /* Dark text color */
+  max-width: 40%; /* Limit the width to 50% of the container */
+  text-align: left; /* Align text to the left */
+  margin: 0 auto; /* Center align the text block */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.content-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between items */
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  padding: 0 60px;
+}
 
 .content-text h3 {
   font-size: 1.5rem;
@@ -153,6 +151,6 @@
   }
 
   .introduction-content p {
-    width:100%
+    width: 100%;
   }
 }

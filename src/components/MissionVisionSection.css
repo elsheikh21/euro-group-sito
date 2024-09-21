@@ -2,7 +2,7 @@
 
 .mission-vision-section {
   position: relative; /* Relative positioning to allow absolute positioning of the overlay */
-  background-image: url('../../public/images/about2.webp'); /* Replace with your actual image path */
+  background-image: url("../../public/images/about2.webp"); /* Replace with your actual image path */
   background-size: cover; /* Cover the entire section */
   background-position: center; /* Center the background image */
   color: #f3f3f5; /* White text */
@@ -13,7 +13,7 @@
 
 /* Blue overlay */
 .mission-vision-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -30,55 +30,53 @@
   z-index: 2; /* Position content above the overlay */
 }
 
-  
+.mission-vision-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  gap: 5rem; /* Increased gap between columns */
+}
+
+.mission-vision-column {
+  flex: 1; /* Equal width for both columns */
+  min-width: 280px; /* Minimum width for responsiveness */
+  padding: 20px;
+}
+
+.mission-vision-column h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.mission-vision-column p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .mission-vision-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto; /* Center the container */
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    gap: 5rem; /* Increased gap between columns */
+    flex-direction: column; /* Stack columns on smaller screens */
+    align-items: center; /* Center align text */
   }
-  
+
   .mission-vision-column {
-    flex: 1; /* Equal width for both columns */
-    min-width: 280px; /* Minimum width for responsiveness */
-    padding: 20px;
+    text-align: center;
+    max-width: 600px; /* Max width to prevent stretching */
   }
-  
+}
+
+@media (max-width: 480px) {
   .mission-vision-column h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    font-weight: bold;
+    font-size: 1.5rem; /* Smaller font size for titles on small screens */
   }
-  
+
   .mission-vision-column p {
-    font-size: 1.15rem;
-    line-height: 1.6;
+    font-size: 0.9rem; /* Smaller font size for text */
   }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .mission-vision-container {
-      flex-direction: column; /* Stack columns on smaller screens */
-      align-items: center; /* Center align text */
-    }
-  
-    .mission-vision-column {
-      text-align: center;
-      max-width: 600px; /* Max width to prevent stretching */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .mission-vision-column h2 {
-      font-size: 1.5rem; /* Smaller font size for titles on small screens */
-    }
-  
-    .mission-vision-column p {
-      font-size: 0.9rem; /* Smaller font size for text */
-    }
-  }
-  
+}

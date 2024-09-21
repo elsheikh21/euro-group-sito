@@ -1,36 +1,36 @@
 /* ProjectsSection.css */
 
 .projects-section {
-    background-color: #f3f3f5;
-  }
-  
-  .filters {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #e0e0e0; /* Gray background for filters */
-    padding: 10px;
-    border-radius: 5px; /* Optional: Rounded corners for the filter bar */
-    font-size: 1.15rem;
-  }
+  background-color: #f3f3f5;
+}
 
-  .filter-button {
-    background-color: transparent; /* No background color */
-    border: none; /* No border */
-    color: #262628; /* Black text color */
-    padding: 10px 15px;
-    margin: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .filter-button.active {
-    background-color: #f3f3f5; /* White background on hover */
-    color: #19258b; /* Midnight blue text on hover */
-    border-radius: 10px; /* Optional: Keep the rounded corners */
-  }
-  /* Hover effect for filter buttons */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #e0e0e0; /* Gray background for filters */
+  padding: 10px;
+  border-radius: 5px; /* Optional: Rounded corners for the filter bar */
+  font-size: 1.15rem;
+}
+
+.filter-button {
+  background-color: transparent; /* No background color */
+  border: none; /* No border */
+  color: #262628; /* Black text color */
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-button.active {
+  background-color: #f3f3f5; /* White background on hover */
+  color: #19258b; /* Midnight blue text on hover */
+  border-radius: 10px; /* Optional: Keep the rounded corners */
+}
+/* Hover effect for filter buttons */
 .filter-button:hover {
   background-color: #f3f3f5; /* White background on hover */
   color: #19258b; /* Midnight blue text on hover */
@@ -78,105 +78,110 @@
 }
 /* Hover effect for filter buttons */
 .secondary-filter-button:hover {
-background-color: #f3f3f5; /* White background on hover */
-color: #19258b; /* Midnight blue text on hover */
-border-radius: 10px;
+  background-color: #f3f3f5; /* White background on hover */
+  color: #19258b; /* Midnight blue text on hover */
+  border-radius: 10px;
 }
-  
+
+.projects-grid {
+  background-color: #f3f3f5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 15px;
+  justify-items: center;
+  width: 70%; /* Limit the grid width to 80% of the container */
+  max-width: 1200px; /* Optional: Set a maximum width */
+  margin: 0 auto; /* Center the grid within the container */
+}
+
+.project-card {
+  background-color: #f3f3f5;
+  border: 1px solid #f3f3f5;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 100%; /* Make the card take the full width within the grid item */
+  height: 50vh; /* Further increased height for longer cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 15px rgba(38, 38, 40, 0.1); /* Light gray shadow on hover */
+  transform: scale(1.05); /* Scale up by 10% */
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth scaling and shadow transition */
+}
+
+.projects-image {
+  width: 100%;
+  height: 350px; /* Further increased height for a longer card */
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.project-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #262628; /* Dark gray */
+  margin-bottom: 5px;
+}
+
+.project-location {
+  font-size: 0.9rem;
+  color: #262628; /* Lighter gray */
+}
+
+.load-more {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 2rem;
+}
+
+.load-more-button {
+  background-color: #19258b !important;
+  color: #f3f3f5;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 30px; /* Adjust padding for desired size */
+  border: 0px solid #262628; /* Create a border to replicate the outline */
+  border-radius: 50px; /* Full rounded corners */
+  background-color: transparent; /* No background to match the second button */
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease; /* Smooth transitions */
+}
+
+.load-more-button:hover {
+  color: #19258b; /* Darker blue on hover */
+  background-color: #f3f3f5 !important; /* Darker blue on hover */
+  border: 1px solid #426ba8;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .projects-grid {
-    background-color: #f3f3f5;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-    gap: 15px;
-    justify-items: center;
-    width: 70%; /* Limit the grid width to 80% of the container */
-    max-width: 1200px; /* Optional: Set a maximum width */
-    margin: 0 auto; /* Center the grid within the container */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 cards per row on smaller screens */
   }
-  
-  .project-card {
-    background-color: #f3f3f5;
-    border: 1px solid #f3f3f5;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    width: 100%; /* Make the card take the full width within the grid item */
-    height: 50vh; /* Further increased height for longer cards */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 10px;
-  }
-  
-  .project-card:hover {
-    box-shadow: 0 4px 15px rgba(38, 38, 40, 0.1); /* Light gray shadow on hover */
-    transform: scale(1.05); /* Scale up by 10% */
-    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth scaling and shadow transition */
-  }
+}
 
-  .projects-image {
-    width: 100%;
-    height: 350px; /* Further increased height for a longer card */
-    object-fit: cover;
-    margin-bottom: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* 1 card per row on very small screens */
   }
-  
-  .project-name {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #262628; /* Dark gray */
-    margin-bottom: 5px;
-  }
-  
-  .project-location {
-    font-size: 0.9rem;
-    color: #262628; /* Lighter gray */
-  }
-  
-  .load-more {
-    text-align: center;
-    margin-top: 20px;
-    padding-bottom: 2rem;
-  }
-  
-  .load-more-button {
-    background-color: #19258b !important;
-    color: #f3f3f5;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px 30px; /* Adjust padding for desired size */
-    border: 0px solid #262628; /* Create a border to replicate the outline */
-    border-radius: 50px; /* Full rounded corners */
-    background-color: transparent; /* No background to match the second button */
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
-  
-  }
-  
-  .load-more-button:hover {
-    color: #19258b; /* Darker blue on hover */
-    background-color: #f3f3f5 !important; /* Darker blue on hover */
-    border: 1px solid #426ba8;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .projects-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .projects-grid {
-      grid-template-columns: repeat(1, 1fr); /* 1 card per row on very small screens */
-    }
-  }
-  
+}
 
-  /* For the filter section */
+/* For the filter section */
 .filters {
   display: inline-block;
   overflow-x: auto; /* Enable horizontal scrolling */

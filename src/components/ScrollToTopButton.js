@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,16 +15,16 @@ const ScrollToTopButton = () => {
       }
     };
 
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
 
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   // Scroll to top when button is clicked
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -34,16 +34,16 @@ const ScrollToTopButton = () => {
         <button
           onClick={scrollToTop}
           style={{
-            position: 'fixed',
-            bottom: '40px',
-            right: '40px',
-            backgroundColor: '#262628',
-            color: 'white',
-            border: 'none',
-            borderRadius: '50%',
-            padding: '10px 15px',
-            cursor: 'pointer',
-            fontSize: '20px',
+            position: "fixed",
+            bottom: "40px",
+            right: "40px",
+            backgroundColor: "#262628",
+            color: "white",
+            border: "none",
+            borderRadius: "50%",
+            padding: "10px 15px",
+            cursor: "pointer",
+            fontSize: "20px",
             zIndex: 1000,
           }}
         >
