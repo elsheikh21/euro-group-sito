@@ -105,9 +105,9 @@ const ContactBody = () => {
         {locations.map((location, index) => (
           <div key={index} className="location">
             <h3>{location.city}</h3>
-            <p>{location.address}</p>
-            {location.phone && <p><strong>Tel:</strong> {location.phone}</p>}
-            {location.fax && <p><strong>Fax:</strong> {location.fax}</p>}
+            <p><i class="fas fa-map-marker-alt"></i> {location.address}</p>
+            {location.phone && <p><i class="fas fa-phone-alt"></i>&nbsp; {location.phone}</p>}
+            {location.fax && <p><i class="fas fa-fax"></i>&nbsp; {location.fax}</p>}
           </div>
         ))}
       </div>
