@@ -3,13 +3,14 @@
   text-align: center;
   padding: 40px 20px;
   background-color: #262628; /* Dark background color to match the palette */
-  color: #ffffff; /* White text color */
+  color: #f3f3f5; /* White text color */
 }
 
 .clients-section-title {
-  font-size: 1.8rem;
-  color: #ffffff; /* White color for the title */
-  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  color: #f3f3f5; /* White color for the title */
+  margin-bottom: 3.25rem;
+  font-weight: bold;
 }
 
 .clients-slide {
@@ -47,7 +48,7 @@
   z-index: 1;
   background-color: transparent; /* Transparent background to match the example */
   border: none; /* No border */
-  color: #ffffff; /* White color for the arrow */
+  color: #f3f3f5; /* White color for the arrow */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +57,7 @@
 
 .slick-prev:before,
 .slick-next:before {
-  color: #ffffff; /* White color for arrows */
+  color: #f3f3f5; /* White color for arrows */
   font-size: 24px;
   content: ''; /* Override the default content */
   display: block;

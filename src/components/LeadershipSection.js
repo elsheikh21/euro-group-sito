@@ -5,7 +5,7 @@ const LeadershipSection = () => {
   // Dummy data for the leadership team
   const leaders = [
     { name: 'Ibrahim Mourad', title: 'Managing Director', imageUrl: '../images/leadership/ibrahim.webp' },
-    { name: 'Dr. Ayman Abourgila', title: 'Chief Executive Officer', imageUrl: '../images/leadership/ayman.webp' },
+    { name: 'Ayman Abourgila', title: 'Chief Executive Officer', imageUrl: '../images/leadership/ayman.webp' },
     { name: 'Hassan Maltawi', title: 'Chief Projects Officer', imageUrl: '../images/leadership/hassan.webp' },
   ];
 

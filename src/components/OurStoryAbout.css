@@ -12,7 +12,7 @@
   .story-box {
     max-width: 800px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 40px 50px;
     background-color: #fff; /* White background for the story box */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     border-radius: 12px;
@@ -23,30 +23,25 @@
   }
   
   .story-box h2 {
-    color: #2e3b84; /* Title color */
-    font-size: 1.8rem;
+    color: #262628; /* Title color */
+    font-size: 1.75rem;
+    margin-bottom: 3.25rem;
     font-weight: bold;
-    margin-bottom: 15px;
   }
   
   .story-box p {
     font-size: 1.15rem;
     line-height: 1.6;
     margin-bottom: 15px;
-    font-weight: bold; 
   }
 
-  .not-bold-text {
-    font-weight: normal; 
-  }
-  
-  /* .story-box p:last-child {
+  .story-box p:last-child {
     font-weight: bold; 
-  } */
+  }
   
   .quote {
     font-size: 2.5rem;
-    color: #333;
+    color: #262628;
     margin-top: 30px;
     font-weight: bold;
     font-style: italic;
@@ -63,20 +58,20 @@
   .quote::before,
   .quote::after {
     content: '"'; /* Add double quote character */
-    font-size: 7rem; /* Increased size of quotes */
-    color: #ccc; /* Light gray color for quotes */
+    font-size: 6.5rem; /* Increased size of quotes */
+    color: rgba(38, 38, 40, 0.3); /* Light gray color for quotes */
     position: absolute;
     font-family: 'Arial', sans-serif; /* Ensure font matches the content */
   }
   
   .quote::before {
-    left: -30px; /* Adjust positioning for larger size */
-    top: -20px; /* Adjust vertical alignment for larger size */
+    left: -50px;
+    top: -30px; 
   }
   
   .quote::after {
     right: -30px; /* Adjust positioning for larger size */
-    bottom: -20px; /* Adjust vertical alignment for larger size */
+    bottom: -75px; /* Adjust vertical alignment for larger size */
   }
   
 

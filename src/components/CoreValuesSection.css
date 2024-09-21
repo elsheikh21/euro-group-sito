@@ -3,14 +3,14 @@
 .core-values-section {
     padding: 60px 20px;
     text-align: center;
-    background-color: #f5f5f5; /* Light gray background */
+    background-color: #f3f3f5; /* Light gray background */
   }
   
   .section-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: bold;
-    color: #2e3b84; /* Dark blue color */
-    margin-bottom: 40px;
+    color: #262628; /* Dark blue color */
+    margin-bottom: 3.25rem;
   }
   
   .core-values-grid {
@@ -44,7 +44,7 @@
   
   .core-value-description {
     font-size: 1rem;
-    color: #555; /* Description color */
+    color: #262628; /* Description color */
     line-height: 1.6;
     max-width: 220px; /* Limit the width of the description */
   }

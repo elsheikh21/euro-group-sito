@@ -2,14 +2,14 @@
 .certificates-section {
   text-align: center;
   padding: 120px 20px;
-  background-color: #ffffff; /* White background */
+  background-color: #fff; /* White background */
 }
 
 .certificates-title {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: bold;
-  color: #000000; /* Black text color */
-  margin-bottom: 20px;
+  color: #262628; /* Black text color */
+  margin-bottom: 3.25rem;
   text-align: center; /* Center the title */
 }
 

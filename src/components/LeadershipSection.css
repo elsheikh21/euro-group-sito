@@ -2,19 +2,20 @@
 .leadership-section {
   text-align: center;
   padding: 120px 20px;
-  background-color: #ffffff; /* White background */
+  background-color: #f3f3f5; /* White background */
   color: #333; /* Dark text color */
 }
 
 .leadership-title {
-  font-size: 1.8rem;
-  color: #233876; /* Matching the color of the title */
-  margin-bottom: 10px;
+  font-size: 1.75rem;
+  color: #262628; /* Matching the color of the title */
+  margin-bottom: 3.25rem;
+  font-weight: bold;
 }
 
 .leadership-description {
-  font-size: 1rem;
-  color: #555; /* Slightly lighter text color */
+  font-size: 1.15rem;
+  color: #262628; /* Slightly lighter text color */
   margin-bottom: 40px;
 }
 
@@ -30,7 +31,7 @@
   border-radius: 8px;
   width: 25%;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(38, 38, 40, 0.1);
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -52,15 +53,15 @@
 }
 
 .leader-name {
-  font-size: 1rem;
-  color: #233876; /* Matching the text color */
+  font-size: 1.15rem;
+  color: #262628; /* Matching the text color */
   font-weight: bold;
   margin: 10px 0 5px;
 }
 
 .leader-title {
   font-size: 0.9rem;
-  color: #555;
+  color: #262628;
   margin-bottom: 15px;
 }
 
