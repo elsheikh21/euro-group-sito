@@ -9,7 +9,7 @@ const ServicesSection = () => {
       {/* Section Title and Subtitle */}
       <div className="section-header">
         <h3>We offer wide span of service to help you <br/> turn your ambitions <strong>concept into reality</strong></h3>
-        <p>We provide best value services by focusing on quality, creativity, innovation and <br/> professional exellence</p>
+        <p class="padding-bottom-120">We provide best value services by focusing on quality, creativity, innovation and <br/> professional exellence</p>
       </div>
       {/* Top part with service cards */}
       <div className="services-cards">
@@ -42,15 +42,15 @@ const ServicesSection = () => {
           <div className="statistics-info">
             <div className="stat-item">
               <h1>60<span class="superscript">+</span></h1>
-              <p>ENGINEERING PROJECTS</p>
+              <p>&nbsp;<strong>Projects</strong></p>
             </div>
             <div className="stat-item">
               <h1>10<span class="superscript">+</span></h1>
-              <p>DIFFERENT COUNTRIES</p>
+              <p>&nbsp;<strong>Locations</strong></p>
             </div>
             <div className="stat-item">
               <h1>{yearsOfExperience}<span class="superscript">+</span></h1>
-              <p>YEARS OF EXPERIENCE</p>
+              <p>&nbsp;<strong>Years</strong></p>
             </div>
           </div>
         </div>

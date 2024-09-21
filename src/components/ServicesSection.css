@@ -1,8 +1,12 @@
 /* ServicesSection.css */
+.padding-bottom-120 {
+  padding-bottom: 120px;
+}
+
 
 .services-section {
     position: relative; /* Position relative for overlapping elements */
-    padding: 40px 20px;
+    padding: 40px 0px;
     background-color: #f3f3f5; /* Light background color for the section */
     z-index: 1;
   }
@@ -14,7 +18,7 @@
   
   .section-header h3 {
     font-size: 1.75rem; /* Increased font size */
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #000;
   }
   
@@ -118,7 +122,8 @@
   
   .stat-item {
     margin: 10px;
-    text-align: center;
+    font-size: 1.15rem;
+    text-align: start;
     padding-right: 50px;
   }
   

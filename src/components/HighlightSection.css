@@ -1,11 +1,8 @@
-/* HighlightSection.css */
-
 /* Section styles */
 .highlight-section {
-  /* TODO: CHECK THE BACKGROUND OVERLAY */
   background-image: url("../../public/images/favicon.png"); /* Replace with your image path */
-  background-size: cover; /* Make the background cover the entire section */
-  background-position: center; /* Center the background image */
+  background-size: 190% 190%;
+  background-position: top center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent the background from repeating */
   padding: 120px 20px; /* Padding for the section */
   text-align: center; /* Center-align text content */
@@ -38,7 +35,7 @@
 
 /* Content section styles (reuse from previous content section) */
 .content-section {
-  padding: 40px 20px;
+  padding: 0px 20px;
   width: 80%;
   margin: 0 auto;
 }
@@ -72,13 +69,13 @@
     object-fit: cover; /* Crop the image to fill the space */
     aspect-ratio: 3 / 4; /* Portrait aspect ratio */
     display: block;
-    margin: 20px auto; /* Center align the image */
+    margin: 0 auto; /* Center align the image */
   }
   
   /* Container styles to keep portrait mode */
   .content-image {
     flex: 1; /* Image takes half of the row */
-    padding: 20px; /* Padding around the image */
+    padding: 0 0; /* Padding around the image */
     display: flex; /* Use flexbox to control alignment */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */

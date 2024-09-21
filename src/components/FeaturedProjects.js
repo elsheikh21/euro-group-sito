@@ -19,7 +19,7 @@ const FeaturedProjects = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3.2, // Number of slides to show at a time
+    slidesToShow: 3.1, // Number of slides to show at a time
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,

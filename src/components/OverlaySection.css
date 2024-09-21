@@ -53,7 +53,8 @@
   }
   
   .overlay-button:hover {
-    background-color: #f3f3f5;
-    color: #262628; /* Dark text color on hover */
+    background-color: rgba(38, 38, 40,0.2); /* Slightly darker background on hover */
+    color: #ffffff; /* Ensures text stays white */
+    border: 1px solid rgba(243, 243, 245, 1); /* Slightly more opaque border on hover */
   }
   

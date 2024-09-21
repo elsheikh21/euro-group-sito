@@ -1,47 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css'; // Import your CSS file
 
 const Footer = () => {
   return (
     <footer className="footer">
-      {/* Upper Row */}
-      <div className="footer-upper">
-        <img src="../images/logos/logo_white.png" alt="Logo" className="footer-logo" />
-      </div>
-
       {/* Middle Row */}
       <div className="footer-middle">
-      {/* <div className="footer-column">
-        <img src="../images/logos/logo_white.png" alt="Logo" className="footer-logo" />
-      </div> */}
-
-        <div className="footer-column">
-          <h4>Projects</h4>
-          <ul>
-            <li><a href="#Projects">All Projects</a></li>
-          </ul>
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#Planning">Planning</a></li>
-            <li><a href="#Engineering">Engineering</a></li>
-            <li><a href="#Architecture">Architecture</a></li>
-            <li><a href="#Construction">Construction</a></li>
-          </ul>
-        </div>
-        <div className="footer-column">
-          <h4>Social Media</h4>
-          <ul className="social-media-list">
+      <div className="footer-column">
+        <img src="../images/logos/logo_white_footer.png" alt="Logo" className="footer-logo" />
+        <ul className="social-media-list padding-bottom-20">
             <li><a href="#Facebook" className="social-icon fab fa-facebook-f" aria-label="Facebook"></a></li>
             <li><a href="#Twitter" className="social-icon fab fa-twitter" aria-label="Twitter"></a></li>
             <li><a href="#Instagram" className="social-icon fab fa-instagram" aria-label="Instagram"></a></li>
             <li><a href="#LinkedIn" className="social-icon fab fa-linkedin-in" aria-label="LinkedIn"></a></li>
           </ul>
-        </div>
-        <div className="footer-column">
+      </div>
+
+        <div className="footer-column one-third-max">
           <h4>Need to reach us?</h4>
           <p>We're here to answer all your questions. If the form isn't your style, contact us with the means below.</p>
-          <button className="contact-button">Contact Us</button>
-        </div>
+          <Link to="/contact"><button className="contact-button">Contact Us</button></Link>
+            </div>
       </div>
 
       {/* Lower Row */}

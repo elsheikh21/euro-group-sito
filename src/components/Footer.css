@@ -14,6 +14,10 @@
   z-index: 1; /* Ensure the content is above the overlay */
 }
 
+.padding-bottom-20 {
+  margin-bottom: 20px;
+}
+
 /* Dark gray overlay */
 .footer::after {
   content: '';
@@ -33,15 +37,21 @@
 }
 
 .footer-logo {
-  max-width: 150px; /* Adjust logo size */
+  max-width: 180px; /* Adjust logo size */
+  text-align: center;
 }
 
 .footer-middle {
   display: flex;
   flex-wrap: wrap; /* Make the middle row responsive */
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 20px 0 0;
   padding: 0 65px;
+  }
+
+
+  .one-third-max {
+    max-width: 33%;
   }
 
 .footer-column {
@@ -79,7 +89,7 @@
 
 .footer-column ul {
   list-style-type: none;
-  padding: 0;
+  padding: 20px 0 ;
 }
 
 .footer-column li {
@@ -97,20 +107,21 @@
 
 .contact-button {
   padding: 10px 30px; /* Adjust padding for a wider button */
-  background-color: transparent; /* Transparent background */
-  color: #fff; /* White text */
-  border: 2px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
-  border-radius: 50px; /* Rounded corners for a pill-shaped button */
+  background-color: rgba(243, 243, 245, 0.3); /* Semi-transparent background */
+  color: #f3f3f5; /* #f3f3f5 text color */
+  border: 2px solid rgba(243, 243, 245, 0.0); /* Semi-transparent white border */
+  border-radius: 25px; /* Rounded corners */
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Smooth transitions */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 6px rgba(38, 38, 40, 0.1); /* Subtle shadow effect */
 }
 
 .contact-button:hover {
   background-color: rgba(255, 255, 255, 0.1); /* Light white overlay on hover */
   color: #fff; /* White text */
-  border: 2px solid #fff; /* Solid white border on hover */
+  border: 2px solid #f3f3f5; /* Solid white border on hover */
 }
 
 
@@ -118,7 +129,7 @@
   text-align: center;
   margin-top: 20px;
   font-size: 14px;
-  border-top: 1px solid #444;
+  border-top: 1px solid #262628;
   padding-top: 10px;
 }
 

@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5f5f5; /* Light gray background */
+  background-color: #f3f3f5; /* Light gray background */
   flex-wrap: wrap; /* Allows wrapping for responsiveness */
 }
 
@@ -50,13 +50,13 @@
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #333;
+  color: #262628;
   font-family: 'Arial', sans-serif;
 }
 
 .join-us-content p {
   font-size: 1.15rem;
-  color: #555;
+  color: #262628;
   margin-bottom: 20px;
   font-weight: 400;
 }
@@ -64,12 +64,13 @@
 .join-us-button {
   padding: 10px 30px; /* Increased padding for a wider button */
   background-color: #19258b; /* Transparent background */
-  color: #fff; /* White text */
+  color: #f3f3f5; /* White text */
+  font-weight: 600;
   border-radius: 50px; /* Full rounded corners (pill-shaped) */
+  border: 0px solid transparent;
   font-size: 1rem; /* Adjust font size */
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Smooth transition */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .join-us-button:hover {

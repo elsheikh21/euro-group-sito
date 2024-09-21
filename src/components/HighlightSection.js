@@ -5,7 +5,7 @@ const HighlightSection = () => {
   return (
     <section className="highlight-section">
       {/* Introduction Section */}
-      <div className="introduction-content">
+      <div className="introduction-content padding-bottom-120">
         <h2>
           We believe that <strong>dynamic interaction with clients</strong> is the fundamental aspect that leads the firm to success.
         </h2>
@@ -22,7 +22,7 @@ const HighlightSection = () => {
           <div className="content-image">
             <img src="../images/home3.webp" class="no-margin-left" alt="Construction work" />
           </div>
-          <div className="content-text right-align">
+          <div className="content-text left-align">
             <h3>We provide the <strong>highest quality of engineering consulting services</strong> that meet your expectations.</h3>
             <p>We help clients from both public and private development sectors to meet their design and construction needs and execute them with creativity and knowledge.</p>
           </div>
