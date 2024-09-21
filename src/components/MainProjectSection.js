@@ -6,7 +6,7 @@ import './MainProjectSection.css';
 const MainProjectSection = () => {
   return (
     <section className="main-project-section">
-      <h1 className="main-project-section-heading">Turning Vision <br/> into reality</h1>
+      <h1 className="main-project-section-heading">Turning Vision into reality</h1>
     </section>
   );
 };

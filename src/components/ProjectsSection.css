@@ -1,23 +1,23 @@
 /* ProjectsSection.css */
 
 .projects-section {
-    background-color: #f3f3f5; /* Light gray background */
+    background-color: #f3f3f5;
   }
   
   .filters {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 30px;
     background-color: #e0e0e0; /* Gray background for filters */
     padding: 10px;
     border-radius: 5px; /* Optional: Rounded corners for the filter bar */
+    font-size: 1.15rem;
   }
-  
+
   .filter-button {
     background-color: transparent; /* No background color */
     border: none; /* No border */
-    color: #000; /* Black text color */
+    color: #262628; /* Black text color */
     padding: 10px 15px;
     margin: 5px;
     cursor: pointer;
@@ -26,17 +26,62 @@
   }
   
   .filter-button.active {
-    background-color: #fff; /* White background on hover */
+    background-color: #f3f3f5; /* White background on hover */
     color: #19258b; /* Midnight blue text on hover */
     border-radius: 10px; /* Optional: Keep the rounded corners */
   }
   /* Hover effect for filter buttons */
 .filter-button:hover {
-  background-color: #fff; /* White background on hover */
+  background-color: #f3f3f5; /* White background on hover */
   color: #19258b; /* Midnight blue text on hover */
   border-radius: 10px;
 }
 
+.arrow-down {
+  font-size: 1rem;
+  margin-left: 5px;
+  color: #19258b; /* Or whatever color fits your theme */
+}
+
+.secondary-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #e0e0e0; /* Gray background for filters */
+  padding: 10px;
+  border-radius: 5px; /* Optional: Rounded corners for the filter bar */
+  font-size: 1.15rem;
+}
+
+.mb-30 {
+  margin-bottom: 1.875rem !important;
+}
+.mb-60 {
+  margin-bottom: 3.75rem !important;
+}
+
+.secondary-filter-button {
+  background-color: transparent; /* No background color */
+  border: none; /* No border */
+  color: #262628; /* Black text color */
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondary-filter-button.active {
+  background-color: #f3f3f5; /* White background on hover */
+  color: #19258b; /* Midnight blue text on hover */
+  border-radius: 10px; /* Optional: Keep the rounded corners */
+}
+/* Hover effect for filter buttons */
+.secondary-filter-button:hover {
+background-color: #f3f3f5; /* White background on hover */
+color: #19258b; /* Midnight blue text on hover */
+border-radius: 10px;
+}
   
   .projects-grid {
     background-color: #f3f3f5;
@@ -51,7 +96,7 @@
   
   .project-card {
     background-color: #f3f3f5;
-    border: 1px solid #ddd;
+    border: 1px solid #f3f3f5;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     width: 100%; /* Make the card take the full width within the grid item */
@@ -63,7 +108,7 @@
   }
   
   .project-card:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light gray shadow on hover */
+    box-shadow: 0 4px 15px rgba(38, 38, 40, 0.1); /* Light gray shadow on hover */
     transform: scale(1.05); /* Scale up by 10% */
     transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth scaling and shadow transition */
   }
@@ -80,13 +125,13 @@
   .project-name {
     font-size: 1rem;
     font-weight: bold;
-    color: #333; /* Dark gray */
+    color: #262628; /* Dark gray */
     margin-bottom: 5px;
   }
   
   .project-location {
     font-size: 0.9rem;
-    color: #777; /* Lighter gray */
+    color: #262628; /* Lighter gray */
   }
   
   .load-more {
@@ -97,11 +142,11 @@
   
   .load-more-button {
     background-color: #19258b !important;
-    color: #fff;
+    color: #f3f3f5;
     cursor: pointer;
     font-weight: bold;
     padding: 10px 30px; /* Adjust padding for desired size */
-    border: 0px solid #555; /* Create a border to replicate the outline */
+    border: 0px solid #262628; /* Create a border to replicate the outline */
     border-radius: 50px; /* Full rounded corners */
     background-color: transparent; /* No background to match the second button */
     cursor: pointer;
@@ -130,3 +175,54 @@
     }
   }
   
+
+  /* For the filter section */
+.filters {
+  display: inline-block;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Ensure the filters stay in one line */
+  padding: 10px;
+  background-color: #e0e0e0; /* Gray background for filters */
+  border-radius: 5px;
+  scrollbar-width: thin; /* Make scrollbar thinner (Firefox) */
+  width: 100%;
+}
+
+.filter-button {
+  display: inline-block; /* Inline block so buttons stay in one row */
+  background-color: transparent;
+  border: none;
+  color: #262628;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap; /* Prevent text from breaking to the next line */
+}
+
+.filter-button.active {
+  background-color: #f3f3f5;
+  color: #19258b;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    overflow-x: auto; /* Enable horizontal scroll on mobile */
+    justify-content: flex-start; /* Align filters to the left */
+  }
+}
+
+.filters::-webkit-scrollbar {
+  height: 6px; /* Scrollbar height */
+}
+
+.filters::-webkit-scrollbar-thumb {
+  background-color: #262628; /* Scrollbar color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.filters::-webkit-scrollbar-thumb:hover {
+  background-color: #333; /* Color on hover */
+}

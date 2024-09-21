@@ -5,7 +5,7 @@
     background-size: cover; /* Ensure the image covers the whole section */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background from repeating */
-    height: 50vh; /* Adjust the height as needed */
+    height: 45vh; /* Adjust the height as needed */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,14 +15,12 @@
   }
   
   .main-project-section-heading {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: bold;
-    color: #19258b; /* Dark blue color */
+    color: #f3f3f5; /* Dark blue color */
     z-index: 2; /* Ensure the text is above the background */
   }
-  
-  /* 
-  // Optional: Overlay effect for better text readability
+
   .main-project-section::before {
     content: '';
     position: absolute;
@@ -30,7 +28,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.0); 
+    background-color: rgba(38, 38, 40, 0.6); 
     z-index: 1;
   }
-   */
