@@ -1,36 +1,34 @@
 /* MainServicesSection.css */
 
 .main-services-section {
-    background-image: url('../../public/images/services2.webp');
-    background-size: cover; /* Ensure the image covers the whole section */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background from repeating */
-    height: 50vh; /* Adjust the height as needed */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-  }
-  
-  .main-services-section-heading {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #19258b; /* Dark blue color */
-    z-index: 2; /* Ensure the text is above the background */
-  }
-  
-  
-  /* Optional: Overlay effect for better text readability */
-  .main-services-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 1;
-  }
-   
+  background-image: url("../../public/images/services2.webp");
+  background-size: cover; /* Ensure the image covers the whole section */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  height: 45vh; /* Adjust the height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.main-services-section-heading {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #f3f3f5; /* Dark blue color */
+  z-index: 2; /* Ensure the text is above the background */
+}
+
+/* Optional: Overlay effect for better text readability */
+.main-services-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}

@@ -3,7 +3,7 @@
 .project-page {
   width: 100%;
   margin: 0 auto;
-  background-color: #f5f5f5;
+  background-color: #f3f3f5;
 }
 
 .project-main-image {
@@ -17,7 +17,7 @@
 }
 
 .project-main-overlay {
-  background-color: rgba(0, 0, 0, 0.1); /* Lighter gray overlay */
+  background-color: rgba(38, 38, 40, 0.1); /* Lighter gray overlay */
   padding: 20px;
   text-align: left; /* Align text to the left */
   width: 100%;
@@ -34,13 +34,13 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin: 10px 0;
-  color: #fff;
+  color: #f3f4f5;
   padding-left: 30px;
   text-align: left;
 }
 
 .single-project-location {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: #f3f4f5;
   margin-bottom: 20px;
   padding-left: 30px;
@@ -73,23 +73,24 @@
   align-items: center;
   gap: 10px;
   font-size: 1rem;
-  color: #333;
+  color: #262628;
 }
 
 .info-item i {
-  font-size: 2.0rem;
-  color: #2e3b84; /* Icon color */
+  font-size: 2rem;
+  color: #19258b; /* Icon color */
 }
 
 .project-info-left h2,
 .project-info-left h3 {
   margin-bottom: 15px;
-  color: #333;
+  color: #262628;
 }
 
 .project-info-left p,
 .project-info-left ul {
-  color: #555;
+  color: #262628;
+  font-size: 1.15rem;
 }
 
 .project-info-left ul {
@@ -105,15 +106,15 @@
 }
 
 .project-info-left ul li::before {
-  content: '•'; /* Custom bullet */
+  content: "•"; /* Custom bullet */
   position: absolute;
   left: 0;
-  color: #2e3b84; /* Bullet color */
+  color: #19258b; /* Bullet color */
 }
 
 .project-images-section {
   padding: 40px 0;
-  background-color: #fff;
+  background-color: #f3f3f5;
 }
 
 .project-image-main,
@@ -139,18 +140,23 @@
   margin-bottom: 0; /* Remove bottom margin since images are side by side */
 }
 
-
 .project-image-main img,
 .project-image img {
   max-width: 100%;
   height: auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(38, 38, 40, 0.1);
 }
 
 .related-projects-section {
   padding: 40px 0;
   text-align: center;
-  color: #19258b;
+  color: #262628;
+}
+
+.services-list-li {
+  text-align: left;
+  margin-left: 1rem;
+  list-style: none;
 }
 
 .related-projects-carousel {
@@ -167,12 +173,12 @@
 }
 
 .related-project-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #f3f3f5;
+  border: 1px solid #f3f3f5;
   padding: 10px;
   text-align: center;
   min-width: 200px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(38, 38, 40, 0.1);
 }
 
 .related-project-card img {
@@ -188,7 +194,7 @@
 
 .related-project-card p {
   font-size: 0.9rem;
-  color: #777;
+  color: #262628;
 }
 
 /* Responsive Styles */
@@ -203,7 +209,6 @@
     min-width: 100%; /* Ensure columns take full width on small screens */
     margin-bottom: 20px;
     padding-left: 20px;
-
   }
 
   .project-main-overlay {
@@ -225,7 +230,6 @@
   }
 }
 
-
 .project-info-section {
   display: flex;
   justify-content: space-between;
@@ -235,26 +239,26 @@
   position: relative; /* Relative positioning for the pseudo-element */
   box-sizing: border-box; /* Ensure padding doesn't affect the overall width/height */
   margin: 0; /* Ensure no extra margin */
-
 }
 
 .project-info-section::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   right: 0;
   width: 0;
   height: 0;
   border-left: 140px solid transparent; /* Create the cutout using borders */
-  border-bottom: 140px solid #fff; /* Make the triangle cutout the same color as the background (white) */
+  border-bottom: 140px solid #f3f3f5; /* Make the triangle cutout the same color as the background (white) */
 }
 
 .project-info-left {
   flex: 0 0 60%; /* Left section takes 60% */
   padding-right: 40px;
-  font-size: 1.1rem;
-  color: #333;
+  font-size: 1.15rem;
+  color: #262628;
   line-height: 1.6;
+  text-align: justify;
 }
 
 .project-info-left p {
@@ -272,10 +276,10 @@
 }
 
 .project-info-left ul li::before {
-  content: '•'; /* Custom bullet point */
+  content: "•"; /* Custom bullet point */
   position: absolute;
   left: 0;
-  color: #2e3b84; /* Midnight blue color for bullet points */
+  color: #19258b; /* Midnight blue color for bullet points */
 }
 
 .project-info-right {
@@ -301,7 +305,7 @@
 }
 
 .project-info-right .info-item span:nth-of-type(2) {
-  color: #555;
+  color: #262628;
 }
 
 /* Optional: Ensure spacing and responsiveness */
@@ -323,7 +327,7 @@
 }
 
 .info-icon {
-  width: 40px;  /* Adjust the size of the icons */
+  width: 40px; /* Adjust the size of the icons */
   height: auto; /* Maintain aspect ratio */
 }
 
@@ -335,11 +339,10 @@
   display: flex;
   flex-direction: column; /* Stack the icon, label, and value vertically */
   align-items: flex-start; /* Align all items to the left */
-
 }
 
 .info-icon {
-  width: 40px;  /* Adjust the size of the icons */
+  width: 40px; /* Adjust the size of the icons */
   height: auto; /* Maintain aspect ratio */
 }
 
@@ -350,7 +353,7 @@
 
 .info-value,
 .service-list {
-  color: #333; /* Dark gray for the values */
+  color: #262628; /* Dark gray for the values */
 }
 
 .info-item {
@@ -361,7 +364,7 @@
 }
 
 .info-icon {
-  width: 40px;  /* Adjust the size of the icons */
+  width: 40px; /* Adjust the size of the icons */
   height: auto; /* Maintain aspect ratio */
 }
 
@@ -371,13 +374,11 @@
   text-align: left; /* Ensure the text is aligned to the left */
 }
 
-.info-value,
-.service-list {
-  color: #333; /* Dark gray for the values */
-  margin-left: 10px; /* No indentation for better left alignment */
-  text-align: left; /* Left align the text */
-}
-
-.service-list div {
-  text-align: left; /* Left align each service */
+.portrait-project-image img {
+  width: auto; /* Let the width adjust automatically */
+  height: 100%; /* Set height to fill the container */
+  object-fit: cover; /* Crop the image to fill the space */
+  aspect-ratio: 3 / 4; /* Portrait aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center align the image */
 }
