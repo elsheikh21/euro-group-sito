@@ -280,7 +280,9 @@ const SingleProjectPage = () => {
       <div className="project-images-section">
         {/* 1st Main Image Section */}
         <div className="project-image-main">
-          <img src={project.image1} alt="Main Project" />
+          <lazyload>
+            <img src={project.image1} alt="Main Project" />
+          </lazyload>
         </div>
         {/* Middle Portrait Images Section */}
         <div className="project-images-row">

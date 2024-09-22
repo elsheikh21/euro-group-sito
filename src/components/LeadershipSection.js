@@ -32,7 +32,9 @@ const LeadershipSection = () => {
         {leaders.map((leader, index) => (
           <div className="leadership-card" key={index}>
             <div className="card-image">
-              <img src={leader.imageUrl} alt={leader.name} />
+              <lazyload>
+                <img src={leader.imageUrl} alt={leader.name} />
+              </lazyload>
             </div>
             <h3 className="leader-name">{leader.name}</h3>
             <p className="leader-title">{leader.title}</p>

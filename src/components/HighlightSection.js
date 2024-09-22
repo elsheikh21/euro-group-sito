@@ -1,4 +1,5 @@
 import React from "react";
+import { lazyload } from "react-lazyload";
 import "./HighlightSection.css";
 
 const HighlightSection = () => {
@@ -22,11 +23,13 @@ const HighlightSection = () => {
         {/* First Row: Image Left, Text Right */}
         <div className="content-row">
           <div className="content-image">
-            <img
-              src="../images/home3.webp"
-              class="no-margin-left"
-              alt="Construction work"
-            />
+            <lazyload>
+              <img
+                src="../images/home3.webp"
+                class="no-margin-left"
+                alt="Construction work"
+              />
+            </lazyload>
           </div>
           <div className="content-text left-align">
             <h3>

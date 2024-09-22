@@ -99,7 +99,9 @@ const ClientsSection = () => {
             <div className="clients-grid">
               {slide.map((client, index) => (
                 <div key={index} className="client-logo">
-                  <img src={client} alt={`Client ${index + 1}`} />
+                  <lazyload>
+                    <img src={client} alt={`Client ${index + 1}`} />
+                  </lazyload>
                 </div>
               ))}
             </div>

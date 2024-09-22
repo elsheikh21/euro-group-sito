@@ -7,7 +7,9 @@ const JoinUsSection = () => {
       {/* First Join Us Section with default layout */}
       <div className="join-us-section">
         <div className="join-us-image">
-          <img src="../images/home7.webp" alt="Join Us" />{" "}
+          <lazyload>
+            <img src="../images/home7.webp" alt="Join Us" />
+          </lazyload>{" "}
           {/* Replace with your actual image path */}
         </div>
         <div className="join-us-content">
@@ -22,7 +24,9 @@ const JoinUsSection = () => {
       {/* Second Join Us Section with reversed layout */}
       <div className="join-us-section reverse-layout">
         <div className="join-us-image">
-          <img src="../images/team.webp" alt="Join Us" />{" "}
+          <lazyload>
+            <img src="../images/team.webp" alt="Join Us" />
+          </lazyload>{" "}
           {/* Replace with another actual image path */}
         </div>
         <div className="join-us-content">
