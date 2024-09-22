@@ -125,4 +125,7 @@
   .footer-column {
     margin-bottom: 20px;
   }
+  .one-third-max {
+    max-width: 100%;
+  }
 }

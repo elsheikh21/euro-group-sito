@@ -187,6 +187,9 @@
     width: 100%;
     text-align: center;
   }
+  .statistics-section {
+    height: 100%;
+  }
 }
 
 @media (max-width: 480px) {

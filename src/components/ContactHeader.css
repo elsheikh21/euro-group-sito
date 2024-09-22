@@ -46,3 +46,9 @@
   z-index: 3;
   position: relative;
 }
+
+@media (max-width: 767px) {
+  .contact-header-content {
+    max-width: 100%;
+  }
+}
