@@ -17,7 +17,7 @@ const Header = () => {
       <div className="header-logo">
         <Link to="/">
           <img
-            src="../images/logos/logo_white.png"
+            src="../images/logos/logo_white.webp"
             alt="Logo"
             className="logo"
           />
@@ -58,7 +58,7 @@ const Header = () => {
         {/* Company Logo at the bottom */}
         <div className="menu-logo">
           <img
-            src="../images/logos/logo_white.png"
+            src="../images/logos/logo_white.webp"
             alt="Company Logo"
             className="menu-company-logo"
           />

@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer-middle">
         <div className="footer-column">
           <img
-            src="../images/logos/logo_white_footer.png"
+            src="../images/logos/logo_white_footer.webp"
             alt="Logo"
             className="footer-logo"
           />

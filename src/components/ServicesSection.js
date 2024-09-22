@@ -21,7 +21,7 @@ const ServicesSection = () => {
       <div className="services-cards">
         <div className="service-card" style={{ top: "0%" }}>
           <img
-            src="../icons/planning.png"
+            src="../icons/planning.webp"
             alt="Planning Icon"
             className="service-icon"
           />
@@ -29,7 +29,7 @@ const ServicesSection = () => {
         </div>
         <div className="service-card" style={{ top: "5%" }}>
           <img
-            src="../icons/engineer.png"
+            src="../icons/engineer.webp"
             alt="Planning Icon"
             className="service-icon"
           />
@@ -37,7 +37,7 @@ const ServicesSection = () => {
         </div>
         <div className="service-card" style={{ top: "2%" }}>
           <img
-            src="../icons/architect.png"
+            src="../icons/architect.webp"
             alt="Planning Icon"
             className="service-icon"
           />
@@ -45,7 +45,7 @@ const ServicesSection = () => {
         </div>
         <div className="service-card" style={{ top: "8%" }}>
           <img
-            src="../icons/directions.png"
+            src="../icons/directions.webp"
             alt="Planning Icon"
             className="service-icon"
           />
@@ -53,7 +53,7 @@ const ServicesSection = () => {
         </div>
         <div className="service-card" style={{ top: "4%" }}>
           <img
-            src="../icons/winch.png"
+            src="../icons/winch.webp"
             alt="Planning Icon"
             className="service-icon"
           />

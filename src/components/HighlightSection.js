@@ -59,7 +59,7 @@ const HighlightSection = () => {
           </div>
           <div className="content-image img right-aligned">
             <img
-              src="../images/home9.jpg"
+              src="../images/home9.webp"
               class="no-margin-right"
               alt="Machinery in action"
             />

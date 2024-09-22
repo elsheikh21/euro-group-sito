@@ -8,8 +8,6 @@ This project is a React application created with Create React App. It provides a
 - [Project Structure](#project-structure)
 - [Available Scripts](#available-scripts)
 - [Deployment](#deployment)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
 
 ## Getting Started
 
@@ -24,7 +22,12 @@ To get started with the project, follow these steps:
 The project is structured as follows:
 
 - `public`: This folder contains static assets that can be used by the application.
+  - `public/images` containing all images used.
+  - `public/icons` containing all icons used.
 - `src`: This folder contains the source code for the application.
+  - under `src`, 2 folders are created
+    - `src/pages` containing all pages in `js` files.
+    - `src/components` contains all components files [`js`, `css`].
 - `package.json`: This file contains metadata for the project, including dependencies and scripts.
 
 ## Available Scripts

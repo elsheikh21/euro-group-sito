@@ -229,7 +229,7 @@ const SingleProjectPage = () => {
           <div className="info-item">
             <div className="info-label">
               <img
-                src="../icons/customer.png"
+                src="../icons/customer.webp"
                 alt="Client Icon"
                 className="info-icon"
               />
@@ -243,7 +243,7 @@ const SingleProjectPage = () => {
           <div className="info-item">
             <div className="info-label">
               <img
-                src="../icons/gears.png"
+                src="../icons/gears.webp"
                 alt="Service Icon"
                 className="info-icon"
               />
@@ -262,7 +262,7 @@ const SingleProjectPage = () => {
           <div className="info-item">
             <div className="info-label">
               <img
-                src="../icons/engineer.png"
+                src="../icons/engineer.webp"
                 alt="Sector Icon"
                 className="info-icon"
               />

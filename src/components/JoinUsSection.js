@@ -22,7 +22,7 @@ const JoinUsSection = () => {
       {/* Second Join Us Section with reversed layout */}
       <div className="join-us-section reverse-layout">
         <div className="join-us-image">
-          <img src="../images/team.jpg" alt="Join Us" />{" "}
+          <img src="../images/team.webp" alt="Join Us" />{" "}
           {/* Replace with another actual image path */}
         </div>
         <div className="join-us-content">

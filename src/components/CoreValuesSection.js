@@ -3,56 +3,56 @@ import "./CoreValuesSection.css";
 
 const coreValues = [
   {
-    imageSrc: "../icons/support.png",
+    imageSrc: "../icons/support.webp",
     altText: "support",
     title: "Teamwork",
     description:
       "We achieve our best work when we all work together as one team, supporting each other and sharing our knowledge and expertise.",
   },
   {
-    imageSrc: "../icons/intersection.png",
+    imageSrc: "../icons/intersection.webp",
     altText: "intersection",
     title: "Integrity",
     description:
       "We build trust on the foundation of honesty, transparency, and making responsible decisions based on professional standards.",
   },
   {
-    imageSrc: "../icons/rating (1).png",
+    imageSrc: "../icons/rating (1).webp",
     altText: "rating (1)",
     title: "Client Service",
     description:
       "We understand our clients' needs and develop relationships that make a positive impact.",
   },
   {
-    imageSrc: "../icons/solar-energy.png",
+    imageSrc: "../icons/solar-energy.webp",
     altText: "solar-energy",
     title: "Sustainability",
     description:
       "We are committed to the social, environmental, and economic factors, whether through our role as engineers or through our own everyday actions.",
   },
   {
-    imageSrc: "../icons/business.png",
+    imageSrc: "../icons/business.webp",
     altText: "business",
     title: "Creativity",
     description:
       "We constantly look for new solutions to overcome new challenges and deliver great results.",
   },
   {
-    imageSrc: "../icons/handshake.png",
+    imageSrc: "../icons/handshake.webp",
     altText: "handshake",
     title: "Partnership",
     description:
       "We work closely with partners and clients to achieve our goals and build mutually beneficial relationships.",
   },
   {
-    imageSrc: "../icons/network.png",
+    imageSrc: "../icons/network.webp",
     altText: "network",
     title: "Collaboration",
     description:
       "We provide the best outcomes through shared goals and built relationships.",
   },
   {
-    imageSrc: "../icons/list.png",
+    imageSrc: "../icons/list.webp",
     altText: "list",
     title: "Commitment",
     description:
