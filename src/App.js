@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
 import SingleProjectPage from "./components/SingleProjectPage";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import NotFoundPage from "./components/404Page"; // Import the 404 page
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/project/:projectId" element={<SingleProjectPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <ScrollToTopButton />
         <Footer />
