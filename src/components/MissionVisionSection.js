@@ -1,7 +1,5 @@
-// src/components/MissionVisionSection.js
-
 import React from "react";
-import "./MissionVisionSection.css"; // Import CSS specific to this component
+import "./MissionVisionSection.css";
 
 const MissionVisionSection = () => {
   return (

@@ -1,8 +1,7 @@
 import React from "react";
-import "./CertificatesSection.css"; // Import CSS specific to this component
+import "./CertificatesSection.css";
 
 const CertificatesSection = () => {
-  // Array of certificates with image sources and alt texts
   const certificates = [
     {
       imageSrc: "../images/iso45001-black.png",

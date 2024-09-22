@@ -1,7 +1,5 @@
-// src/components/CoreValuesSection.js
-
 import React from "react";
-import "./CoreValuesSection.css"; // Import CSS specific to this component
+import "./CoreValuesSection.css";
 
 const coreValues = [
   {

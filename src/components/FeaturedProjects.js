@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./FeaturedProjects.css"; // Your custom styles
+import "./FeaturedProjects.css";
 
 const FeaturedProjects = () => {
   // Dummy data for projects
@@ -99,7 +99,7 @@ const SampleNextArrow = (props) => {
       >
         <path
           d="M8 4L16 12L8 20"
-          stroke="#233876" /* Match the color from your design */
+          stroke="#262628"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -123,7 +123,7 @@ const SamplePrevArrow = (props) => {
       >
         <path
           d="M16 4L8 12L16 20"
-          stroke="#233876" /* Match the color from your design */
+          stroke="#262628"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"

@@ -1,11 +1,9 @@
-/* MainServicesSection.css */
-
 .main-services-section {
   background-image: url("../../public/images/services2.webp");
-  background-size: cover; /* Ensure the image covers the whole section */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-  height: 45vh; /* Adjust the height as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 45vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,11 +15,10 @@
 .main-services-section-heading {
   font-size: 1.75rem;
   font-weight: bold;
-  color: #f3f3f5; /* Dark blue color */
-  z-index: 2; /* Ensure the text is above the background */
+  color: #f3f3f5;
+  z-index: 2;
 }
 
-/* Optional: Overlay effect for better text readability */
 .main-services-section::before {
   content: "";
   position: absolute;

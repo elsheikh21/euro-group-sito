@@ -1,5 +1,5 @@
 import React from "react";
-import "./ContentSection.css"; // Import the CSS file for custom styles
+import "./ContentSection.css";
 
 const ContentSection = () => {
   return (

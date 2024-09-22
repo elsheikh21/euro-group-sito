@@ -1,8 +1,7 @@
 import React from "react";
-import "./LeadershipSection.css"; // Import the CSS file for custom styles
+import "./LeadershipSection.css";
 
 const LeadershipSection = () => {
-  // Dummy data for the leadership team
   const leaders = [
     {
       name: "Ibrahim Mourad",

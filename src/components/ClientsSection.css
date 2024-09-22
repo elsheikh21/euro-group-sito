@@ -1,14 +1,13 @@
-/* Clients Section Styles */
 .clients-section {
   text-align: center;
   padding: 40px 20px;
-  background-color: #262628; /* Dark background color to match the palette */
-  color: #f3f3f5; /* White text color */
+  background-color: #262628;
+  color: #f3f3f5;
 }
 
 .clients-section-title {
   font-size: 1.75rem;
-  color: #f3f3f5; /* White color for the title */
+  color: #f3f3f5;
   margin-bottom: 3.25rem;
   font-weight: bold;
 }
@@ -19,8 +18,8 @@
 
 .clients-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columns per row */
-  grid-template-rows: repeat(3, auto); /* 3 rows */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, auto);
   gap: 10px;
   height: 100%;
   justify-items: center;
@@ -31,44 +30,43 @@
   max-width: 100%;
   height: auto;
   display: block;
-  background-color: transparent; /* No background color around logos */
-  filter: grayscale(100%); /* Apply black and white filter */
-  box-shadow: none; /* Remove any shadow around logos */
-  border-radius: 0; /* No border radius */
+  background-color: transparent;
+  filter: grayscale(100%);
+  box-shadow: none;
+  border-radius: 0;
 }
 .client-logo img:hover {
-  filter: grayscale(0%); /* Apply black and white filter */
+  filter: grayscale(0%);
 }
 
-/* Slick Carousel custom styles for arrows */
 .slick-prev,
 .slick-next {
   width: 40px;
   height: 40px;
   z-index: 1;
-  background-color: transparent; /* Transparent background to match the example */
-  border: none; /* No border */
-  color: #f3f3f5; /* White color for the arrow */
+  background-color: transparent;
+  border: none;
+  color: #f3f3f5;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: none; /* Remove any box shadow */
+  box-shadow: none;
 }
 
 .slick-prev:before,
 .slick-next:before {
-  color: #f3f3f5; /* White color for arrows */
+  color: #f3f3f5;
   font-size: 24px;
-  content: ""; /* Override the default content */
+  content: "";
   display: block;
 }
 
 .slick-prev:before {
-  content: ""; /* Left arrow */
+  content: "";
 }
 
 .slick-next:before {
-  content: ""; /* Right arrow */
+  content: "";
 }
 
 @media (min-width: 769px) {
@@ -82,25 +80,23 @@
 }
 
 .slick-dots li {
-  margin: 0 5px; /* Add some space between each rectangle */
+  margin: 0 5px;
 }
 
-/* Style for the dots in an inactive state (small rectangles) */
 .slick-dots li button:before {
   content: "";
-  width: 20px; /* Adjust the width of the rectangle */
-  height: 4px; /* Adjust the height for a rectangular shape */
-  background-color: #cccccc; /* Light gray color for rectangles */
+  width: 20px;
+  height: 4px;
+  background-color: #cccccc;
   display: block;
-  border-radius: 2px; /* Make the corners slightly rounded */
-  transition: background-color 0.3s ease; /* Smooth color transition */
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
 }
 
-/* Style for the active rectangle */
 .slick-dots li.slick-active button:before {
-  background-color: #ffffff; /* White color for the active rectangle */
-  width: 25px; /* Slightly wider for the active state */
-  height: 4px; /* Same height as inactive */
-  border-radius: 2px; /* Keep the slight rounding */
-  transition: background-color 0.3s ease, width 0.3s ease; /* Smooth color and size transition */
+  background-color: #ffffff;
+  width: 25px;
+  height: 4px;
+  border-radius: 2px;
+  transition: background-color 0.3s ease, width 0.3s ease;
 }

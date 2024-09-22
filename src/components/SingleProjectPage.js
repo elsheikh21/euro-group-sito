@@ -1,8 +1,6 @@
-// src/components/SingleProjectPage.js
-
 import React from "react";
 import { useParams } from "react-router-dom";
-import "./SingleProjectPage.css"; // Import CSS specific to this component
+import "./SingleProjectPage.css";
 
 // Dummy data for projects (use actual data or fetch from a backend)
 const projects = [

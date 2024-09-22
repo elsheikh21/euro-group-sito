@@ -1,5 +1,3 @@
-// src/components/MainProjectSection.js
-
 import React from "react";
 import "./MainProjectSection.css";
 

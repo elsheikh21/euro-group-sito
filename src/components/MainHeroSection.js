@@ -1,7 +1,5 @@
-// src/components/MainHeroSection.js
-
 import React from "react";
-import "./MainHeroSection.css"; // Import CSS specific to this component
+import "./MainHeroSection.css";
 
 const MainHeroSection = () => {
   return (

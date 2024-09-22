@@ -1,5 +1,5 @@
 import React from "react";
-import "./ServicesSection.css"; // Import the CSS file for custom styles
+import "./ServicesSection.css";
 
 const ServicesSection = () => {
   const yearsOfExperience = new Date().getFullYear() - 2003;

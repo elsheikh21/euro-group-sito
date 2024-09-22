@@ -1,5 +1,3 @@
-/* SingleProjectPage.css */
-
 .project-page {
   width: 100%;
   margin: 0 auto;
@@ -7,27 +5,27 @@
 }
 
 .project-main-image {
-  background-size: cover; /* Change to 'cover' for full image coverage */
+  background-size: cover;
   background-position: center;
   height: 60vh;
   position: relative;
   display: flex;
-  align-items: flex-end; /* Aligns the overlay content to the bottom */
-  justify-content: flex-start; /* Aligns content to the left */
+  align-items: flex-end;
+  justify-content: flex-start;
 }
 
 .project-main-overlay {
-  background-color: rgba(38, 38, 40, 0.1); /* Lighter gray overlay */
+  background-color: rgba(38, 38, 40, 0.1);
   padding: 20px;
-  text-align: left; /* Align text to the left */
+  text-align: left;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Pushes content to the bottom */
+  justify-content: flex-end;
   position: absolute;
-  bottom: 0; /* Ensures overlay stays at the bottom */
-  left: 0; /* Aligns the overlay to the left */
+  bottom: 0;
+  left: 0;
 }
 
 .project-title {
@@ -54,14 +52,14 @@
 }
 
 .project-info-left {
-  flex: 0 0 65%; /* Takes up 2/3 of the width */
+  flex: 0 0 65%;
   padding: 20px;
   text-align: left;
   padding-left: 5rem;
 }
 
 .project-info-right {
-  flex: 1; /* Takes up 1/3 of the width */
+  flex: 1;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -78,7 +76,7 @@
 
 .info-item i {
   font-size: 2rem;
-  color: #19258b; /* Icon color */
+  color: #19258b;
 }
 
 .project-info-left h2,
@@ -94,22 +92,22 @@
 }
 
 .project-info-left ul {
-  list-style-type: none; /* Removes default bullets */
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
 .project-info-left ul li {
   margin-bottom: 5px;
-  padding-left: 20px; /* Space for custom bullets or icons */
+  padding-left: 20px;
   position: relative;
 }
 
 .project-info-left ul li::before {
-  content: "•"; /* Custom bullet */
+  content: "•";
   position: absolute;
   left: 0;
-  color: #19258b; /* Bullet color */
+  color: #19258b;
 }
 
 .project-images-section {
@@ -122,14 +120,14 @@
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Wrap images on smaller screens */
+  flex-wrap: wrap;
 }
 
 .project-images-row {
-  display: flex; /* Align images side by side */
-  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
-  gap: 15px; /* Reduce gap between images to 15px (adjustable) */
-  justify-content: center; /* Center the images horizontally */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
@@ -156,36 +154,35 @@
   overflow-x: auto;
   gap: 20px;
   padding: 10px 0;
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .related-projects-carousel::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
+  display: none;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .project-info-section {
-    flex-direction: column; /* Stack columns on smaller screens */
+    flex-direction: column;
     padding: 20px 0;
   }
 
   .project-info-left,
   .project-info-right {
-    min-width: 100%; /* Ensure columns take full width on small screens */
+    min-width: 100%;
     margin-bottom: 20px;
     padding-left: 20px;
   }
 
   .project-main-overlay {
-    width: 100%; /* Ensure overlay text stays within screen width */
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .project-title {
-    font-size: 1.8rem; /* Reduce font size for very small screens */
+    font-size: 1.8rem;
   }
 
   .single-project-location {
@@ -196,12 +193,12 @@
 .project-info-section {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Aligns the sections to the top */
+  align-items: flex-start;
   padding: 40px 0;
-  background-color: #f3f3f5; /* Light gray background */
-  position: relative; /* Relative positioning for the pseudo-element */
-  box-sizing: border-box; /* Ensure padding doesn't affect the overall width/height */
-  margin: 0; /* Ensure no extra margin */
+  background-color: #f3f3f5;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .project-info-section::after {
@@ -211,12 +208,12 @@
   right: 0;
   width: 0;
   height: 0;
-  border-left: 140px solid transparent; /* Create the cutout using borders */
-  border-bottom: 140px solid #f3f3f5; /* Make the triangle cutout the same color as the background (white) */
+  border-left: 140px solid transparent;
+  border-bottom: 140px solid #f3f3f5;
 }
 
 .project-info-left {
-  flex: 0 0 60%; /* Left section takes 60% */
+  flex: 0 0 60%;
   padding-right: 40px;
   font-size: 1.15rem;
   color: #262628;
@@ -229,24 +226,24 @@
 }
 
 .project-info-left ul {
-  list-style: none; /* Remove default bullet points */
+  list-style: none;
   padding: 0;
 }
 
 .project-info-left ul li {
   position: relative;
-  padding-left: 25px; /* Space for the custom bullet */
+  padding-left: 25px;
 }
 
 .project-info-left ul li::before {
-  content: "•"; /* Custom bullet point */
+  content: "•";
   position: absolute;
   left: 0;
-  color: #19258b; /* Midnight blue color for bullet points */
+  color: #19258b;
 }
 
 .project-info-right {
-  flex: 0 0 35%; /* Right section takes 35% */
+  flex: 0 0 35%;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -259,19 +256,18 @@
 }
 
 .info-item i {
-  color: #19258b; /* Midnight blue for icons */
+  color: #19258b;
 }
 
 .info-item span:first-of-type {
   margin-left: 10px;
-  color: #19258b; /* Midnight blue for the key info (Client, Service, Sector) */
+  color: #19258b;
 }
 
 .project-info-right .info-item span:nth-of-type(2) {
   color: #262628;
 }
 
-/* Optional: Ensure spacing and responsiveness */
 @media (max-width: 768px) {
   .project-info-section {
     flex-direction: column;
@@ -290,58 +286,57 @@
 }
 
 .info-icon {
-  width: 40px; /* Adjust the size of the icons */
-  height: auto; /* Maintain aspect ratio */
+  width: 40px;
+  height: auto;
 }
 
 .info-item span:first-of-type {
   font-weight: bold;
-  color: #19258b; /* Midnight blue */
+  color: #19258b;
 }
 .info-item {
   display: flex;
-  flex-direction: column; /* Stack the icon, label, and value vertically */
-  align-items: flex-start; /* Align all items to the left */
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .info-icon {
-  width: 40px; /* Adjust the size of the icons */
-  height: auto; /* Maintain aspect ratio */
+  width: 40px;
+  height: auto;
 }
 
 .info-item span {
   font-weight: bold;
-  color: #19258b; /* Midnight blue for the category labels */
+  color: #19258b;
 }
-
 
 .service-list {
-  color: #262628; /* Dark gray for the values */
+  color: #262628;
 }
 
 .info-item {
   display: flex;
-  flex-direction: column; /* Stack icon, label, and value vertically */
-  gap: 0; /* Space between the elements */
-  align-items: flex-start; /* Align all items to the left */
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
 }
 
 .info-icon {
-  width: 40px; /* Adjust the size of the icons */
-  height: auto; /* Maintain aspect ratio */
+  width: 40px;
+  height: auto;
 }
 
 .info-item span {
   font-weight: bold;
-  color: #19258b; /* Midnight blue for the category labels */
-  text-align: left; /* Ensure the text is aligned to the left */
+  color: #19258b;
+  text-align: left;
 }
 
 .portrait-project-image img {
-  width: auto; /* Let the width adjust automatically */
-  height: 100%; /* Set height to fill the container */
-  object-fit: cover; /* Crop the image to fill the space */
-  aspect-ratio: 3 / 4; /* Portrait aspect ratio */
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
   display: block;
-  margin: 0 auto; /* Center align the image */
+  margin: 0 auto;
 }

@@ -1,7 +1,5 @@
-// src/components/OurStoryAbout.js
-
 import React from "react";
-import "./OurStoryAbout.css"; // Import CSS specific to this component
+import "./OurStoryAbout.css";
 
 const OurStoryAbout = () => {
   return (

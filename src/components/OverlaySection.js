@@ -1,5 +1,5 @@
 import React from "react";
-import "./OverlaySection.css"; // Import the CSS file for custom styles
+import "./OverlaySection.css";
 import { Link } from "react-router-dom";
 
 const OverlaySection = () => {

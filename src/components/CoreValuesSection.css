@@ -1,25 +1,23 @@
-/* CoreValuesSection.css */
-
 .core-values-section {
   padding: 60px 20px;
   text-align: center;
-  background-color: #f3f3f5; /* Light gray background */
+  background-color: #f3f3f5;
 }
 
 .section-title {
   font-size: 1.75rem;
   font-weight: bold;
-  color: #262628; /* Dark blue color */
+  color: #262628;
   margin-bottom: 3.25rem;
 }
 
 .core-values-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   justify-items: center;
   max-width: 1200px;
-  margin: 0 auto; /* Center the grid */
+  margin: 0 auto;
 }
 
 .core-value-item {
@@ -38,30 +36,23 @@
 
 .core-value-description {
   font-size: 1rem;
-  color: #262628; /* Description color */
+  color: #262628;
   line-height: 1.6;
-  max-width: 220px; /* Limit the width of the description */
+  max-width: 220px;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .core-values-grid {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* 2 columns per row on smaller screens */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .core-values-grid {
-    grid-template-columns: repeat(
-      1,
-      1fr
-    ); /* 1 column per row on very small screens */
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .section-title {
-    font-size: 1.8rem; /* Adjust font size for smaller screens */
+    font-size: 1.8rem;
   }
 }

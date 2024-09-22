@@ -1,5 +1,5 @@
 import React from "react";
-import "./HighlightSection.css"; // Import the CSS file for custom styles
+import "./HighlightSection.css";
 
 const HighlightSection = () => {
   return (

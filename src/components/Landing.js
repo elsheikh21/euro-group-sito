@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./Landing.css"; // Import custom styles for the landing component
+import "./Landing.css";
 
 const Landing = () => {
   return (
@@ -19,7 +19,6 @@ const Landing = () => {
               <div className="carousel-content">
                 <h2>Engineering Consultancy</h2>
                 <h1>Delivering Excellence.</h1>
-                {/* <p>Get in touch with our experts for unmatched engineering solutions.</p> */}
                 <Link to="/About" className="btn btn-primary">
                   About Us
                 </Link>
@@ -33,14 +32,13 @@ const Landing = () => {
           <div className="carousel-image">
             <img
               className="d-block w-100"
-              src="../images/carousel3.webp" // Replace with your actual image path
+              src="../images/carousel3.webp"
               alt="Second slide"
             />
             <div className="carousel-overlay">
               <div className="carousel-content">
                 <h2>Engineering Consultancy</h2>
                 <h1>Providing diversified solutions.</h1>
-                {/* <p>Innovative designs for a sustainable and secure future.</p> */}
                 <Link to="/Services" className="btn btn-primary">
                   Our Services
                 </Link>
@@ -54,14 +52,13 @@ const Landing = () => {
           <div className="carousel-image">
             <img
               className="d-block w-100"
-              src="../images/carousel4.webp" // Replace with your actual image path
+              src="../images/carousel4.webp"
               alt="Third slide"
             />
             <div className="carousel-overlay">
               <div className="carousel-content">
                 <h2>Engineering Consultancy</h2>
                 <h1>Creating Reality.</h1>
-                {/* <p>Delivering impactful solutions to clients worldwide.</p> */}
                 <Link to="/Projects" className="btn btn-primary">
                   Our Projects
                 </Link>{" "}
@@ -75,14 +72,13 @@ const Landing = () => {
           <div className="carousel-image">
             <img
               className="d-block w-100"
-              src="../images/carousel5.webp" // Replace with your actual image path
+              src="../images/carousel5.webp"
               alt="First slide"
             />
             <div className="carousel-overlay">
               <div className="carousel-content">
                 <h2>Engineering Consultancy</h2>
                 <h1>Delivering Excellence.</h1>
-                {/* <p>Get in touch with our experts for unmatched engineering solutions.</p> */}
                 <Link to="/Contact" className="btn btn-primary">
                   Contact Us
                 </Link>{" "}
@@ -103,7 +99,6 @@ const Landing = () => {
               <div className="carousel-content">
                 <h2>Engineering Consultancy</h2>
                 <h1>Creating Opportunities.</h1>
-                {/* <p>Get in touch with our experts for unmatched engineering solutions.</p> */}
                 <Link to="/Careers" className="btn btn-primary">
                   Join Us
                 </Link>{" "}

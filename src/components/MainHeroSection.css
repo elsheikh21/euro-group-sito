@@ -1,13 +1,11 @@
-/* MainHeroSection.css */
-
 .hero-section {
   position: relative;
   width: 100%;
-  height: 60vh; /* Adjust the height based on your design */
-  background-image: url("../../public/images/about-hero.webp"); /* Replace with your actual image */
+  height: 60vh;
+  background-image: url("../../public/images/about-hero.webp");
   background-size: cover;
   background-position: center;
-  z-index: 1; /* Ensure it is under the overlapping elements */
+  z-index: 1;
 }
 
 .overlay {
@@ -16,7 +14,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent gray overlay */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,19 +24,18 @@
   color: #f3f3f5;
   font-size: 2.5rem;
   text-align: center;
-  z-index: 2; /* Ensure it is above the background */
+  z-index: 2;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .overlay h1 {
-    font-size: 2rem; /* Adjust title size for smaller screens */
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
   .overlay h1 {
-    font-size: 1.5rem; /* Further adjust title size */
+    font-size: 1.5rem;
     padding: 0 0.5rem;
   }
 }

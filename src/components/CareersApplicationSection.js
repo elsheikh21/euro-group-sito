@@ -1,5 +1,5 @@
 import React from "react";
-import "./CareersApplicationSection.css"; // Import the CSS for this component
+import "./CareersApplicationSection.css";
 
 const CareersApplicationSection = () => {
   return (

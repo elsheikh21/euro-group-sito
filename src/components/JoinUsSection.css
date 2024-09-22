@@ -1,25 +1,23 @@
-/* Container for multiple Join Us sections */
 .join-us-container {
   display: flex;
   flex-direction: column;
-  background-color: #f3f3f5; /* Matches the overall style */
+  background-color: #f3f3f5;
   margin-top: 120px;
 }
 
-/* Styles for individual Join Us section */
 .join-us-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f3f3f5; /* Light gray background */
-  flex-wrap: wrap; /* Allows wrapping for responsiveness */
+  background-color: #f3f3f5;
+  flex-wrap: wrap;
 }
 
 .join-us-image {
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  position: relative; /* Ensure the pseudo-element is positioned relative to the image container */
+  position: relative;
 }
 
 .join-us-image::before {
@@ -29,9 +27,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(38, 38, 40, 0.7); /* RGBA for 80% transparency */
-  z-index: 3; /* Ensure it covers the image */
-  pointer-events: none; /* Allow interaction with the image if needed */
+  background-color: rgba(38, 38, 40, 0.7);
+  z-index: 3;
+  pointer-events: none;
 }
 
 .join-us-image img {
@@ -41,7 +39,7 @@
 
 .join-us-content {
   flex: 1;
-  /* Remove left padding */
+
   text-align: center;
 }
 
@@ -61,30 +59,28 @@
 }
 
 .join-us-button {
-  padding: 10px 30px; /* Increased padding for a wider button */
-  background-color: #19258b; /* Transparent background */
-  color: #f3f3f5; /* White text */
+  padding: 10px 30px;
+  background-color: #19258b;
+  color: #f3f3f5;
   font-weight: 600;
-  border-radius: 50px; /* Full rounded corners (pill-shaped) */
+  border-radius: 50px;
   border: 0px solid transparent;
-  font-size: 1rem; /* Adjust font size */
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Smooth transition */
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
 .join-us-button:hover {
-  background-color: transparent; /* Light white background on hover */
-  color: #19258b; /* Keep text white */
-  border: 2px solid #19258b; /* Full opaque border on hover */
+  background-color: transparent;
+  color: #19258b;
+  border: 2px solid #19258b;
 }
 
-/* Reversed Layout for the second Join Us section */
 .reverse-layout {
-  flex-direction: row-reverse; /* Reverses the order of the image and content */
-  text-align: left; /* Align text to the left for reversed section */
+  flex-direction: row-reverse;
+  text-align: left;
 }
 
-/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
   .join-us-section {
     flex-direction: column;

@@ -1,4 +1,3 @@
-// src/App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
@@ -9,8 +8,8 @@ import Projects from "./pages/Projects";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
-import SingleProjectPage from "./components/SingleProjectPage"; // Import the ScrollToTopButton component
-import ScrollToTopButton from "./components/ScrollToTopButton"; // Import the ScrollToTopButton component
+import SingleProjectPage from "./components/SingleProjectPage";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";

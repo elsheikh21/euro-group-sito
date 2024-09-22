@@ -1,29 +1,27 @@
-/* OurStoryAbout.css */
-
 .our-story-section {
   padding: 40px 20px;
-  background-color: #f5f5f5; /* Light gray background */
+  background-color: #f5f5f5;
   text-align: center;
-  margin-top: -100px; /* Negative margin to overlap hero section */
+  margin-top: -100px;
   position: relative;
-  z-index: 2; /* Bring it above the hero section */
+  z-index: 2;
 }
 
 .story-box {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 50px;
-  background-color: #fff; /* White background for the story box */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
-  text-align: center; /* Center-align text within the box */
+  text-align: center;
   position: relative;
-  z-index: 3; /* Ensure it appears above the hero section */
+  z-index: 3;
   margin-top: -5rem;
 }
 
 .story-box h2 {
-  color: #262628; /* Title color */
+  color: #262628;
   font-size: 1.75rem;
   margin-bottom: 3.25rem;
   font-weight: bold;
@@ -47,21 +45,21 @@
   font-style: italic;
   margin: 30px auto;
   max-width: 700px;
-  text-align: center; /* Center-align the text */
-  background: none; /* Remove the overlay/background */
+  text-align: center;
+  background: none;
   padding: 20px;
   border-radius: 8px;
   position: relative;
-  z-index: 3; /* Ensure it appears above the hero section */
+  z-index: 3;
 }
 
 .quote::before,
 .quote::after {
-  content: '"'; /* Add double quote character */
-  font-size: 6.5rem; /* Increased size of quotes */
-  color: rgba(38, 38, 40, 0.3); /* Light gray color for quotes */
+  content: '"';
+  font-size: 6.5rem;
+  color: rgba(38, 38, 40, 0.3);
   position: absolute;
-  font-family: "Arial", sans-serif; /* Ensure font matches the content */
+  font-family: "Arial", sans-serif;
 }
 
 .quote::before {
@@ -70,8 +68,8 @@
 }
 
 .quote::after {
-  right: -30px; /* Adjust positioning for larger size */
-  bottom: -75px; /* Adjust vertical alignment for larger size */
+  right: -30px;
+  bottom: -75px;
 }
 
 @media (max-width: 768px) {

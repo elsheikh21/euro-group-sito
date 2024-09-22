@@ -1,82 +1,78 @@
-/* ContentSection.css */
-
 .content-section {
-  background-color: #f5f5f5; /* Light gray background to match overall style */
-  padding: 40px 20px; /* Padding for spacing */
+  background-color: #f5f5f5;
+  padding: 40px 20px;
 }
 
 .content-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px; /* Space between rows */
-  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .content-image {
-  flex: 1; /* Image takes half of the row */
-  padding: 20px; /* Padding around the image */
+  flex: 1;
+  padding: 20px;
 }
 
 .content-image img {
-  width: 100%; /* Make the image take full width */
-  height: auto; /* Set height to maintain aspect ratio */
+  width: 100%;
+  height: auto;
   display: block;
-  object-fit: cover; /* Crop the image to fill the space */
-  aspect-ratio: 6 / 4; /* Maintain a 16:9 aspect ratio for a horizontal rectangle */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Shadow effect for the image */
+  object-fit: cover;
+  aspect-ratio: 6 / 4;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Specific style for the second row image to align right */
 .content-image.right-aligned {
-  order: 2; /* Force the image to be the last in the flex order for the second row */
+  order: 2;
 }
 
 .content-text {
-  flex: 1; /* Text takes half of the row */
-  padding: 20px; /* Padding around the text */
-  color: #333; /* Dark text color */
-  font-family: "Arial", sans-serif; /* Font style matching the overall theme */
+  flex: 1;
+  padding: 20px;
+  color: #333;
+  font-family: "Arial", sans-serif;
 }
 
 .content-text h3 {
-  font-size: 1.5rem; /* Heading size */
-  font-weight: 700; /* Bold font for heading */
-  margin-bottom: 10px; /* Space below heading */
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .content-text p {
-  font-size: 1.15rem; /* Paragraph text size */
-  font-weight: 300; /* Light font weight for paragraph */
-  line-height: 1.6; /* Line height for better readability */
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.6;
 }
 
-/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
   .content-row {
-    flex-direction: column; /* Stack the image and text vertically */
-    align-items: center; /* Center align for vertical stacking */
+    flex-direction: column;
+    align-items: center;
   }
 
   .content-image,
   .content-text {
-    width: 90%; /* Make content fit within the viewport width */
-    padding: 10px; /* Reduce padding on smaller screens */
+    width: 90%;
+    padding: 10px;
   }
 
   .content-image.right-aligned {
-    order: unset; /* Reset the order for better stacking on small screens */
+    order: unset;
   }
 
   .content-text {
-    text-align: center; /* Center align text for better appearance on mobile */
+    text-align: center;
   }
 
   .content-text h3 {
-    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    font-size: 1.2rem;
   }
 
   .content-text p {
-    font-size: 0.9rem; /* Adjust paragraph text size for smaller screens */
+    font-size: 0.9rem;
   }
 }

@@ -1,48 +1,46 @@
-/* Certificates Section Styles */
 .certificates-section {
   text-align: center;
   padding: 120px 20px;
-  background-color: #fff; /* White background */
+  background-color: #fff;
 }
 
 .certificates-title {
   font-size: 1.75rem;
   font-weight: bold;
-  color: #262628; /* Black text color */
+  color: #262628;
   margin-bottom: 3.25rem;
-  text-align: center; /* Center the title */
+  text-align: center;
 }
 
 .certificates-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px; /* Space between the certificate items */
-  flex-wrap: wrap; /* Allows the items to wrap on smaller screens */
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .certificate-item {
-  flex: 1 1 200px; /* Flex-grow, flex-shrink, and base size for responsiveness */
+  flex: 1 1 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 200px; /* Ensures all certificates are the same width */
+  max-width: 200px;
 }
 
 .certificate-image {
-  width: 100%; /* Makes sure the image takes full width of its container */
-  height: auto; /* Keeps aspect ratio intact */
+  width: 100%;
+  height: auto;
   display: block;
 }
 
-/* Responsive Styles for Mobile View */
 @media (max-width: 768px) {
   .certificates-container {
-    flex-direction: column; /* Stack items vertically on smaller screens */
+    flex-direction: column;
   }
 
   .certificate-item {
-    max-width: 100%; /* Allows full width on smaller screens */
-    margin-bottom: 20px; /* Adds space between items */
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 }

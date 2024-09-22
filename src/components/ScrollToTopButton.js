@@ -5,7 +5,6 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show button when page is scrolled down
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
@@ -20,7 +19,6 @@ const ScrollToTopButton = () => {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
-  // Scroll to top when button is clicked
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

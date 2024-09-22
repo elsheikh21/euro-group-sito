@@ -1,6 +1,6 @@
 .careers-application-section {
   padding: 60px 20px;
-  background-color: #f3f3f5; /* Light gray background */
+  background-color: #f3f3f5;
   text-align: center;
 }
 
@@ -11,12 +11,12 @@
 
 .application-container h2 {
   font-size: 1.8rem;
-  color: #19258b; /* Midnight blue */
+  color: #19258b;
   margin-bottom: 20px;
 }
 
 .application-container p {
   font-size: 1.15rem;
-  color: #333; /* Dark text */
+  color: #333;
   margin-bottom: 40px;
 }

@@ -1,8 +1,6 @@
-// src/components/ClientsSection.js
-
 import React from "react";
 import Slider from "react-slick";
-import "./ClientsSection.css"; // Import CSS specific to this component
+import "./ClientsSection.css";
 
 const ClientsSection = () => {
   // Sample list of client logos - Replace the image URLs with the actual logo URLs you have
@@ -29,7 +27,6 @@ const ClientsSection = () => {
     "https://picsum.photos/175/175?random=20",
     "https://picsum.photos/175/175?random=21",
   ];
-  // Custom Next Arrow
   const NextArrow = (props) => {
     const { onClick } = props;
     return (
@@ -52,7 +49,6 @@ const ClientsSection = () => {
     );
   };
 
-  // Custom Prev Arrow
   const PrevArrow = (props) => {
     const { onClick } = props;
     return (
@@ -79,7 +75,7 @@ const ClientsSection = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1, // Show one slide at a time
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,

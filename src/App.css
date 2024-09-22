@@ -45,29 +45,27 @@ body {
   }
 }
 
-/* App.css */
-
 .scroll-to-top {
   position: fixed;
   bottom: 40px;
   right: 40px;
   width: 40px;
   height: 40px;
-  background-color: #2e3b84; /* Background color */
+  background-color: #2e3b84;
   color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
-  transition: opacity 0.3s ease-in-out; /* Smooth transition */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease-in-out;
 }
 
 .scroll-to-top:hover {
-  background-color: #1a1f5c; /* Darker background on hover */
+  background-color: #1a1f5c;
 }
 
 .scroll-to-top svg {
-  font-size: 20px; /* Adjust the size of the arrow icon */
+  font-size: 20px;
 }

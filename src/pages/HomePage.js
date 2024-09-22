@@ -9,7 +9,6 @@ import JoinUsSection from "../components/JoinUsSection";
 const HomePage = () => {
   return (
     <>
-      {/* Main page content */}
       <Landing />
       <HighlightSection />
       <OverlaySection />

@@ -1,5 +1,5 @@
 import React from "react";
-import "./CareersHeroSection.css"; // Import the CSS for this component
+import "./CareersHeroSection.css";
 
 const CareersHeroSection = () => {
   return (
