@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ReactPaginate from "react-paginate"; // Import react-paginate
 import "./ProjectsSection.css";
 
 const services = [
@@ -134,12 +135,14 @@ const ProjectsSection = () => {
   const navigate = useNavigate();
   const [selectedService, setSelectedService] = useState("all");
   const [selectedSector, setSelectedSector] = useState(null);
-  const [visibleProjectsCount, setVisibleProjectsCount] = useState(9);
+  const [pageNumber, setPageNumber] = useState(0); // New state for pagination
+  const projectsPerPage = 9; // Define how many projects per page
 
   // Handle service filter click
   const handleServiceClick = (serviceId) => {
     setSelectedService(serviceId);
     setSelectedSector(null); // Reset sector filter when changing service
+    setPageNumber(0); // Reset to first page when filters change
   };
 
   // Filter projects based on selected service and sector
@@ -149,6 +152,19 @@ const ProjectsSection = () => {
         selectedService === "all" || project.service === selectedService
     )
     .filter((project) => !selectedSector || project.sector === selectedSector);
+
+  // Pagination logic
+  const pagesVisited = pageNumber * projectsPerPage;
+  const displayProjects = filteredProjects.slice(
+    pagesVisited,
+    pagesVisited + projectsPerPage
+  );
+
+  const pageCount = Math.ceil(filteredProjects.length / projectsPerPage);
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
 
   // Extract unique sectors from projects for secondary filter (only for 'sectors')
   const sectors = [
@@ -162,7 +178,7 @@ const ProjectsSection = () => {
   return (
     <section className="projects-section">
       {/* Primary Service Filters */}
-      <div className="filters mb-60">
+      <div className="filters">
         {services.map((service) => (
           <button
             key={service.id}
@@ -198,7 +214,7 @@ const ProjectsSection = () => {
 
       {/* Projects Grid */}
       <div className="projects-grid">
-        {filteredProjects.slice(0, visibleProjectsCount).map((project) => (
+        {displayProjects.map((project) => (
           <div
             key={project.id}
             className="project-card"
@@ -215,17 +231,21 @@ const ProjectsSection = () => {
         ))}
       </div>
 
-      {/* Load More Button */}
-      {visibleProjectsCount < filteredProjects.length && (
-        <div className="load-more">
-          <button
-            className="load-more-button"
-            onClick={() => setVisibleProjectsCount(visibleProjectsCount + 6)}
-          >
-            Load More
-          </button>
-        </div>
-      )}
+      {/* Pagination Component */}
+      <ReactPaginate
+        previousLabel={"<"}
+        nextLabel={">"}
+        pageCount={pageCount}
+        onPageChange={changePage}
+        containerClassName={"pagination-container"}
+        previousLinkClassName={"pagination-link"}
+        nextLinkClassName={"pagination-link"}
+        disabledClassName={"pagination-disabled"}
+        activeClassName={"pagination-active"}
+        pageClassName={"page-number"}
+        pageLinkClassName={"page-number"}
+        activeLinkClassName={"page-number-active"}
+      />
     </section>
   );
 };

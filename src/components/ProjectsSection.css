@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   justify-content: center;
   background-color: #e0e0e0; /* Gray background for filters */
-  padding: 10px;
+  padding: 0 10px;
   border-radius: 5px; /* Optional: Rounded corners for the filter bar */
   font-size: 1.15rem;
 }
@@ -48,7 +48,7 @@
   flex-wrap: wrap;
   justify-content: center;
   background-color: #e0e0e0; /* Gray background for filters */
-  padding: 10px;
+  padding: 0 10px;
   border-radius: 5px; /* Optional: Rounded corners for the filter bar */
   font-size: 1.15rem;
 }
@@ -230,4 +230,67 @@
 
 .filters::-webkit-scrollbar-thumb:hover {
   background-color: #333; /* Color on hover */
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center the page numbers */
+  margin: 3.5rem 1rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.pagination-link {
+  background-color: #64686c; /* Gray background */
+  color: #fff; /* White text color */
+  border: none; /* Remove border */
+  padding: 12px; /* Equal padding for a more circular shape */
+  font-size: 1rem; /* Font size for consistency */
+  font-weight: normal; /* Regular text weight for non-active buttons */
+  border-radius: 50%; /* Full circle */
+  width: 45px; /* Fixed width for a perfect circle */
+  height: 45px; /* Fixed height for a perfect circle */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin: 0 8px; /* Space between pagination items */
+  transition: all 0.3s ease; /* Smooth transition for hover */
+  text-align: center;
+  display: flex; /* Flexbox to center the text */
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+  text-decoration: none; /* Remove underline */
+}
+
+.pagination-link:hover {
+  background-color: #505357; /* Darker shade on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.pagination-active .pagination-link {
+  background-color: #19258b; /* Active button background (midnight blue) */
+  color: #fff; /* Keep text white */
+  font-weight: bold; /* Bold text for the active page */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Strong shadow for active state */
+}
+
+.pagination-disabled .pagination-link {
+  background-color: #b0b0b0; /* Gray color for disabled state */
+  color: #fff; /* White text for disabled */
+  opacity: 0.6; /* Slightly faded */
+  cursor: not-allowed; /* Disabled cursor */
+}
+
+.page-number {
+  font-size: 1.15rem; /* Slightly larger font size for numbers */
+  margin: 0 0.5rem; /* Spacing around the page numbers */
+  color: #262628; /* Dark gray for page numbers */
+  text-decoration: none;
+}
+
+.page-number-active {
+  font-weight: bold; /* Bold for the active page number */
+  color: #19258b; /* Midnight blue for active page number */
+  font-size: 1.25rem; /* Slightly larger font size for numbers */
 }
