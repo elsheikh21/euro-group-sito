@@ -47,10 +47,6 @@
   flex-wrap: wrap;
 }
 
-.right-align {
-  text-align: right !important;
-}
-
 .no-margin-left {
   margin-left: 0 !important;
 }

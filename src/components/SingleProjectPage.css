@@ -133,15 +133,7 @@
   margin-bottom: 20px;
 }
 
-.project-image {
-  width: auto; /* Adjust width for two images per row considering gap */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover;
-  margin-bottom: 0; /* Remove bottom margin since images are side by side */
-}
-
-.project-image-main img,
-.project-image img {
+.project-image-main img {
   max-width: 100%;
   height: auto;
   box-shadow: 0 2px 5px rgba(38, 38, 40, 0.1);
@@ -172,31 +164,6 @@
   display: none; /* For Chrome, Safari, and Opera */
 }
 
-.related-project-card {
-  background-color: #f3f3f5;
-  border: 1px solid #f3f3f5;
-  padding: 10px;
-  text-align: center;
-  min-width: 200px;
-  box-shadow: 0 2px 5px rgba(38, 38, 40, 0.1);
-}
-
-.related-project-card img {
-  max-width: 100%;
-  height: auto;
-}
-
-.related-project-card h4 {
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 10px 0 5px;
-}
-
-.related-project-card p {
-  font-size: 0.9rem;
-  color: #262628;
-}
-
 /* Responsive Styles */
 @media (max-width: 768px) {
   .project-info-section {
@@ -223,10 +190,6 @@
 
   .single-project-location {
     font-size: 1rem;
-  }
-
-  .related-project-card {
-    min-width: 150px; /* Adjust card width for smaller screens */
   }
 }
 
@@ -351,7 +314,7 @@
   color: #19258b; /* Midnight blue for the category labels */
 }
 
-.info-value,
+
 .service-list {
   color: #262628; /* Dark gray for the values */
 }

@@ -197,7 +197,7 @@ const ProjectsSection = () => {
 
       {/* Secondary Sector Filters for "SECTORS" */}
       {selectedService === "sectors" && sectors.length > 0 && (
-        <div className="secondary-filters mb-30">
+        <div className="secondary-filters mb-60">
           {sectors.map((sector) => (
             <button
               key={sector}

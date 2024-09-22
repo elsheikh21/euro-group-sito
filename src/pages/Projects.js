@@ -9,7 +9,6 @@ const Projects = () => {
     <div>
       <MainProjectSection />
       <ProjectsSection />
-      {/* TODO: Pagination of projects instead of "LOAD MORE" functionality */}
     </div>
   );
 };
