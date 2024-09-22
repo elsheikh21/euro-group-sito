@@ -81,12 +81,26 @@
   }
 }
 
-/* Light gray color for dots */
-.slick-dots li button:before {
-  font-size: 12px;
-  color: #cccccc; /* Light gray color for dots */
+.slick-dots li {
+  margin: 0 5px; /* Add some space between each rectangle */
 }
 
+/* Style for the dots in an inactive state (small rectangles) */
+.slick-dots li button:before {
+  content: "";
+  width: 20px; /* Adjust the width of the rectangle */
+  height: 4px; /* Adjust the height for a rectangular shape */
+  background-color: #cccccc; /* Light gray color for rectangles */
+  display: block;
+  border-radius: 2px; /* Make the corners slightly rounded */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Style for the active rectangle */
 .slick-dots li.slick-active button:before {
-  color: #ffffff; /* White color for the active dot */
+  background-color: #ffffff; /* White color for the active rectangle */
+  width: 25px; /* Slightly wider for the active state */
+  height: 4px; /* Same height as inactive */
+  border-radius: 2px; /* Keep the slight rounding */
+  transition: background-color 0.3s ease, width 0.3s ease; /* Smooth color and size transition */
 }
