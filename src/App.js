@@ -9,6 +9,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
 import SingleProjectPage from "./components/SingleProjectPage";
+import SingleServicePage from "./components/SingleServicePage";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import NotFoundPage from "./components/404Page"; // Import the 404 page
 import "./App.css";
@@ -19,7 +20,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const App = () => {
   return (
-    /* TODO: Mostafa to check contents and images */
+    /* TODO: Update textual contents, and waiting for Images */
     <Router>
       <div className="App">
         <Header />
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/project/:projectId" element={<SingleProjectPage />} />
+          <Route path="/service/:serviceName" element={<SingleServicePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <ScrollToTopButton />
