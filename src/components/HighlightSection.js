@@ -1,5 +1,4 @@
 import React from "react";
-import { lazyload } from "react-lazyload";
 import "./HighlightSection.css";
 
 const HighlightSection = () => {
