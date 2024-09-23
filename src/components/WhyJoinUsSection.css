@@ -1,0 +1,58 @@
+.join-values-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f3f3f5;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #262628;
+  margin-bottom: 3.25rem;
+}
+
+.join-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.join-value-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.join-value-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.75rem 0;
+}
+
+.join-value-description {
+  font-size: 1rem;
+  color: #262628;
+  line-height: 1.6;
+  max-width: 220px;
+}
+
+@media (max-width: 768px) {
+  .join-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .join-values-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
