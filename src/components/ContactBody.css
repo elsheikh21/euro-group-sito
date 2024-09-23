@@ -81,6 +81,12 @@ textarea {
   text-align: left;
 }
 
+.phone-link,
+.location-link {
+  text-decoration: none;
+  color: #f3f3f5;
+}
+
 @media (max-width: 768px) {
   .contact-body {
     flex-direction: column;

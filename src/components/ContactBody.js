@@ -13,18 +13,21 @@ const ContactBody = () => {
       city: "Cairo, Egypt",
       address:
         "Office 701, 18 Badr Towers, Ring Road, New Maadi, P.O. Box 11742, Cairo, Egypt.",
+      address_maps: "https://maps.app.goo.gl/yFSZMM4NR1FPt1LTA",
       phone: "+202 23104085",
     },
     {
       city: "Riyadh, KSA",
       address:
         "Office 702 To 704 - 707, Al Nemr Center 1, Olaya Road, P.O. Box 286 588, Riyadh 11323, KSA.",
+      address_maps: "https://maps.app.goo.gl/BWxtKaQNE7CT1QnN6",
       phone: "+202 23104085",
     },
     {
       city: "Manama, Bahrain",
       address:
         "Office 402, Building 455, Euro Tower, Road 1010, Block 410, Sanabis Area, P.O. Box 66311, Manama, Bahrain.",
+      address_maps: "https://maps.app.goo.gl/BWxtKaQNE7CT1QnN6",
       phone: "+973 17508383",
     },
     {
@@ -113,11 +116,24 @@ const ContactBody = () => {
           <div key={index} className="location">
             <h3>{location.city}</h3>
             <p>
-              <i class="fas fa-map-marker-alt"></i> {location.address}
+              <i class="fas fa-map-marker-alt"></i>{" "}
+              <a
+                href={`https://maps.google.com/?q=${encodeURIComponent(
+                  location.address_maps
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="location-link"
+              >
+                {location.address}
+              </a>
             </p>
             {location.phone && (
               <p>
-                <i class="fas fa-phone-alt"></i>&nbsp; {location.phone}
+                <i className="fas fa-phone-alt"></i>&nbsp;
+                <a href={`tel:${location.phone}`} className="phone-link">
+                  {location.phone}
+                </a>
               </p>
             )}
             {location.fax && (

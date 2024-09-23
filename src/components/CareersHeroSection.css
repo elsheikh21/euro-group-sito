@@ -26,15 +26,15 @@
 }
 
 .careers-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: #19258b;
+  color: #f3f3f5;
   margin-bottom: 15px;
 }
 
 .careers-description {
-  font-size: 1.2rem;
-  color: #fff;
+  font-size: 1.15rem;
+  color: #f3f3f5;
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;

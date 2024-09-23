@@ -10,7 +10,15 @@ const CareersApplicationSection = () => {
           We are always looking for talented individuals to join our team.
           Please fill out the form below to apply for a position at Euro Group.
         </p>
-        {/* Application form will be added here later */}
+        <p>
+          Send us your CV at{" "}
+          <a
+            href={`mailto:info@eurogroup.org?subject=Job%20Opportunity`}
+            className="email-link"
+          >
+            info@eurogroup.org
+          </a>
+        </p>
       </div>
     </section>
   );
