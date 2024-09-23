@@ -14,21 +14,18 @@ const ContactBody = () => {
       address:
         "Office 701, 18 Badr Towers, Ring Road, New Maadi, P.O. Box 11742, Cairo, Egypt.",
       phone: "+202 23104085",
-      fax: "+202 23104086",
     },
     {
       city: "Riyadh, KSA",
       address:
         "Office 702 To 704 - 707, Al Nemr Center 1, Olaya Road, P.O. Box 286 588, Riyadh 11323, KSA.",
       phone: "+202 23104085",
-      fax: "+202 23104086",
     },
     {
       city: "Manama, Bahrain",
       address:
         "Office 402, Building 455, Euro Tower, Road 1010, Block 410, Sanabis Area, P.O. Box 66311, Manama, Bahrain.",
       phone: "+973 17508383",
-      fax: "+973 17508384",
     },
     {
       city: "Madinah, KSA",

@@ -17,7 +17,7 @@ const coreValues = [
       "We build trust on the foundation of honesty, transparency, and making responsible decisions based on professional standards.",
   },
   {
-    imageSrc: "../icons/rating (1).webp",
+    imageSrc: "../icons/rating.webp",
     altText: "rating (1)",
     title: "Client Service",
     description:
