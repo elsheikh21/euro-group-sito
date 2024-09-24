@@ -16,8 +16,8 @@ const JoinUsSection = () => {
           <h2>
             Even Group offers opportunities for career advancements and more.
           </h2>
-          <p>Start in a role. Build a career.</p>
-          <button className="join-us-button">Apply Now</button>
+          <p>Don’t do a job, build a career.</p>
+          <button className="join-us-button">Join Our Team</button>
         </div>
       </div>
 

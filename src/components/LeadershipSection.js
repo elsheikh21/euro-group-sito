@@ -10,12 +10,12 @@ const LeadershipSection = () => {
     },
     {
       name: "Ayman Abourgila",
-      title: "Chief Executive Officer",
+      title: "Executive Director",
       imageUrl: "../images/leadership/ayman.webp",
     },
     {
       name: "Hassan Maltawi",
-      title: "Chief Projects Officer",
+      title: "Projects Manager",
       imageUrl: "../images/leadership/hassan.webp",
     },
   ];
@@ -24,9 +24,10 @@ const LeadershipSection = () => {
     <section className="leadership-section">
       <h2 className="leadership-title">Meet our Leadership</h2>
       <p className="leadership-description">
-        The leadership team at Euro Group has the breadth of expertise and depth
-        of experience necessary to drive our strategy and continue to deliver
-        profitable performances.
+        Implementation of quality plan and procedures is directed, fully
+        controlled and assured by the quality council formed by top management
+        representatives, to ensure that quality of work meets each assignment
+        requirements and address client’s satisfaction.
       </p>
       <div className="leadership-cards">
         {leaders.map((leader, index) => (

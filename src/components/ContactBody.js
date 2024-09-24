@@ -10,51 +10,55 @@ const ContactBody = () => {
 
   const locations = [
     {
-      city: "Cairo, Egypt",
-      address:
-        "Office 701, 18 Badr Towers, Ring Road, New Maadi, P.O. Box 11742, Cairo, Egypt.",
-      address_maps: "https://maps.app.goo.gl/yFSZMM4NR1FPt1LTA",
-      phone: "+202 23104085",
-    },
-    {
       city: "Riyadh, KSA",
       address:
         "Office 702 To 704 - 707, Al Nemr Center 1, Olaya Road, P.O. Box 286 588, Riyadh 11323, KSA.",
       address_maps: "https://maps.app.goo.gl/BWxtKaQNE7CT1QnN6",
-      phone: "+202 23104085",
+      phone: "+966 11 464 48 44",
+    },
+    {
+      city: "Cairo, Egypt",
+      address:
+        "Office 701, 18 Badr Towers, Ring Road, New Maadi, P.O. Box 11742, Cairo, Egypt.",
+      address_maps: "https://maps.app.goo.gl/yFSZMM4NR1FPt1LTA",
+      phone: "+202 23 104 085",
     },
     {
       city: "Manama, Bahrain",
       address:
-        "Office 402, Building 455, Euro Tower, Road 1010, Block 410, Sanabis Area, P.O. Box 66311, Manama, Bahrain.",
+        "Office 62, Building 485, Euro Tower, Road 1010, Block 410, Sanabis Area, P.O. Box 60811, Manama, Bahrain.",
       address_maps: "https://maps.app.goo.gl/BWxtKaQNE7CT1QnN6",
-      phone: "+973 17508383",
-    },
-    {
-      city: "Madinah, KSA",
-      address:
-        "Office 101, 2058 Rafidah Al Ansariyah St., Al Jamiah, P.O. Box 42351, Madinah, KSA.",
-      phone: "+966 14 8240788",
-    },
-    {
-      city: "Khobar, KSA",
-      address: "Al-Khobar Al-Jubailyah, Al Khobar 34621, KSA",
-    },
-    {
-      city: "Dammam, KSA",
-      address: "Abu Bakr Al-Siddiq Street, Al Nada, Dammam 32271, KSA",
+      phone: "+973 17 580 380",
     },
     {
       city: "Amman, Jordan",
       address:
-        "Office 301, 142 Al Hurriyah St, Al Muqablayn, P.O. Box 941597, Amman, Jordan.",
-      phone: "+962 790687289",
+        "Office 301, 142 Al Hurriyah Street, Al Muqabalayn, P.O. Box 941 597, Amman, Jordan.",
+      phone: "+962 79 506 8729",
+    },
+    {
+      city: "Khobar, KSA",
+      address:
+        "Office 209, 4381 Custodian of The Two Holy Mosques Road, Al Khobar Al Janubiyah, P.O. Box 34621, Al Khobar, KSA.",
+      phone: "+966 13 895 3107",
+    },
+    {
+      city: "Jeddah, KSA",
+      address:
+        "Office 201, 4687 Hira Street, Al Marwah, P.O. Box 23545, Jeddah, KSA.",
+      phone: "+966 12 264 3850",
+    },
+    {
+      city: "Madinah, KSA",
+      address:
+        "Office 101, 2588 Rafidah Al Ansariyah Street, Al Jamiah, P.O. Box 42351, Al Madinah, KSA.",
+      phone: "+966 14 842 0788",
     },
     {
       city: "Dubai, UAE",
       address:
-        "Office 301, XL Tower, Business Bay, P.O. Box 123951, Dubai, UAE.",
-      phone: "+971 04 2402555",
+        "Office 1401, XL Tower, Business Bay, P.O. Box 126 351, Dubai, UAE.",
+      phone: "+971 04 240 2255",
     },
   ];
 
