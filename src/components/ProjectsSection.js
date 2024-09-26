@@ -138,7 +138,11 @@ const ProjectsSection = () => {
   const [selectedSector, setSelectedSector] = useState(null);
   const [pageNumber, setPageNumber] = useState(0); // New state for pagination
   const projectsPerPage = 12; // Define how many projects per page
+  /*
+  TODO Backend Err State
+  Uncomment the error state when attaching backend
   const [error, setError] = useState(null); // State to store any error during API call
+  */
 
   // Handle service filter click
   const handleServiceClick = (serviceId) => {
@@ -168,13 +172,16 @@ const ProjectsSection = () => {
     setPageNumber(selected);
   };
 
+  /* TODO 
+  Projects Fetching
+  Uncomment this section when connecting backend
   // Fetch projects from the backend API
   useEffect(() => {
     axios
       .get("https://euro-group-5011e47364b0.herokuapp.com/projects/")
       .then((response) => {
         console.log("Success:", response);
-        /* setProjects(response.data.data); // Set the fetched projects data */
+        setProjects(response.data.data);
         setError(null); // Reset error state
       })
       .catch((error) => {
@@ -182,6 +189,7 @@ const ProjectsSection = () => {
         setError("Failed to fetch projects. Please try again later.");
       });
   }, []); // Empty dependency array to call only on component mount
+*/
 
   // Extract unique sectors from projects for secondary filter (only for 'sectors')
   const sectors = [
