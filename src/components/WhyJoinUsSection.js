@@ -56,10 +56,10 @@ const WhyJoinUsSection = () => {
                 src={value.imageSrc}
                 alt={value.altText}
                 style={{ height: "5rem" }}
+                className="join-value-image-icon"
               />
             </div>
             <h3 className="join-value-title">{value.title}</h3>
-            <p className="join-value-description">{value.description}</p>
           </div>
         ))}
       </div>

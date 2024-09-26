@@ -116,11 +116,11 @@ const ServicesCarousel = () => {
   return (
     <div className="services-carousel-wrapper">
       {/* Filters Section */}
-      <div className="filters">
+      <div className="proj-filters">
         {filters.map((filter) => (
           <button
             key={filter.id}
-            className={`filter-button ${
+            className={`srv-filter-button ${
               selectedFilter === filter.id ? "active" : ""
             }`}
             onClick={() => handleFilterClick(filter.id)}

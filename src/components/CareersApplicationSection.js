@@ -7,8 +7,9 @@ const CareersApplicationSection = () => {
       <div className="application-container">
         <h2>Join Our Team</h2>
         <p>
-          We are always looking for talented individuals to join our team.
-          Please fill out the form below to apply for a position at Euro Group.
+          We are always looking for talented individuals to join our team. If
+          you are passionate about creating an impact, apply for a position at
+          Euro Group
         </p>
         <p>
           Send us your CV at{" "}

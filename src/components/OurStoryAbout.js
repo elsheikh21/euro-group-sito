@@ -13,10 +13,12 @@ const OurStoryAbout = () => {
           meet the continuous rising in the local and regional demand. From
           educational, residential and commercial to hospitality, industrial and
           health care, our services span across all construction phases from
-          planning trough design and construction supervision. We were founded
-          in 2003 under the name of “Resources Technology Bureau”, and were
-          registered as Saudi company in 2014 under the name of “Euro Group for
-          Engineering Consultancy”.
+          planning trough design and construction supervision.
+        </p>
+        <p>
+          We were founded in 2003 under the name of “Resources Technology
+          Bureau”, and were registered as Saudi company in 2014 under the name
+          of “Euro Group for Engineering Consultancy”.
         </p>
 
         <p>

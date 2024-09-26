@@ -1,6 +1,6 @@
 .certificates-section {
   text-align: center;
-  padding: 120px 20px;
+  padding: 40px 20px;
   background-color: #fff;
 }
 
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 120px;
   flex-wrap: wrap;
 }
 

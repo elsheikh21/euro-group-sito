@@ -65,14 +65,14 @@ const ContactBody = () => {
   return (
     <section className="contact-body">
       <div className="contact-left">
-        <div id="contact-us-first-text">
+        {/* <div id="contact-us-first-text">
           <h2>Contact Us</h2>
           <p>
             We can help you with your project and we treat each project like it
             is our very own. We would be happy to connect with you in person,
             phone, email, or videoconference – whatever works best for you.
           </p>
-        </div>
+        </div> */}
         <div>
           <h2>Leave us a Message</h2>
           <p>
@@ -100,7 +100,7 @@ const ContactBody = () => {
               <label htmlFor="message">Message</label>
               <textarea
                 id="message"
-                placeholder="Message"
+                placeholder="Leave us a Message"
                 maxLength="512"
                 onChange={handleMessageChange}
               ></textarea>

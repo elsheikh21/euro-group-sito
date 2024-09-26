@@ -36,7 +36,7 @@ textarea {
   padding: 10px;
   font-size: 1rem;
   border: none;
-  border-bottom: 1px solid #f3f3f5;
+  border-bottom: 1px solid #262628;
   background-color: transparent;
   outline: none;
 }
@@ -85,6 +85,11 @@ textarea {
 .location-link {
   text-decoration: none;
   color: #f3f3f5;
+}
+
+.phone-link:hover,
+.location-link:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -137,12 +142,13 @@ label {
 
 input:focus,
 textarea:focus {
-  border-bottom: 1px solid #19258b;
+  border-bottom: 1px solid #262628;
 }
 
 textarea {
   resize: none;
   height: 100px;
+  border-bottom: 1px solid #262628;
 }
 
 .character-count {

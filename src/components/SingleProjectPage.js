@@ -226,7 +226,7 @@ const SingleProjectPage = () => {
         </div>
 
         <div className="project-info-right">
-          <div className="info-item">
+          <div className="proj-info-item">
             <div className="info-label">
               <img
                 src="../icons/customer.webp"
@@ -240,7 +240,7 @@ const SingleProjectPage = () => {
               {/* Display value below the label */}
             </ul>
           </div>
-          <div className="info-item">
+          <div className="proj-info-item">
             <div className="info-label">
               <img
                 src="../icons/gears.webp"
@@ -259,7 +259,7 @@ const SingleProjectPage = () => {
               </ul>
             </div>
           </div>
-          <div className="info-item">
+          <div className="proj-info-item">
             <div className="info-label">
               <img
                 src="../icons/engineer.webp"

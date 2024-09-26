@@ -12,7 +12,7 @@ const Landing = () => {
           <div className="carousel-image">
             <img
               className="d-block w-100"
-              src="../images/carousel2.webp"
+              src="../images/Bridges-engineering.webp"
               alt="First slide"
             />
             <div className="carousel-overlay">
@@ -38,7 +38,7 @@ const Landing = () => {
             <div className="carousel-overlay">
               <div className="carousel-content">
                 <h2>Engineering Consultancy</h2>
-                <h1>Providing diversified solutions.</h1>
+                <h1>Providing Diversified Solutions.</h1>
                 <Link to="/Services" className="btn btn-primary">
                   Our Services
                 </Link>
@@ -68,7 +68,7 @@ const Landing = () => {
         </Carousel.Item>
 
         {/* Carousel Item 4 */}
-        <Carousel.Item>
+        {/* <Carousel.Item>
           <div className="carousel-image">
             <img
               className="d-block w-100"
@@ -78,21 +78,21 @@ const Landing = () => {
             <div className="carousel-overlay">
               <div className="carousel-content">
                 <h2>Engineering Consultancy</h2>
-                <h1>Delivering Excellence.</h1>
+                <h1>Delivering Excellence.</h1> 
                 <Link to="/Contact" className="btn btn-primary">
                   Contact Us
                 </Link>{" "}
               </div>
             </div>
           </div>
-        </Carousel.Item>
+        </Carousel.Item>*/}
 
         {/* Carousel Item 5 */}
         <Carousel.Item>
           <div className="carousel-image">
             <img
               className="d-block w-100"
-              src="https://picsum.photos/seed/picsum/1200/900" // Replace with your actual image path
+              src="../images/carousel5.webp"
               alt="First slide"
             />
             <div className="carousel-overlay">

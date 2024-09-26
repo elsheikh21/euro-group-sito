@@ -14,10 +14,13 @@ const JoinUsSection = () => {
         </div>
         <div className="join-us-content">
           <h2>
-            Even Group offers opportunities for career advancements and more.
+            Euro Group offers opportunities for career <br />
+            advancements and more.{" "}
           </h2>
-          <p>Don’t do a job, build a career.</p>
-          <button className="join-us-button">Join Our Team</button>
+          <p>
+            Don’t do a job, build a career <br /> Join our Team
+          </p>
+          <button className="join-us-button">Apply Now</button>
         </div>
       </div>
 
@@ -25,14 +28,19 @@ const JoinUsSection = () => {
       <div className="join-us-section reverse-layout">
         <div className="join-us-image">
           <lazyload>
-            <img src="../images/team.webp" alt="Join Us" />
+            <img src="../images/unnamed.webp" alt="Join Us" />
           </lazyload>{" "}
           {/* Replace with another actual image path */}
         </div>
         <div className="join-us-content">
-          <h2>Join a dynamic team that values innovation and creativity.</h2>
-          <p>Contribute to impactful projects and make a difference.</p>
-          <button className="join-us-button">Join the Team</button>
+          <h2>
+            We build a lasting long-term relation <br /> with clients.
+          </h2>
+          <p>
+            Our staff is always happy to help. <br />
+            We are just a click away
+          </p>
+          <button className="join-us-button">Contact Us</button>
         </div>
       </div>
     </section>

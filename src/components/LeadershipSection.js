@@ -26,8 +26,9 @@ const LeadershipSection = () => {
       <p className="leadership-description">
         Implementation of quality plan and procedures is directed, fully
         controlled and assured by the quality council formed by top management
-        representatives, to ensure that quality of work meets each assignment
-        requirements and address client’s satisfaction.
+        representatives, to ensure <br />
+        that quality of work meets each assignment requirements and address
+        client’s satisfaction.
       </p>
       <div className="leadership-cards">
         {leaders.map((leader, index) => (

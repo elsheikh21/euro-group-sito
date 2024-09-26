@@ -20,7 +20,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const App = () => {
   return (
-    /* TODO: Update textual contents, and waiting for Images */
+    /* TODO: Connect Backend */
     <Router>
       <div className="App">
         <Header />

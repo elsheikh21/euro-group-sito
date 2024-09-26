@@ -5,7 +5,7 @@ const MainProjectSection = () => {
   return (
     <section className="main-project-section">
       <h1 className="main-project-section-heading">
-        Turning Vision into reality
+        Turning Vision Into Reality
       </h1>
     </section>
   );

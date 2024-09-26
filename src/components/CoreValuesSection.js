@@ -28,7 +28,7 @@ const coreValues = [
     altText: "solar-energy",
     title: "Sustainability",
     description:
-      "We are committed to the social, environmental, and economic factors, whether through our role as engineers or through our own everyday actions.",
+      "We are committed to the social, environmental and economic footprint, either through our role as engineers or through our own every day actions.",
   },
   {
     imageSrc: "../icons/business.webp",
@@ -49,7 +49,7 @@ const coreValues = [
     altText: "network",
     title: "Collaboration",
     description:
-      "We provide the best outcomes through shared goals and built relationships.",
+      "We provide the best client service through shared goals and built relationships.",
   },
   {
     imageSrc: "../icons/list.webp",

@@ -9,12 +9,12 @@ const ServicesSection = () => {
       {/* Section Title and Subtitle */}
       <div className="section-header">
         <h3>
-          We offer wide span of service to help you <br /> turn your ambitions{" "}
+          We offer wide span of service to help you <br /> turn your ambitious{" "}
           <strong>concept into reality</strong>
         </h3>
         <p class="padding-bottom-120">
           We provide best value services by focusing on quality, creativity,
-          innovation and <br /> professional exellence
+          innovation and <br /> professional excellence
         </p>
       </div>
       {/* Top part with service cards */}
@@ -70,10 +70,10 @@ const ServicesSection = () => {
           <div className="statistics-info">
             <div className="stat-item">
               <h1>
-                60<span class="superscript">+</span>
+                80<span class="superscript">+</span>
               </h1>
               <p>
-                &nbsp;<strong>Projects</strong>
+                &nbsp;&nbsp;&nbsp;<strong>Projects</strong>
               </p>
             </div>
             <div className="stat-item">
@@ -81,7 +81,7 @@ const ServicesSection = () => {
                 10<span class="superscript">+</span>
               </h1>
               <p>
-                &nbsp;<strong>Locations</strong>
+                &nbsp;&nbsp;<strong>Locations</strong>
               </p>
             </div>
             <div className="stat-item">
@@ -90,7 +90,7 @@ const ServicesSection = () => {
                 <span class="superscript">+</span>
               </h1>
               <p>
-                &nbsp;<strong>Years</strong>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>Years</strong>
               </p>
             </div>
           </div>

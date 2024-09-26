@@ -5,7 +5,7 @@ const MainServicesSection = () => {
   return (
     <section className="main-services-section">
       <h1 className="main-services-section-heading">
-        Efficient, cost effective and timely services.
+        Efficient, Cost-effective and Timely Services.
       </h1>
     </section>
   );

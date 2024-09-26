@@ -4,16 +4,16 @@ import "./CertificatesSection.css";
 const CertificatesSection = () => {
   const certificates = [
     {
-      imageSrc: "../images/iso45001-black.webp",
+      imageSrc: "../images/bv.png",
       altText: "ISO 14001 Certificate",
     },
     {
-      imageSrc: "../images/iso45001-black.webp",
-      altText: "ISO 45001 Certificate",
+      imageSrc: "../images/IRF-Logo-2015.png",
+      altText: "ISO 9001:2015 Certificate",
     },
     {
-      imageSrc: "../images/iso45001-black.webp",
-      altText: "ISO 9001:2015 Certificate",
+      imageSrc: "../images/375684.png",
+      altText: "ISO 45001 Certificate",
     },
   ];
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ReactPaginate from "react-paginate"; // Import react-paginate
+import ReactPaginate from "react-paginate";
 import "./ProjectsSection.css";
 
 const services = [
@@ -136,7 +136,8 @@ const ProjectsSection = () => {
   const [selectedService, setSelectedService] = useState("all");
   const [selectedSector, setSelectedSector] = useState(null);
   const [pageNumber, setPageNumber] = useState(0); // New state for pagination
-  const projectsPerPage = 9; // Define how many projects per page
+  const projectsPerPage = 12; // Define how many projects per page
+  const [error, setError] = useState(null); // State to store any error during API call
 
   // Handle service filter click
   const handleServiceClick = (serviceId) => {
@@ -178,19 +179,17 @@ const ProjectsSection = () => {
   return (
     <section className="projects-section">
       {/* Primary Service Filters */}
-      <div className="filters">
+      <div className="proj-filters">
         {services.map((service) => (
           <button
             key={service.id}
-            className={`filter-button ${
+            className={`feat-proj-filter-button ${
               selectedService === service.id ? "active" : ""
             }`}
             onClick={() => handleServiceClick(service.id)}
           >
             {service.name}
-            {service.id === "sectors" && selectedService === "sectors" && (
-              <span className="arrow-down"> ▼</span>
-            )}
+            {service.id === "sectors" && selectedService === "sectors"}
           </button>
         ))}
       </div>

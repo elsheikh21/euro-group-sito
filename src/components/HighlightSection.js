@@ -8,12 +8,12 @@ const HighlightSection = () => {
       <div className="introduction-content padding-bottom-120">
         <h2>
           We believe that <strong>dynamic interaction with clients</strong> is
-          the fundamental aspect that leads the firm to success.
+          the fundamental aspect that leads our firm to success.
         </h2>
         <p>
           We deliver dynamic, creative and cost-effective engineering solutions,
           giving top priority to ensuring quality, safety, and environmental
-          standards.
+          solutions.
         </p>
       </div>
 
@@ -30,7 +30,7 @@ const HighlightSection = () => {
               />
             </lazyload>
           </div>
-          <div className="content-text left-align">
+          <div className="content-text left-align pl-2-5">
             <h3>
               We provide the{" "}
               <strong>
@@ -40,31 +40,34 @@ const HighlightSection = () => {
             </h3>
             <p>
               We help clients from both public and private development sectors
-              to meet their design and construction needs and execute them with
-              creativity and knowledge.
+              to meet their design and construction needs and provide them with
+              expertise and knowledge.
             </p>
           </div>
         </div>
 
         {/* Second Row: Text Left, Image Right */}
         <div className="content-row">
+          <div className="content-image right-aligned">
+            <lazyload>
+              <img
+                src="../images/road-construction-with-road-transport-equipment-top-view.webp"
+                class="no-margin-right"
+                alt="Machinery in action"
+              />
+            </lazyload>
+          </div>
           <div className="content-text">
             <h3>
-              We look for <strong>solutions</strong> that can have an impact
+              We look for <strong>solutions</strong> that can have an{" "}
+              <strong>impact </strong>
               beyond the project.
             </h3>
             <p>
-              We elevate the power of your projects beyond the impact they
-              deliver. We are committed to the social, technological, and
+              We measure success of our projects based on the impact they
+              deliver. We are committed to the social, environmental and
               economic performance of our projects.
             </p>
-          </div>
-          <div className="content-image img right-aligned">
-            <img
-              src="../images/home9.webp"
-              class="no-margin-right"
-              alt="Machinery in action"
-            />
           </div>
         </div>
       </div>
