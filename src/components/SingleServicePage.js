@@ -1,31 +1,31 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { servicesData } from "./ServicesCarousel"; // Import the data
 import "./SingleServicePage.css";
 
 const SingleServicePage = () => {
-  const { serviceName } = useParams(); // Access the service_name from the URL
+  const { serviceName } = useParams(); // Get the service_name from the URL
 
-  // Fetch the service details based on serviceName or use static data for demonstration
-  const serviceDetails = {
-    scientific: {
-      title: "GTS Scientific",
-      description: "Detailed description of GTS Scientific...",
-    },
-    executive: {
-      title: "GTS Executive",
-      description: "Detailed description of GTS Executive...",
-    },
-  };
+  // Find the service in servicesData based on the serviceName from the URL
+  const service = servicesData.find(
+    (service) => service.service_name === serviceName
+  );
 
-  const service = serviceDetails[serviceName] || {
-    title: "Service Not Found",
-    description: "",
-  };
+  if (!service) {
+    return <h1>Service Not Found</h1>;
+  }
 
   return (
     <div className="single-service-page">
-      {/* Project Main Image */}
-      <div className="single-service-main-image">
+      {/* Project Main Image with dynamic background */}
+      <div
+        className="single-service-main-image"
+        style={{
+          backgroundImage: `url(${service.imageUrl})`, // Use the image URL dynamically
+          backgroundSize: "cover", // Make sure the image covers the container
+          backgroundPosition: "center", // Center the image
+        }}
+      >
         <div className="single-service-main-overlay">
           <div className="single-service-title-container">
             <h1 className="single-service-title">{service.title}</h1>
@@ -37,14 +37,6 @@ const SingleServicePage = () => {
         {/* Left Column: Main Project Information */}
         <div className="single-service-info-left">
           <p>{service.description}</p>
-          <br />
-          <p>Scope of work includes:</p>
-          <ul>
-            <li>Access Roads to Shurayrah, North Jetty and Airport Road</li>
-            <li>
-              Plot Connection Roads which interconnects utilities buildings
-            </li>
-          </ul>
         </div>
       </div>
 

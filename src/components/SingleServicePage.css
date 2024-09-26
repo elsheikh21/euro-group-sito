@@ -12,7 +12,6 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  background-image: url("../../public/images/services2.webp");
 }
 
 .single-service-main-overlay {
