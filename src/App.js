@@ -20,7 +20,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 const App = () => {
   return (
-    /* TODO: Connect Backend */
     <Router>
       <div className="App">
         <Header />

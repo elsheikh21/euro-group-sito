@@ -12,7 +12,7 @@ const OverlaySection = () => {
             We build projects on foundation that will stand the <br /> test of
             time.
           </h2>
-          <Link to={"/About"} class="overlay-button">
+          <Link to={"/About"} className="overlay-button">
             Read More
           </Link>
         </div>

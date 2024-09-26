@@ -12,7 +12,7 @@ const ServicesSection = () => {
           We offer wide span of service to help you <br /> turn your ambitious{" "}
           <strong>concept into reality</strong>
         </h3>
-        <p class="padding-bottom-120">
+        <p className="padding-bottom-120">
           We provide best value services by focusing on quality, creativity,
           innovation and <br /> professional excellence
         </p>
@@ -25,7 +25,7 @@ const ServicesSection = () => {
             alt="Planning Icon"
             className="service-icon"
           />
-          <p class="service-card-text">Planning</p>
+          <p className="service-card-text">Planning</p>
         </div>
         <div className="service-card" style={{ top: "5%" }}>
           <img
@@ -33,7 +33,7 @@ const ServicesSection = () => {
             alt="Planning Icon"
             className="service-icon"
           />
-          <p class="service-card-text">Engineering</p>
+          <p className="service-card-text">Engineering</p>
         </div>
         <div className="service-card" style={{ top: "2%" }}>
           <img
@@ -41,7 +41,7 @@ const ServicesSection = () => {
             alt="Planning Icon"
             className="service-icon"
           />
-          <p class="service-card-text">Architecture & Sustainability</p>
+          <p className="service-card-text">Architecture & Sustainability</p>
         </div>
         <div className="service-card" style={{ top: "8%" }}>
           <img
@@ -49,7 +49,7 @@ const ServicesSection = () => {
             alt="Planning Icon"
             className="service-icon"
           />
-          <p class="service-card-text">Transportation</p>
+          <p className="service-card-text">Transportation</p>
         </div>
         <div className="service-card" style={{ top: "4%" }}>
           <img
@@ -57,7 +57,7 @@ const ServicesSection = () => {
             alt="Planning Icon"
             className="service-icon"
           />
-          <p class="service-card-text">
+          <p className="service-card-text">
             Project Management & Construction Supervision
           </p>
         </div>
@@ -70,7 +70,7 @@ const ServicesSection = () => {
           <div className="statistics-info">
             <div className="stat-item">
               <h1>
-                80<span class="superscript">+</span>
+                80<span className="superscript">+</span>
               </h1>
               <p>
                 &nbsp;&nbsp;&nbsp;<strong>Projects</strong>
@@ -78,7 +78,7 @@ const ServicesSection = () => {
             </div>
             <div className="stat-item">
               <h1>
-                10<span class="superscript">+</span>
+                10<span className="superscript">+</span>
               </h1>
               <p>
                 &nbsp;&nbsp;<strong>Locations</strong>
@@ -87,7 +87,7 @@ const ServicesSection = () => {
             <div className="stat-item">
               <h1>
                 {yearsOfExperience}
-                <span class="superscript">+</span>
+                <span className="superscript">+</span>
               </h1>
               <p>
                 &nbsp;&nbsp;&nbsp;&nbsp;<strong>Years</strong>

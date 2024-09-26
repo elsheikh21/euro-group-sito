@@ -80,7 +80,7 @@ const ContactBody = () => {
             put you in touch with the right people.
           </p>
         </div>
-        <div class="contact-form-div">
+        <div className="contact-form-div">
           <form className="contact-form">
             <div className="form-group double">
               <div className="form-item">
@@ -108,7 +108,7 @@ const ContactBody = () => {
                 {messageLength} of 512 max characters.
               </div>
             </div>
-            <button class="contact-form-button" type="submit">
+            <button className="contact-form-button" type="submit">
               Submit
             </button>
           </form>
@@ -120,7 +120,7 @@ const ContactBody = () => {
           <div key={index} className="location">
             <h3>{location.city}</h3>
             <p>
-              <i class="fas fa-map-marker-alt"></i>{" "}
+              <i className="fas fa-map-marker-alt"></i>{" "}
               <a
                 href={`https://maps.google.com/?q=${encodeURIComponent(
                   location.address_maps
@@ -142,7 +142,7 @@ const ContactBody = () => {
             )}
             {location.fax && (
               <p>
-                <i class="fas fa-fax"></i>&nbsp; {location.fax}
+                <i className="fas fa-fax"></i>&nbsp; {location.fax}
               </p>
             )}
           </div>

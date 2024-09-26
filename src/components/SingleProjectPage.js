@@ -1,212 +1,64 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useLocation, useParams } from "react-router-dom";
+import { BASE_API_URL } from "./ProjectsSection";
+import FilteredProjects from "./FilteredProjects";
+import axios from "axios";
 import "./SingleProjectPage.css";
 
-// Dummy data for projects (use actual data or fetch from a backend)
-const projects = [
-  {
-    id: 1,
-    name: "Red Sea Development Roads",
-    location: "Tabuk, KSA",
-    description: "This project is one of the most significant ...",
-    client: "Red Sea Development Company",
-    services: ["Engineering", "Project Management", "Sustainability"],
-    mainImage: "https://picsum.photos/seed/pics/2400/1200",
-    image1: "https://picsum.photos/seed/2/1200/600",
-    image2: "https://picsum.photos/seed/3/600/400",
-    image3: "https://picsum.photos/seed/4/600/400",
-    image4: "https://picsum.photos/seed/5/1200/600",
-  },
-  {
-    id: 2,
-    name: "Hilton DoubleTree",
-    location: "Al Khobar, KSA",
-    description: "A luxurious hotel development ...",
-    client: "Hilton Worldwide",
-    services: ["Architecture", "Sustainability"],
-    mainImage: "https://picsum.photos/seed/2/2400/1200",
-    image1: "https://picsum.photos/seed/6/1200/600",
-    image2: "https://picsum.photos/seed/7/600/400",
-    image3: "https://picsum.photos/seed/8/600/400",
-    image4: "https://picsum.photos/seed/9/1200/600",
-  },
-  {
-    id: 3,
-    name: "Madinah Scheme Development",
-    location: "Lugbe, Nigeria",
-    description:
-      "The Red Sea Project is one of three giga-projects announced by Prince Mohammad bin Salman bin Abdulaziz Al Saud in 2017. Extending over 28,000 km² on Saudi Arabia's Red Sea coast, the destination offers a unique luxurious range of experiences, from island getaways to resort holidays, mountain retreats, and desert adventures, focusing on the wellness and ecology for local and international visitors.",
-    client: "Madinah Developers",
-    services: ["Urban Planning", "Engineering", "Consultancy"],
-    sector: "Construction",
-    mainImage: "https://picsum.photos/seed/pc3s/2400/1200",
-    image1: "https://picsum.photos/seed/10/1200/600",
-    image2: "https://picsum.photos/seed/11/600/400",
-    image3: "https://picsum.photos/seed/12/600/400",
-    image4: "https://picsum.photos/seed/13/1200/600",
-  },
-  {
-    id: 4,
-    name: "Red Sea Development Roads",
-    location: "Tabuk, KSA",
-    description: "This project is one of the most significant ...",
-    client: "Red Sea Development Company",
-    services: ["Engineering", "Project Management", "Sustainability"],
-    mainImage: "https://picsum.photos/seed/pics/2400/1200",
-    image1: "https://picsum.photos/seed/2/1200/600",
-    image2: "https://picsum.photos/seed/3/600/400",
-    image3: "https://picsum.photos/seed/4/600/400",
-    image4: "https://picsum.photos/seed/5/1200/600",
-  },
-  {
-    id: 5,
-    name: "Hilton DoubleTree",
-    location: "Al Khobar, KSA",
-    description: "A luxurious hotel development ...",
-    client: "Hilton Worldwide",
-    services: ["Architecture", "Sustainability"],
-    mainImage: "https://picsum.photos/seed/2/2400/1200",
-    image1: "https://picsum.photos/seed/6/1200/600",
-    image2: "https://picsum.photos/seed/7/600/400",
-    image3: "https://picsum.photos/seed/8/600/400",
-    image4: "https://picsum.photos/seed/9/1200/600",
-  },
-  {
-    id: 6,
-    name: "Madinah Scheme Development",
-    location: "Lugbe, Nigeria",
-    description:
-      "The Red Sea Project is one of three giga-projects announced by Prince Mohammad bin Salman bin Abdulaziz Al Saud in 2017. Extending over 28,000 km² on Saudi Arabia's Red Sea coast, the destination offers a unique luxurious range of experiences, from island getaways to resort holidays, mountain retreats, and desert adventures, focusing on the wellness and ecology for local and international visitors.",
-    client: "Madinah Developers",
-    services: ["Urban Planning", "Engineering", "Consultancy"],
-    sector: "Construction",
-    mainImage: "https://picsum.photos/seed/pc3s/2400/1200",
-    image1: "https://picsum.photos/seed/10/1200/600",
-    image2: "https://picsum.photos/seed/11/600/400",
-    image3: "https://picsum.photos/seed/12/600/400",
-    image4: "https://picsum.photos/seed/13/1200/600",
-  },
-  {
-    id: 7,
-    name: "Red Sea Development Roads",
-    location: "Tabuk, KSA",
-    description:
-      "The Red Sea Project is one of three giga-projects announced by Prince Mohammad bin Selman bin Abdulaziz Al Saud in 2017. Extending over 28,000 km2 on Saudi Arabia's Red Sea coast, the destination offers a unique luxurious range of experiences, from island getaways to resort holidays, mountain retreats and desert adventures, focusing on the wellness and ecology for local and international visitors.",
-    client: "Red Sea Development Company",
-    services: ["Engineering", "Project Management", "Sustainability"],
-    sector: "Construction",
-    mainImage: "https://picsum.photos/seed/pics/2400/1200",
-    image1: "https://picsum.photos/seed/2/1200/600",
-    image2: "https://picsum.photos/seed/3/600/400",
-    image3: "https://picsum.photos/seed/4/600/600",
-    image4: "https://picsum.photos/seed/5/1200/600",
-  },
-  {
-    id: 8,
-    name: "Hilton DoubleTree",
-    location: "Al Khobar, KSA",
-    description: "A luxurious hotel development ...",
-    client: "Hilton Worldwide",
-    services: ["Architecture", "Sustainability"],
-    mainImage: "https://picsum.photos/seed/2/2400/1200",
-    image1: "https://picsum.photos/seed/6/1200/600",
-    image2: "https://picsum.photos/seed/7/600/400",
-    image3: "https://picsum.photos/seed/8/600/400",
-    image4: "https://picsum.photos/seed/9/1200/600",
-  },
-  {
-    id: 9,
-    name: "Madinah Scheme Development",
-    location: "Lugbe, Nigeria",
-    description:
-      "The Red Sea Project is one of three giga-projects announced by Prince Mohammad bin Salman bin Abdulaziz Al Saud in 2017. Extending over 28,000 km² on Saudi Arabia's Red Sea coast, the destination offers a unique luxurious range of experiences, from island getaways to resort holidays, mountain retreats, and desert adventures, focusing on the wellness and ecology for local and international visitors.",
-    client: "Madinah Developers",
-    services: ["Urban Planning", "Engineering", "Consultancy"],
-    sector: "Construction",
-    mainImage: "https://picsum.photos/seed/pc3s/2400/1200",
-    image1: "https://picsum.photos/seed/10/1200/600",
-    image2: "https://picsum.photos/seed/11/600/400",
-    image3: "https://picsum.photos/seed/12/600/400",
-    image4: "https://picsum.photos/seed/13/1200/600",
-  },
-  {
-    id: 10,
-    name: "Red Sea Development Roads",
-    location: "Tabuk, KSA",
-    description: "This project is one of the most significant ...",
-    client: "Red Sea Development Company",
-    services: ["Engineering", "Project Management", "Sustainability"],
-    mainImage: "https://picsum.photos/seed/pics/2400/1200",
-    image1: "https://picsum.photos/seed/2/1200/600",
-    image2: "https://picsum.photos/seed/3/600/400",
-    image3: "https://picsum.photos/seed/4/600/400",
-    image4: "https://picsum.photos/seed/5/1200/600",
-  },
-  {
-    id: 11,
-    name: "Hilton DoubleTree",
-    location: "Al Khobar, KSA",
-    description: "A luxurious hotel development ...",
-    client: "Hilton Worldwide",
-    services: ["Architecture", "Sustainability"],
-    mainImage: "https://picsum.photos/seed/2/2400/1200",
-    image1: "https://picsum.photos/seed/6/1200/600",
-    image2: "https://picsum.photos/seed/7/600/400",
-    image3: "https://picsum.photos/seed/8/600/400",
-    image4: "https://picsum.photos/seed/9/1200/600",
-  },
-  {
-    id: 12,
-    name: "Hilton DoubleTree",
-    location: "Al Khobar, KSA",
-    description: "A luxurious hotel development ...",
-    client: "Hilton Worldwide",
-    services: ["Architecture", "Sustainability"],
-    mainImage: "https://picsum.photos/seed/2/2400/1200",
-    image1: "https://picsum.photos/seed/6/1200/600",
-    image2: "https://picsum.photos/seed/7/600/400",
-    image3: "https://picsum.photos/seed/8/600/400",
-    image4: "https://picsum.photos/seed/9/1200/600",
-  },
-  {
-    id: 13,
-    name: "Madinah Scheme Development",
-    location: "Lugbe, Nigeria",
-    description:
-      "The Red Sea Project is one of three giga-projects announced by Prince Mohammad bin Salman bin Abdulaziz Al Saud in 2017. Extending over 28,000 km² on Saudi Arabia's Red Sea coast, the destination offers a unique luxurious range of experiences, from island getaways to resort holidays, mountain retreats, and desert adventures, focusing on the wellness and ecology for local and international visitors.",
-    client: "Madinah Developers",
-    services: ["Urban Planning", "Engineering", "Consultancy"],
-    sector: "Construction",
-    mainImage: "https://picsum.photos/seed/pc3s/2400/1200",
-    image1: "https://picsum.photos/seed/10/1200/600",
-    image2: "https://picsum.photos/seed/11/600/400",
-    image3: "https://picsum.photos/seed/12/600/400",
-    image4: "https://picsum.photos/seed/13/1200/600",
-  },
-];
-
 const SingleProjectPage = () => {
-  const { projectId } = useParams(); // Extract projectId from URL parameters
-
-  // Find the project based on the ID from the URL
-  const project = projects.find((proj) => proj.id === parseInt(projectId));
+  /* eslint-disable no-unused-vars */
+  const { projectId } = useParams(); // Extract projectId from URL
+  const location = useLocation(); // Get the location object to access passed state
+  // Access the project data passed via navigate
+  const project = location.state?.project;
+  // State to hold the fetched projects
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`${BASE_API_URL}projects/`) // Use the correct API URL
+      .then((response) => {
+        setProjects(response.data.data); // Set the projects data
+      })
+      .catch((error) => {
+        console.error("Error fetching projects:", error);
+      });
+  }, []);
 
   // Handle case where project is not found
   if (!project) {
     return <div>Project not found</div>;
   }
 
+  // Step 1: Get the first sector of the current project
+  const firstSector = project?.sector?.[0]?.name;
+
+  // Step 2: Filter projects based on the first sector of the current project
+  /* eslint-disable no-unused-vars */
+  const filteredProjects = projects.filter(
+    (proj) =>
+      proj.sector.some((sect) => sect.name === firstSector) &&
+      proj.id !== project.id // Exclude current project
+  );
+
   return (
     <div className="project-page">
       {/* Project Main Image */}
-      <div className="project-main-image">
-        <div
-          className="project-main-overlay"
-          style={{ backgroundImage: `url(${project.mainImage})` }}
-        >
+      <div
+        className="project-main-image"
+        style={{
+          backgroundImage: `url(${BASE_API_URL}${project.cover_image})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="project-main-overlay">
           <div className="project-title-container">
-            <h1 className="project-title">{project.name}</h1>
-            <p className="single-project-location">{project.location}</p>
+            <h1 className="project-title">
+              {project.name || "Name Unavailable"}
+            </h1>
+            <p className="single-project-location">
+              {project.location || "Location Unavailable"}
+            </p>
           </div>
         </div>
       </div>
@@ -214,15 +66,11 @@ const SingleProjectPage = () => {
       <div className="project-info-section">
         {/* Left Column: Main Project Information */}
         <div className="project-info-left">
-          <p>{project.description}</p>
-          <br />
-          <p>Scope of work includes:</p>
-          <ul>
-            <li>Access Roads to Shurayrah, North Jetty and Airport Road</li>
-            <li>
-              Plot Connection Roads which interconnects utilities buildings
-            </li>
-          </ul>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: project.description || "<p>Desc Unavailable</p>",
+            }}
+          />
         </div>
 
         <div className="project-info-right">
@@ -235,9 +83,10 @@ const SingleProjectPage = () => {
               />
               <span>Client</span>
             </div>
-            <ul>
-              <li className="services-list-li">{project.client}</li>{" "}
-              {/* Display value below the label */}
+            <ul className="no-mb">
+              <li className="services-list-li">
+                {project.client.name || "Client Name Unavailable"}
+              </li>
             </ul>
           </div>
           <div className="proj-info-item">
@@ -250,10 +99,10 @@ const SingleProjectPage = () => {
               <span>Service</span>
             </div>
             <div className="service-list">
-              <ul>
-                {project.services.map((service, index) => (
-                  <li class="services-list-li" key={index}>
-                    {service}
+              <ul className="no-mb">
+                {project.service.map((service, index) => (
+                  <li className="services-list-li" key={index}>
+                    {service.name}
                   </li>
                 ))}
               </ul>
@@ -268,9 +117,16 @@ const SingleProjectPage = () => {
               />
               <span>Sector</span>
             </div>
-            <ul>
-              <li className="services-list-li">{project.sector}</li>{" "}
-              {/* Display value below the label */}
+            <ul className="no-mb">
+              {project.sector && project.sector.length > 0 ? (
+                project.sector.map((sector) => (
+                  <li key={sector.id} className="services-list-li">
+                    {sector.name}
+                  </li>
+                ))
+              ) : (
+                <li className="services-list-li">Sector Unavailable</li>
+              )}
             </ul>
           </div>
         </div>
@@ -278,24 +134,47 @@ const SingleProjectPage = () => {
 
       {/* Project Images Section */}
       <div className="project-images-section">
-        {/* 1st Main Image Section */}
         <div className="project-image-main">
-          <lazyload>
-            <img src={project.image1} alt="Main Project" />
-          </lazyload>
+          <img
+            src={
+              project.landscape_image1
+                ? `${BASE_API_URL}${project.landscape_image1}`
+                : "../images/team.webp"
+            }
+            alt="Main Project"
+          />
         </div>
-        {/* Middle Portrait Images Section */}
         <div className="project-images-row">
           <div className="portrait-project-image">
-            <img src={project.image2} alt="Project Detail 1" />
+            <img
+              src={
+                project.portrait_image1
+                  ? `${BASE_API_URL}${project.portrait_image1}`
+                  : "../images/team.webp"
+              }
+              alt="Project Detail 1"
+            />
           </div>
           <div className="portrait-project-image">
-            <img src={project.image3} alt="Project Detail 2" />
+            <img
+              src={
+                project.portrait_image2
+                  ? `${BASE_API_URL}${project.portrait_image2}`
+                  : "../images/team.webp"
+              }
+              alt="Project Detail 2"
+            />
           </div>
         </div>
-        {/* Last Main Image Section */}
         <div className="project-image-main">
-          <img src={project.image4} alt="Final Project" />
+          <img
+            src={
+              project.landscape_image2
+                ? `${BASE_API_URL}${project.landscape_image2}`
+                : "../images/team.webp"
+            }
+            alt="Final Project"
+          />
         </div>
       </div>
 
@@ -304,9 +183,7 @@ const SingleProjectPage = () => {
         <h3>
           <strong>Related Projects</strong>
         </h3>
-        <div className="related-projects-carousel">
-          {/* Add related projects here */}
-        </div>
+        <FilteredProjects projects={filteredProjects} />
       </div>
     </div>
   );

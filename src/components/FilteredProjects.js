@@ -1,39 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Slider from "react-slick";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./FeaturedProjects.css";
+import { useNavigate } from "react-router-dom";
+import "./FilteredProjects.css"; // Renamed the CSS file to match the new component
 import { BASE_API_URL } from "./ProjectsSection";
 
-const FeaturedProjects = () => {
-  const navigate = useNavigate(); // Hook to navigate between pages
-  const [projects, setProjects] = useState([]);
-  // eslint-disable-next-line
-  const [error, setError] = useState(null);
-
-  // Fetch projects from the backend API
-  useEffect(() => {
-    axios
-      .get(`${BASE_API_URL}projects/`)
-      .then((response) => {
-        setProjects(response.data.data);
-        setError(null);
-      })
-      .catch((error) => {
-        setError("Failed to fetch projects due to " + error);
-      });
-  }, []);
-
-  console.log(projects);
+const FilteredProjects = ({ projects }) => {
+  const navigate = useNavigate(); // Hook for navigation
 
   // Slick carousel settings
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3.1, // Number of slides to show at a time
+    slidesToShow: 3, // Number of slides to show at a time
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -54,21 +35,22 @@ const FeaturedProjects = () => {
   };
 
   return (
-    <div className="featured-projects">
-      <h2 className="featured-projects__title">Featured Projects</h2>
+    <div className="filtered-projects">
       <Slider {...settings}>
         {projects.map((project) => (
           <div
             key={project.id}
             className="home-project-card"
             onClick={() =>
-              navigate(`/project/${project.id}`, {
-                state: { project }, // Pass the entire project data in state
-              })
-            }
+              navigate(`/project/${project.id}`, { state: { project } })
+            } // Navigate to single project page
           >
             <img
-              src={`${BASE_API_URL}${project.cover_image}`}
+              src={
+                project.landscape_image1
+                  ? `${BASE_API_URL}${project.landscape_image1}`
+                  : "../images/team.webp"
+              }
               alt={project.name}
               className="project-card__image"
             />
@@ -86,7 +68,6 @@ const SampleNextArrow = (props) => {
   const { onClick } = props;
   return (
     <div className="arrow next-arrow" onClick={onClick}>
-      {/* Right Arrow SVG */}
       <svg
         width="24"
         height="24"
@@ -110,11 +91,10 @@ const SamplePrevArrow = (props) => {
   const { onClick } = props;
   return (
     <div className="arrow prev-arrow" onClick={onClick}>
-      {/* Left Arrow SVG */}
       <svg
         width="24"
         height="24"
-        viewBox="0 0 24 24"
+        viewBox="0  0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -130,4 +110,4 @@ const SamplePrevArrow = (props) => {
   );
 };
 
-export default FeaturedProjects;
+export default FilteredProjects;

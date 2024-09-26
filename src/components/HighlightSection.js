@@ -25,7 +25,7 @@ const HighlightSection = () => {
             <lazyload>
               <img
                 src="../images/home3.webp"
-                class="no-margin-left"
+                className="no-margin-left"
                 alt="Construction work"
               />
             </lazyload>
@@ -52,7 +52,7 @@ const HighlightSection = () => {
             <lazyload>
               <img
                 src="../images/road-construction-with-road-transport-equipment-top-view-transformed.webp"
-                class="no-margin-right"
+                className="no-margin-right"
                 alt="Machinery in action"
               />
             </lazyload>

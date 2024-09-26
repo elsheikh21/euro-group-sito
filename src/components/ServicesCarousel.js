@@ -181,7 +181,12 @@ const ServicesCarousel = () => {
   };
 
   const handleReadMoreClick = (service) => {
-    navigate(`/service/${service.service_name}`); // Redirect to the SingleServicePage with the service name in the URL
+    navigate(`/service/${service.service_name}`, {
+      state: {
+        service_name: service.service_name,
+        service_title: service.title,
+      },
+    });
   };
 
   // Filter services based on selected filter
