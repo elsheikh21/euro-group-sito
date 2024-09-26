@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 import "./ProjectsSection.css";
@@ -166,6 +167,21 @@ const ProjectsSection = () => {
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
+
+  // Fetch projects from the backend API
+  useEffect(() => {
+    axios
+      .get("https://euro-group-5011e47364b0.herokuapp.com/projects/")
+      .then((response) => {
+        console.log("Success:", response);
+        /* setProjects(response.data.data); // Set the fetched projects data */
+        setError(null); // Reset error state
+      })
+      .catch((error) => {
+        console.error("Error fetching projects:", error);
+        setError("Failed to fetch projects. Please try again later.");
+      });
+  }, []); // Empty dependency array to call only on component mount
 
   // Extract unique sectors from projects for secondary filter (only for 'sectors')
   const sectors = [
