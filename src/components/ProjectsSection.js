@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 import "./ProjectsSection.css";
@@ -174,7 +173,10 @@ const ProjectsSection = () => {
 
   /* TODO 
   Projects Fetching
-  Uncomment this section when connecting backend
+
+  import axios from "axios";
+  import React, { useState, useEffect } from "react";
+
   // Fetch projects from the backend API
   useEffect(() => {
     axios
