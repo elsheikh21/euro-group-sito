@@ -12,7 +12,7 @@ const Landing = () => {
           <div className="carousel-image">
             <img
               className="d-block w-100"
-              src="../images/Bridges-engineering.webp"
+              src="../images/Bridges-engineering-transformed.webp"
               alt="First slide"
             />
             <div className="carousel-overlay">

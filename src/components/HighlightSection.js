@@ -51,7 +51,7 @@ const HighlightSection = () => {
           <div className="content-image right-aligned">
             <lazyload>
               <img
-                src="../images/road-construction-with-road-transport-equipment-top-view.webp"
+                src="../images/road-construction-with-road-transport-equipment-top-view-transformed.webp"
                 class="no-margin-right"
                 alt="Machinery in action"
               />
