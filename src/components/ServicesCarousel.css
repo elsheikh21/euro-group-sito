@@ -12,9 +12,35 @@
 }
 
 .proj-filters {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+  display: inline-block;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  scrollbar-width: thin;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+  .proj-filters {
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+}
+
+.proj-filters::-webkit-scrollbar {
+  height: 6px;
+}
+
+.proj-filters::-webkit-scrollbar-thumb {
+  background-color: #262628;
+  border-radius: 10px;
+}
+
+.proj-filters::-webkit-scrollbar-thumb:hover {
+  background-color: #333;
 }
 
 .srv-filter-button {
@@ -162,7 +188,11 @@
 
 @media (max-width: 480px) {
   .service-slide {
-    width: 100% !important;
+    width: 80% !important;
+  }
+
+  .slick-slider {
+    margin: 0 0 !important;
   }
 
   .service-image {

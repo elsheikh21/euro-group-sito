@@ -6,6 +6,20 @@ body {
   background-color: #f3f3f5 !important;
 }
 
+/* Apply the styles to the body or html element for the whole website */
+html::-webkit-scrollbar {
+  width: 6px; /* Vertical scrollbar width */
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #262628;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #333;
+}
+
 .App {
   text-align: center;
 }

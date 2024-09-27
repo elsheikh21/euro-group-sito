@@ -355,3 +355,10 @@
   margin: 0 0;
   padding: 0 0;
 }
+
+@media (max-width: 480px) {
+  .project-image-main img {
+    width: 100%;
+    height: auto;
+  }
+}
