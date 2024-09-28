@@ -1,11 +1,85 @@
 import React, { useState } from "react";
+import DOMPurify from "dompurify";
+import * as yup from "yup";
 import "./ContactBody.css";
 
 const ContactBody = () => {
   const [messageLength, setMessageLength] = useState(0);
 
-  const handleMessageChange = (event) => {
-    setMessageLength(event.target.value.length);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+  // eslint-disable-next-line
+  const [formStatus, setFormStatus] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const validationSchema = yup.object().shape({
+    firstName: yup.string().required("First name is required"),
+    lastName: yup.string().required("Last name is required"),
+    email: yup
+      .string()
+      .email("Invalid email address")
+      .required("Email is required"),
+    message: yup.string().required("Message is required"),
+  });
+  const handleInputChange = (event) => {
+    const { id, value } = event.target;
+    const sanitizedValue = DOMPurify.sanitize(value);
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: sanitizedValue,
+    }));
+
+    if (id === "message") {
+      setMessageLength(sanitizedValue.length);
+    }
+  };
+  // Function to post form data to the backend
+  const postFormData = async (data) => {
+    try {
+      const response = await fetch(
+        "https://your-backend-domain.com/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (response.ok) {
+        setFormStatus("Your message has been successfully sent!");
+        setFormData({ firstName: "", lastName: "", email: "", message: "" }); // Reset form
+        setMessageLength(0);
+      } else {
+        setFormStatus(
+          "There was an issue submitting your message. Please try again later."
+        );
+      }
+    } catch (error) {
+      setFormStatus("Network error. Please try again later.");
+    }
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await validationSchema.validate(formData, { abortEarly: false });
+      setErrors({}); // Clear errors if validation passes
+
+      // Post the validated data to the backend
+      await postFormData(formData);
+    } catch (validationErrors) {
+      const formattedErrors = {};
+      validationErrors.inner.forEach((error) => {
+        formattedErrors[error.path] = error.message;
+      });
+      setErrors(formattedErrors);
+    }
   };
 
   const locations = [
@@ -81,20 +155,31 @@ const ContactBody = () => {
           </p>
         </div>
         <div className="contact-form-div">
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group double">
               <div className="form-item">
                 <label htmlFor="firstName">First Name</label>
-                <input type="text" id="firstName" />
+                <input
+                  type="text"
+                  id="firstName"
+                  onChange={handleInputChange}
+                />
+                {errors.firstName && (
+                  <p className="error-text">{errors.firstName}</p>
+                )}
               </div>
               <div className="form-item">
                 <label htmlFor="lastName">Last Name</label>
-                <input type="text" id="lastName" />
+                <input type="text" id="lastName" onChange={handleInputChange} />
+                {errors.lastName && (
+                  <p className="error-text">{errors.lastName}</p>
+                )}
               </div>
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input type="email" id="email" />
+              <input type="email" id="email" onChange={handleInputChange} />
+              {errors.email && <p className="error-text">{errors.email}</p>}
             </div>
             <div className="form-group">
               <label htmlFor="message">Message</label>
@@ -102,11 +187,12 @@ const ContactBody = () => {
                 id="message"
                 placeholder="Leave us a Message"
                 maxLength="512"
-                onChange={handleMessageChange}
+                onChange={handleInputChange}
               ></textarea>
               <div className="character-count">
                 {messageLength} of 512 max characters.
               </div>
+              {errors.message && <p className="error-text">{errors.message}</p>}
             </div>
             <button className="contact-form-button" type="submit">
               Submit
