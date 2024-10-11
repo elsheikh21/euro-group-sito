@@ -27,22 +27,27 @@ const App = () => {
     document.onkeydown = function (e) {
       // F12
       if (e.key === "F12") {
+        e.preventDefault();
         return false;
       }
       // Ctrl+Shift+I
-      if (e.ctrlKey && e.shiftKey && e.key === "I") {
+      if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "i")) {
+        e.preventDefault();
         return false;
       }
       // Ctrl+Shift+C
-      if (e.ctrlKey && e.shiftKey && e.key === "C") {
+      if (e.ctrlKey && e.shiftKey && (e.key === "C" || e.key === "c")) {
+        e.preventDefault();
         return false;
       }
       // Ctrl+Shift+J (Console)
-      if (e.ctrlKey && e.shiftKey && e.key === "J") {
+      if (e.ctrlKey && e.shiftKey && (e.key === "J" || e.key === "j")) {
+        e.preventDefault();
         return false;
       }
       // Ctrl+U (View Source)
-      if (e.ctrlKey && e.key === "U") {
+      if (e.ctrlKey && (e.key === "U" || e.key === "u")) {
+        e.preventDefault();
         return false;
       }
     };
