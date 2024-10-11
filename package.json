@@ -31,8 +31,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "react-scripts build && npm run obfuscate && npm run minify-html",
+    "obfuscate": "javascript-obfuscator build/static/js --output build/static/js --config obfuscator-config.json",
+    "minify-html": "html-minifier-terser --input-dir build --output-dir build --file-ext html --collapse-whitespace --minify-css --minify-js --remove-comments --remove-empty-elements",
     "eject": "react-scripts eject",
     "postbuild": "purgecss --css src/components/*.css --content public/index.html src/components/*.js --output ./"
   },
@@ -58,6 +59,8 @@
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-proposal-decorators": "^7.24.7",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@fullhuman/postcss-purgecss": "^6.0.0"
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "html-minifier-terser": "^7.2.0",
+    "javascript-obfuscator": "^4.1.1"
   }
 }

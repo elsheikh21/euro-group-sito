@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -19,6 +19,34 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const App = () => {
+  useEffect(() => {
+    // Disable right-click
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    // // Disable certain key combinations
+    document.onkeydown = function (e) {
+      // F12
+      if (e.key === "F12") {
+        return false;
+      }
+      // Ctrl+Shift+I
+      if (e.ctrlKey && e.shiftKey && e.key === "I") {
+        return false;
+      }
+      // Ctrl+Shift+C
+      if (e.ctrlKey && e.shiftKey && e.key === "C") {
+        return false;
+      }
+      // Ctrl+Shift+J (Console)
+      if (e.ctrlKey && e.shiftKey && e.key === "J") {
+        return false;
+      }
+      // Ctrl+U (View Source)
+      if (e.ctrlKey && e.key === "U") {
+        return false;
+      }
+    };
+  }, []);
   return (
     <Router>
       <div className="App">
