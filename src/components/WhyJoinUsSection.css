@@ -38,13 +38,6 @@
   max-height: 100%;
 }
 
-.join-value-description {
-  font-size: 1rem;
-  color: #262628;
-  line-height: 1.6;
-  max-width: 220px;
-}
-
 @media (max-width: 768px) {
   .join-values-grid {
     grid-template-columns: repeat(2, 1fr);

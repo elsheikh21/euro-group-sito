@@ -4,12 +4,6 @@
   background-color: #f3f3f5;
 }
 
-.filtered-projects__title {
-  font-size: 1.75rem;
-  margin-bottom: 4rem;
-  font-weight: bold;
-}
-
 .home-project-card {
   border-radius: 10px;
   overflow: hidden;

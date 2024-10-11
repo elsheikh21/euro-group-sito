@@ -18,8 +18,8 @@
 
 .clients-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
   gap: 10px;
   height: 100%;
   justify-items: center;
@@ -77,26 +77,4 @@
   .slick-next {
     right: 0;
   }
-}
-
-.slick-dots li {
-  margin: 0 5px;
-}
-
-.slick-dots li button:before {
-  content: "";
-  width: 20px;
-  height: 4px;
-  background-color: #cccccc;
-  display: block;
-  border-radius: 2px;
-  transition: background-color 0.3s ease;
-}
-
-.slick-dots li.slick-active button:before {
-  background-color: #ffffff;
-  width: 25px;
-  height: 4px;
-  border-radius: 2px;
-  transition: background-color 0.3s ease, width 0.3s ease;
 }

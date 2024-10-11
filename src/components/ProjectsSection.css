@@ -13,72 +13,6 @@
   font-size: 1.15rem;
 }
 
-.filter-button {
-  background-color: transparent;
-  border: none;
-  color: #19258b;
-  padding: 10px 15px;
-  margin: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.filter-button .active {
-  background-color: #19258b;
-  color: #f3f3f5;
-  border-radius: 10px;
-}
-
-.filter-button:hover {
-  background-color: #f3f3f5;
-  color: #19258b;
-  border-radius: 10px;
-}
-
-.arrow-down {
-  font-size: 1rem;
-  margin-left: 5px;
-  color: #19258b;
-}
-
-.secondary-filters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #e0e0e0;
-  padding: 0 10px;
-  border-radius: 5px;
-  font-size: 1.15rem;
-}
-
-.mb-60 {
-  margin-bottom: 3.75rem !important;
-}
-
-.secondary-filter-button {
-  background-color: transparent;
-  border: none;
-  color: #262628;
-  padding: 10px 15px;
-  margin: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.secondary-filter-button.active {
-  background-color: #f3f3f5;
-  color: #19258b;
-  border-radius: 10px;
-}
-
-.secondary-filter-button:hover {
-  background-color: #f3f3f5;
-  color: #19258b;
-  border-radius: 10px;
-}
-
 .projects-grid {
   background-color: #f3f3f5;
   display: grid;
@@ -157,31 +91,6 @@
   scrollbar-width: thin;
   width: 100%;
   margin-bottom: 0px;
-}
-
-.feat-proj-filter-button {
-  display: inline-block;
-  background-color: transparent;
-  border: none;
-  color: #262628;
-  padding: 10px 15px;
-  margin: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  white-space: nowrap;
-}
-
-.feat-proj-filter-button.active {
-  background-color: #19258b;
-  color: #f3f3f5;
-  border-radius: 10px;
-}
-
-.feat-proj-filter-button:hover {
-  background-color: #19258b;
-  color: #f3f3f5;
-  border-radius: 10px;
 }
 
 @media (max-width: 768px) {

@@ -46,7 +46,10 @@ const SingleProjectPage = () => {
       <div
         className="project-main-image"
         style={{
-          backgroundImage: `url(${BASE_API_URL}${project.cover_image})`,
+          backgroundImage: `url(${BASE_API_URL}${project.cover_image.replace(
+            "/",
+            ""
+          )})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

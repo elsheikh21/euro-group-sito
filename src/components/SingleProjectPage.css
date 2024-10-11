@@ -157,19 +157,6 @@
   list-style: none;
 }
 
-.related-projects-carousel {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding: 10px 0;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.related-projects-carousel::-webkit-scrollbar {
-  display: none;
-}
-
 @media (max-width: 768px) {
   .project-info-section {
     flex-direction: column;

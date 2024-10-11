@@ -46,30 +46,6 @@
   background-color: #262628;
 }
 
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  right: 20px;
-  top: 20px;
-  z-index: 2001;
-}
-
-.bm-burger-bars {
-  background: #f3f3f5;
-}
-
-.bm-burger-bars-hover {
-  background: #ddd;
-}
-
-.bm-menu {
-  background: #333;
-  padding-top: 5rem;
-  padding-left: 1.5em;
-  border-radius: 10px;
-}
-
 .menu-item {
   color: #f3f3f5;
   padding: 0.5em 0;
@@ -132,16 +108,6 @@
 
 @media (max-width: 768px) {
   .header-nav {
-    display: none;
-  }
-
-  .bm-burger-button {
-    display: block;
-  }
-}
-
-@media (min-width: 769px) {
-  .bm-burger-button {
     display: none;
   }
 }
