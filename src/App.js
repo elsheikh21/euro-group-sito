@@ -23,7 +23,7 @@ const App = () => {
     // Disable right-click
     document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-    // // Disable certain key combinations
+    // Disable certain key combinations
     document.onkeydown = function (e) {
       // F12
       if (e.key === "F12") {

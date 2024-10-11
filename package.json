@@ -33,7 +33,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build && npm run obfuscate && npm run minify-html",
     "obfuscate": "javascript-obfuscator build/static/js --output build/static/js --config obfuscator-config.json",
-    "minify-html": "html-minifier-terser --input-dir build --output-dir build --file-ext html --collapse-whitespace --minify-css --minify-js --remove-comments --remove-empty-elements",
     "eject": "react-scripts eject",
     "postbuild": "purgecss --css src/components/*.css --content public/index.html src/components/*.js --output ./"
   },
