@@ -39,15 +39,20 @@ const ContactBody = () => {
   };
   // Function to post form data to the backend
   const postFormData = async (data) => {
+    const formattedData = {
+      name: `${data.firstName} ${data.lastName}`,  // Combine first and last name into 'name'
+      email: data.email,
+      message: data.message
+    };
     try {
       const response = await fetch(
-        "https://your-backend-domain.com/api/contact",
+        "https://euro-group-5011e47364b0.herokuapp.com/contact/",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(data),
+          body: JSON.stringify(formattedData),
         }
       );
 
