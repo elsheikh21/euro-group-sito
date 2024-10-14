@@ -32,8 +32,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject",
-    "postbuild": "purgecss --css src/components/*.css --content public/index.html src/components/*.js --output ./"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
