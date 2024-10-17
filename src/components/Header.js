@@ -69,28 +69,28 @@ const Header = () => {
           <ul>
             <li>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/EuroGroupEngineeringConsultancy"
                 className="social-icon fab fa-facebook-f"
                 aria-label="Facebook"
               ></a>
             </li>
             <li>
               <a
-                href="https://twitter.com"
+                href="https://x.com/EuroGroupforEn1"
                 className="social-icon fab fa-twitter"
                 aria-label="Twitter"
               ></a>
             </li>
             <li>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/eurogroupconsult/"
                 className="social-icon fab fa-instagram"
                 aria-label="Instagram"
               ></a>
             </li>
             <li>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/euro-group-for-engineering-consultancy/?viewAsMember=true"
                 className="social-icon fab fa-linkedin-in"
                 aria-label="LinkedIn"
               ></a>

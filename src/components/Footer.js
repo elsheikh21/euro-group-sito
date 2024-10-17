@@ -16,28 +16,28 @@ const Footer = () => {
           <ul className="social-media-list padding-bottom-20">
             <li>
               <a
-                href="#Facebook"
+                href="https://www.facebook.com/EuroGroupEngineeringConsultancy"
                 className="social-icon fab fa-facebook-f"
                 aria-label="Facebook"
               ></a>
             </li>
             <li>
               <a
-                href="#Twitter"
+                href="https://x.com/EuroGroupforEn1"
                 className="social-icon fab fa-twitter"
                 aria-label="Twitter"
               ></a>
             </li>
             <li>
               <a
-                href="#Instagram"
+                href="https://www.instagram.com/eurogroupconsult/"
                 className="social-icon fab fa-instagram"
                 aria-label="Instagram"
               ></a>
             </li>
             <li>
               <a
-                href="#LinkedIn"
+                href="https://www.linkedin.com/company/euro-group-for-engineering-consultancy/?viewAsMember=true"
                 className="social-icon fab fa-linkedin-in"
                 aria-label="LinkedIn"
               ></a>
