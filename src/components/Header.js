@@ -77,7 +77,7 @@ const Header = () => {
             <li>
               <a
                 href="https://x.com/EuroGroupforEn1"
-                className="social-icon fab fa-twitter"
+                className="social-icon fa-brands fa-x-twitter"
                 aria-label="Twitter"
               ></a>
             </li>
