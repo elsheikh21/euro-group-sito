@@ -64,7 +64,7 @@ const ProjectsSection = () => {
             }
           >
             <img
-              src={`${BASE_API_URL}${project.cover_image.replace("/", "")}`}
+              src={`${project.cover_image}`}
               alt={project.name}
               className="projects-image"
             />

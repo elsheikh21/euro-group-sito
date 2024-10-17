@@ -9,29 +9,6 @@ const ClientsSection = () => {
   // eslint-disable-next-line
   const [error, setError] = useState(null);
 
-  // const clients = [
-  //   "https://picsum.photos/175/175?random=1",
-  //   "https://picsum.photos/175/175?random=2",
-  //   "https://picsum.photos/175/175?random=3",
-  //   "https://picsum.photos/175/175?random=4",
-  //   "https://picsum.photos/175/175?random=5",
-  //   "https://picsum.photos/175/175?random=6",
-  //   "https://picsum.photos/175/175?random=7",
-  //   "https://picsum.photos/175/175?random=8",
-  //   "https://picsum.photos/175/175?random=9",
-  //   "https://picsum.photos/175/175?random=10",
-  //   "https://picsum.photos/175/175?random=11",
-  //   "https://picsum.photos/175/175?random=12",
-  //   "https://picsum.photos/175/175?random=13",
-  //   "https://picsum.photos/175/175?random=14",
-  //   "https://picsum.photos/175/175?random=15",
-  //   "https://picsum.photos/175/175?random=16",
-  //   "https://picsum.photos/175/175?random=17",
-  //   "https://picsum.photos/175/175?random=18",
-  //   "https://picsum.photos/175/175?random=19",
-  //   "https://picsum.photos/175/175?random=20",
-  //   "https://picsum.photos/175/175?random=21",
-  // ];
   const NextArrow = (props) => {
     const { onClick } = props;
     return (
@@ -93,7 +70,7 @@ const ClientsSection = () => {
       .get(`${BASE_API_URL}projects/`)
       .then((response) => {
         const clientLogos = response.data.data.map(
-          (project) => `${BASE_API_URL}${project.client.logo}`
+          (project) => `${project.client.logo}`
         );
         setClients(clientLogos);
         setError(null);
