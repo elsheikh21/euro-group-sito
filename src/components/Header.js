@@ -58,7 +58,7 @@ const Header = () => {
         {/* Company Logo at the bottom */}
         <div className="menu-logo">
           <img
-            src="../images/logo_white.webp"
+            src="../images/Logo_white.webp"
             alt="Company Logo"
             className="menu-company-logo"
           />
