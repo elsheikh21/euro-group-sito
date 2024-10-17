@@ -17,7 +17,7 @@ const Header = () => {
       <div className="header-logo">
         <Link to="/">
           <img
-            src="../images/logo_white.webp"
+            src="../images/Logo_white.webp"
             alt="Logo"
             className="logo"
           />
