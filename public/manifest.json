@@ -1,6 +1,6 @@
 {
-  "short_name": "Euro Group Website",
-  "name": "Euro Group Website",
+  "short_name": "Euro Group for Engineering Consultancy Website",
+  "name": "Euro Group for Engineering Consultancy Website",
   "icons": [
     {
       "src": "favicon_blk_bgnd.png",
@@ -8,13 +8,13 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.webp",
-      "type": "image/webp",
+      "src": "favicon_blk_bgnd.png",
+      "type": "image/x-icon",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.webp",
-      "type": "image/webp",
+      "src": "favicon_blk_bgnd.png",
+      "type": "image/x-icon",
       "sizes": "512x512"
     }
   ],
