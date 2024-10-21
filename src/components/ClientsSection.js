@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import { BASE_API_URL } from "../components/ProjectsSection";
 import axios from "axios";
@@ -8,6 +8,7 @@ const ClientsSection = () => {
   const [clients, setClients] = useState([]);
   // eslint-disable-next-line
   const [error, setError] = useState(null);
+  const hasFetchedData = useRef(false); // To keep track of the first fetch
 
   const NextArrow = (props) => {
     const { onClick } = props;
@@ -55,7 +56,7 @@ const ClientsSection = () => {
   // Settings for the slider
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -66,22 +67,24 @@ const ClientsSection = () => {
     prevArrow: <PrevArrow />,
   };
   useEffect(() => {
+    if (hasFetchedData.current) return; // Prevent second API call
+    hasFetchedData.current = true; // Mark as fetched
+
     axios
-      .get(`${BASE_API_URL}projects/`)
+      .get(`${BASE_API_URL}projects/clients`)
       .then((response) => {
-        const clientLogos = response.data.data.map(
-          (project) => `${project.client.logo}`
-        );
-        setClients(clientLogos);
+        const clientLogos = response.data.data.map((client) => client.logo);
+        const setClientLogos = [...new Set(clientLogos)];
+        setClients(setClientLogos);
         setError(null);
       })
       .catch((error) => {
-        setError("Failed to fetch projects due to " + error);
+        setError("Failed to fetch clients due to " + error);
       });
-  }, []);
+  }, [clients]);
 
   // Logging to verify the output
-  // console.log("CLIENTS:", clients);
+  console.log("CLIENTS:", clients);
 
   // Group clients into slides of 5x3 (15 clients per slide)
   const slides = [];
@@ -90,25 +93,29 @@ const ClientsSection = () => {
   }
 
   // Logging to verify the list
-  // console.log("SLIDES:", slides);
+  console.log("SLIDES:", slides);
+  const placeholderImage = '../images/placeholder.png'; // Replace with the actual placeholder image URL
 
   return (
     <section className="clients-section">
       <h2 className="clients-section-title">Our Clients & Partners</h2>
       <Slider {...settings}>
-        {slides.map((slide, slideIndex) => (
-          <div key={slideIndex} className="clients-slide">
-            <div className="clients-grid">
-              {slide.map((client, index) => (
-                <div key={index} className="client-logo">
-                  <lazyload>
-                    <img src={client} alt={`Client ${index + 1}`} />
-                  </lazyload>
-                </div>
-              ))}
-            </div>
+        <div className="clients-slide">
+          <div className="clients-grid">
+            {clients.map((client, index) => (
+              <div key={index} className="client-logo">
+                <img
+                  src={client || placeholderImage} // Default to placeholder if client logo is missing
+                  alt={`Client ${index + 1}`}
+                  onError={(e) => {
+                    e.target.onerror = null; // Prevent infinite loop in case placeholder fails
+                    e.target.src = placeholderImage; // Set placeholder if the image fails to load
+                  }}
+                />
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </Slider>
     </section>
   );
