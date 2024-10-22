@@ -48,7 +48,7 @@ const FilteredProjects = ({ projects }) => {
             <img
               src={
                 project.landscape_image1
-                  ? `${BASE_API_URL}${project.landscape_image1}`
+                  ? `${project.landscape_image1}`
                   : "../images/team.webp"
               }
               alt={project.name}
