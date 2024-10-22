@@ -34,7 +34,7 @@
   filter: grayscale(100%);
   box-shadow: none;
   border-radius: 0;
-  object-fit: cover;
+  object-fit: contain;
   /* Ensure the image covers the entire area without stretching */
   display: block;
   /* Removes any inline spacing issues */
