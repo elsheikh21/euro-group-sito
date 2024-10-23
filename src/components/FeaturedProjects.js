@@ -68,7 +68,7 @@ const FeaturedProjects = () => {
             }
           >
             <img
-              src={`${project.cover_image.replace("/", "")}`}
+              src={`${project.cover_image}`}
               alt={project.name}
               className="project-card__image"
             />
