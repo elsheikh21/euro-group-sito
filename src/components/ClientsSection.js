@@ -83,9 +83,6 @@ const ClientsSection = () => {
       });
   }, [clients]);
 
-  // Logging to verify the output
-  console.log("CLIENTS:", clients);
-
   // Group clients into slides of 5x3 (15 clients per slide)
   const slides = [];
   for (let i = 0; i < clients.length; i += 15) {
@@ -93,7 +90,6 @@ const ClientsSection = () => {
   }
 
   // Logging to verify the list
-  console.log("SLIDES:", slides);
   const placeholderImage = '../images/placeholder.png'; // Replace with the actual placeholder image URL
 
   return (
