@@ -216,7 +216,7 @@ const ServicesCarousel = () => {
         );
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -243,10 +243,12 @@ const ServicesCarousel = () => {
         ))}
       </div>
 
+      <div class="container-fluid">
+        <div class="row-fluid w-80">
       {/* Carousel Section */}
-      <Slider {...settings} className="m-20">
+          <Slider {...settings}>
         {filteredServices.map((service, index) => (
-          <div key={index} className="service-slide">
+              <div key={index} className="service-slide my_1 ">
             <div className="service-content">
               <div className="service-image-wrapper">
                 <img
@@ -273,6 +275,8 @@ const ServicesCarousel = () => {
           </div>
         ))}
       </Slider>
+      </div>
+      </div>
     </div>
   );
 };
