@@ -58,7 +58,7 @@ const ContactBody = () => {
 
       if (response.ok) {
         setFormStatus("Your message has been successfully sent!");
-        setFormData({ firstName: "", lastName: "", email: "", message: "" }); // Reset form
+        setFormData({ firstName: "", lastName: "", email: "", message: "" });
         setMessageLength(0);
       } else {
         setFormStatus(
@@ -213,9 +213,7 @@ const ContactBody = () => {
             <p>
               <i className="fas fa-map-marker-alt"></i>{" "}
               <a
-                href={`https://maps.google.com/?q=${encodeURIComponent(
-                  location.address_maps
-                )}`}
+                href={`${location.address_maps}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="location-link"
