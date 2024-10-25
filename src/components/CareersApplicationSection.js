@@ -14,10 +14,10 @@ const CareersApplicationSection = () => {
         <p>
           Send us your CV at{" "}
           <a
-            href={`mailto:info@eurogroup.org?subject=Job%20Opportunity`}
+            href={`mailto:recruitment@eurogroup.org?subject=Job%20Opportunity`}
             className="email-link"
           >
-            info@eurogroup.org
+            recruitment@eurogroup.org
           </a>
         </p>
       </div>
