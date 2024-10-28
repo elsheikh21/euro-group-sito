@@ -11,7 +11,7 @@ const FilteredProjects = ({ projects }) => {
   // Slick carousel settings
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: projects.length > 1,
     speed: 500,
     slidesToShow: 3, // Number of slides to show at a time
     slidesToScroll: 1,
