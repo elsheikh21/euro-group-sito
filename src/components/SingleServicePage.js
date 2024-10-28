@@ -10,7 +10,7 @@ const SingleServicePage = () => {
   const { serviceName } = useParams(); // Get the service_name from the URL
   const location = useLocation();
   // eslint-disable-next-line
-  const { service_name, service_title } = location.state || {}; // Get service_name and service_title from the passed state
+  const { service_name, service_title, service_image } = location.state || {}; 
   // eslint-disable-next-line
   const [error, setError] = useState(null);
 
@@ -54,15 +54,14 @@ const SingleServicePage = () => {
       <div
         className="single-service-main-image"
         style={{
-          backgroundImage: `url(${service.imageUrl})`, // Use the image URL dynamically
-          backgroundSize: "cover", // Make sure the image covers the container
-          backgroundPosition: "center", // Center the image
-        }}
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          ...(service_image ? { backgroundImage: `url(${service_image})` } : {}),        }}
       >
         <div className="single-service-main-overlay">
           <div className="single-service-title-container">
             <h1 className="single-service-title">
-              {service_title || service.title}
+              {service_title}
             </h1>
           </div>
         </div>
