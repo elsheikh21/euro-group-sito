@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useNavigate } from "react-router-dom";
 import "./FilteredProjects.css"; // Renamed the CSS file to match the new component
-import { BASE_API_URL } from "./ProjectsSection";
 
 const FilteredProjects = ({ projects }) => {
   const navigate = useNavigate(); // Hook for navigation
