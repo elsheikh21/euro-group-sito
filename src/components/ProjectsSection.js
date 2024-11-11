@@ -31,11 +31,14 @@ const ProjectsSection = () => {
 
   // Pagination logic
   const filteredProjects = projects
-    .filter(
-      (project) =>
-        selectedService === "all" || project.service === selectedService
-    )
-    .filter((project) => !selectedSector || project.sector === selectedSector);
+  .filter(
+    (project) =>
+      selectedService === "all" || 
+      (project.service && 
+       Array.isArray(project.service) && 
+       project.service.some(svc => svc.id === selectedService))
+  )
+  .filter((project) => !selectedSector || project.sector === selectedSector);
 
   const pagesVisited = pageNumber * projectsPerPage;
   const displayProjects = filteredProjects.slice(
@@ -48,8 +51,75 @@ const ProjectsSection = () => {
     setPageNumber(selected);
   };
 
+  
+const [services, setServices] = useState([]);
+
+useEffect(() => {
+  axios
+    .get(`${BASE_API_URL}projects/mainservices`)
+    .then((response) => {
+      const allServices = {
+        id: "all",
+        name: "All",
+      };
+      setServices([allServices, ...response.data.data.filter(service => service.id !== "all")]);
+      setError(null);
+    })
+    .catch((error) => {
+      setError("Failed to fetch services due to " + error);
+    });
+}, []);
+
+  // Handle service filter click
+  const handleServiceClick = (serviceId) => {
+    setSelectedService(serviceId);
+    setSelectedSector(null); // Reset sector filter when changing service
+    setPageNumber(0); // Reset to first page when filters change
+  };
+
+    // Extract unique sectors from projects for secondary filter (only for 'sectors')
+  const sectors = [
+    ...new Set(
+      projects
+        .filter((project) => project.service === "sectors")
+        .map((project) => project.sector)
+    ),
+  ];
+
   return (
     <section className="projects-section">
+        {/* Primary Service Filters */}
+        <div className="proj-filters">
+        {services.map((service) => (
+          <button
+            key={service.id}
+            className={`feat-proj-filter-button ${
+              selectedService === service.id ? "active" : ""
+            }`}
+            onClick={() => handleServiceClick(service.id)}
+          >
+            {service.name}
+            {service.id === "sectors" && selectedService === "sectors"}
+          </button>
+        ))}
+      </div>
+
+      {/* Secondary Sector Filters for "SECTORS" */}
+      {selectedService === "sectors" && sectors.length > 0 && (
+        <div className="secondary-filters mb-60">
+          {sectors.map((sector) => (
+            <button
+              key={sector}
+              className={`secondary-filter-button ${
+                selectedSector === sector ? "active" : ""
+              }`}
+              onClick={() => setSelectedSector(sector)}
+            >
+              {sector}
+            </button>
+          ))}
+        </div>
+      )}
       {/* Projects Grid */}
       <div className="projects-grid">
         {displayProjects.map((project) => (
