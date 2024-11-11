@@ -18,7 +18,8 @@ const FeaturedProjects = () => {
     axios
       .get(`${BASE_API_URL}projects/`)
       .then((response) => {
-        setProjects(response.data.data);
+        const fetchedProjects = response.data.data;
+        setProjects(fetchedProjects.slice(0, 10)); // Only display the first 10 projects
         setError(null);
       })
       .catch((error) => {
@@ -30,7 +31,7 @@ const FeaturedProjects = () => {
 
   // Slick carousel settings
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3.1, // Number of slides to show at a time
