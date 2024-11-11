@@ -53,19 +53,7 @@ const ClientsSection = () => {
       </div>
     );
   };
-  // Settings for the slider
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-  };
+
   useEffect(() => {
     if (hasFetchedData.current) return; // Prevent second API call
     hasFetchedData.current = true; // Mark as fetched
@@ -83,35 +71,62 @@ const ClientsSection = () => {
       });
   }, [clients]);
 
+
+
   // Group clients into slides of 5x3 (15 clients per slide)
   const slides = [];
   for (let i = 0; i < clients.length; i += 15) {
-    slides.push(clients.slice(i, i + 15));
+    const slide = clients.slice(i, i + 3);
+    // Only add slide if it has items
+    if (slide.length > 0) {
+      slides.push(slide);
+    }
   }
+
+    // Settings for the slider
+    const settings = {
+      dots: true,
+      infinite: false,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      arrows: true,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />,
+    };
 
   // Logging to verify the list
   const placeholderImage = '../images/placeholder.png'; // Replace with the actual placeholder image URL
-
+// Create slides with 5x3 grid layout (15 clients per slide)
+const createSlides = () => {
+  const slides = [];
+  for (let i = 0; i < clients.length; i += 15) {
+    const slideClients = clients.slice(i, i + 15);
+    slides.push(slideClients);
+  }
+  return slides;
+};
   return (
     <section className="clients-section">
       <h2 className="clients-section-title">Our Clients & Partners</h2>
       <Slider {...settings}>
-        <div className="clients-slide">
-          <div className="clients-grid">
-            {clients.map((client, index) => (
-              <div key={index} className="client-logo">
-                <img
-                  src={client || placeholderImage} // Default to placeholder if client logo is missing
-                  alt={`Client ${index + 1}`}
-                  onError={(e) => {
-                    e.target.onerror = null; // Prevent infinite loop in case placeholder fails
-                    e.target.src = placeholderImage; // Set placeholder if the image fails to load
-                  }}
-                />
-              </div>
-            ))}
+        {createSlides().map((slide, slideIndex) => (
+          <div key={slideIndex} className="clients-slide">
+            <div className="clients-grid">
+              {slide.map((client, index) => (
+                <div key={`${slideIndex}-${index}`} className="client-logo">
+                  <img
+                    src={client || placeholderImage}
+                    alt={`Client ${slideIndex * 15 + index + 1}`}
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = placeholderImage;
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        ))}
       </Slider>
     </section>
   );
