@@ -92,7 +92,7 @@ const ContactBody = () => {
       city: "Riyadh, KSA",
       address:
         "Office 702 To 704 - 707, Al Nemr Center 1, Olaya Road, P.O. Box 286 588, Riyadh 11323, KSA.",
-      address_maps: "https://maps.app.goo.gl/BWxtKaQNE7CT1QnN6",
+      address_maps: "https://maps.app.goo.gl/5QLDga8wjzWhdboT6",
       phone: "+966 11 464 48 44",
     },
     {
