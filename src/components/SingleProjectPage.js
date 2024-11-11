@@ -13,6 +13,7 @@ const SingleProjectPage = () => {
   const project = location.state?.project;
   // State to hold the fetched projects
   const [projects, setProjects] = useState([]);
+  const [filteredProjects, setRelatedProjects] = useState([]);
   useEffect(() => {
     axios
       .get(`${BASE_API_URL}projects/`) // Use the correct API URL
@@ -22,23 +23,28 @@ const SingleProjectPage = () => {
       .catch((error) => {
         console.error("Error fetching projects:", error);
       });
-  }, []);
+    }, []);
+
+  // Step 2: Filter projects based on the first sector of the current project
+  useEffect(() => {
+    if (project?.id) { // This check is now inside the hook
+      axios
+        .get(`${BASE_API_URL}projects/related/${project.id}`)
+        .then((response) => {
+          setRelatedProjects(response.data.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching related projects:", error);
+        });
+    }
+  }, [project]);
 
   // Handle case where project is not found
   if (!project) {
     return <div>Project not found</div>;
   }
 
-  // Step 1: Get the first sector of the current project
-  const firstSector = project?.sector?.[0]?.name;
 
-  // Step 2: Filter projects based on the first sector of the current project
-  /* eslint-disable no-unused-vars */
-  const filteredProjects = projects.filter(
-    (proj) =>
-      proj.sector.some((sect) => sect.name === firstSector) &&
-      proj.id !== project.id // Exclude current project
-  );
 
   return (
     <div className="project-page">
