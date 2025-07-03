@@ -10,10 +10,15 @@ const SingleProjectPage = () => {
   const { projectId } = useParams(); // Extract projectId from URL
   const location = useLocation(); // Get the location object to access passed state
   // Access the project data passed via navigate
-  const project = location.state?.project;
+  // const project = location.state?.project;
   // State to hold the fetched projects
   const [projects, setProjects] = useState([]);
   const [filteredProjects, setRelatedProjects] = useState([]);
+
+  const [project, setProject] = useState(location.state?.project || null);
+  const [loading, setLoading] = useState(!location.state?.project);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
     axios
       .get(`${BASE_API_URL}projects/`) // Use the correct API URL
@@ -39,10 +44,25 @@ const SingleProjectPage = () => {
     }
   }, [project]);
 
+  useEffect(() => {
   // Handle case where project is not found
   if (!project) {
-    return <div>Project not found</div>;
-  }
+    setLoading(true);
+    axios
+      .get(`${BASE_API_URL}projects/${projectId}`)
+      .then(response => {
+         setProject(response.data.data);
+         setLoading(false);
+      })
+      .catch(err => {
+         setError("Project Not Found!");
+         setLoading(false);
+     });
+   }
+  }, [projectId, project]);
+
+  if (loading) return <div>Loading</div>
+  if (error || !project) return <div>Project Not Found!</div>
 
 
 

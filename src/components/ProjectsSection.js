@@ -121,15 +121,16 @@ useEffect(() => {
       {/* Projects Grid */}
       <div className="projects-grid">
         {displayProjects.map((project) => (
-          <div
+          <a
+            href={`/project/${project.id}`}
             key={project.id}
             className="project-card"
-            onClick={
-              () =>
+            onClick={e => {
+                e.preventDefault();
                 navigate(`/project/${project.id}`, {
                   state: { project },
-                }) // Pass project data to the next page
-            }
+                });
+            }}
           >
             <img
               src={`https://api.eurogroup.org${project.cover_image}`}
@@ -138,7 +139,7 @@ useEffect(() => {
             />
             <h3 className="project-name">{project.name}</h3>
             <p className="project-location">{project.location}</p>
-          </div>
+          </a>
         ))}
       </div>
 
