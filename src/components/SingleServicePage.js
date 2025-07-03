@@ -58,7 +58,7 @@ const SingleServicePage = () => {
       <div className="single-service-info-section">
         {/* Left Column: Main Project Information */}
         <div className="single-service-info-left">
-        <div dangerouslySetInnerHTML={{ __html: service_desc }} />
+        <div className="single-service-desc" dangerouslySetInnerHTML={{ __html: service_desc }} />
         </div>
       </div>
       <div className="related-projects-section">

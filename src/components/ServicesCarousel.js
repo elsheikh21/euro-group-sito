@@ -149,7 +149,7 @@ const ServicesCarousel = () => {
               </div>
               <div className="service-text">
                 <h2 className="service-title text-left">{service.title}</h2>
-                <div dangerouslySetInnerHTML={{ __html: service.description }} />
+                <div className="service-description" dangerouslySetInnerHTML={{ __html: service.description }} />
                 <div className="services-read-more-btn">
                   <button
                     className="service-button"

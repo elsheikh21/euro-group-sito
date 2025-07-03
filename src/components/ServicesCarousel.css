@@ -88,6 +88,13 @@
   color: #666;
   margin-bottom: 30px;
   line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 2em;
+
 }
 
 .service-content {
@@ -99,15 +106,15 @@
 }
 
 .service-image-wrapper {
-  flex: 50%;
+  flex: 30%;
   display: flex;
   justify-content: center;
 }
 
 .service-image {
-  width: 75%;
-  height: auto;
-  object-fit: contain;
+  width: 320px;
+  height: 420px;
+  object-fit: cover;
   border-radius: 10px;
 }
 

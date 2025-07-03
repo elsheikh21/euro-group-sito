@@ -74,7 +74,7 @@ const ClientsSection = () => {
 
   // Group clients into slides of 5x3 (15 clients per slide)
   const slides = [];
-  for (let i = 0; i < clients.length; i += 15) {
+  for (let i = 0; i < clients.length; i += 16) {
     const slide = clients.slice(i, i + 3);
     // Only add slide if it has items
     if (slide.length > 0) {

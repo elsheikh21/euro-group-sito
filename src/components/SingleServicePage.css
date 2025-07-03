@@ -49,6 +49,14 @@
   padding: 20px;
   text-align: left;
   padding-left: 5rem;
+ font-size: 1.15rem;
+ line-height: 1.6;
+}
+
+.single-service-desc span {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  font-family: Archivo;
 }
 
 .single-service-info-left h2,
