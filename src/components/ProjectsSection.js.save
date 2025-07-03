@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"; import { useNavigate } from
 "react-router-dom"; import ReactPaginate from "react-paginate"; import axios from 
 "axios"; import "./ProjectsSection.css";
 
-export const BASE_API_URL = "https://api.eurogroup.org/";
+export const BASE_API_URL = "";
 
 const ProjectsSection = () => {
   /* eslint-disable no-unused-vars */
@@ -132,7 +132,7 @@ useEffect(() => {
             }
           >
             <img
-              src={`https://api.eurogroup.org${project.cover_image}`}
+              src={`${project.cover_image}`}
               alt={project.name}
               className="projects-image"
             />

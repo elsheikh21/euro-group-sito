@@ -9,7 +9,7 @@ const SingleServicePage = () => {
   const { serviceName } = useParams(); // Get the service_name from the URL
   const location = useLocation();
   // eslint-disable-next-line
-  const { servicesData, service_id, service_desc, service_name, service_title, service_image } = location.state || {}; 
+  const { servicesData, service_id, service_desc, service_name, service_title, service_image } = location.state || {};
   // eslint-disable-next-line
   const [error, setError] = useState(null);
   const [filteredProjects, setFilteredProjects] = useState([]);

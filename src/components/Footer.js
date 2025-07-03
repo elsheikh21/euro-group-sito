@@ -59,7 +59,7 @@ const Footer = () => {
 
       {/* Lower Row */}
       <div className="footer-lower">
-        <p>© 2024 TaliCo. All rights reserved.</p>
+        <p>© 2024 Sugoi Design. All rights reserved.</p>
       </div>
     </footer>
   );

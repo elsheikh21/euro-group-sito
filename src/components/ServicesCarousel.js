@@ -30,7 +30,7 @@ const PrevArrow = ({ onClick }) => (
   </div>
 );
 
-export const BASE_API_URL = "https://euro-group-5011e47364b0.herokuapp.com/";
+export const BASE_API_URL = "https://api.eurogroup.org/";
 
 
 const extractSubServices = (servicesData) => {
@@ -42,9 +42,9 @@ const extractSubServices = (servicesData) => {
         service_name: service.name,
         title: subService.name,
         description: subService.description,
-        imageUrl: subService.image,
+        imageUrl: `${BASE_API_URL.replace(/\/$/, '')}${subService.image}`,
         id: subService.id,
-      });      
+      });
     });
   });
   return subServices;

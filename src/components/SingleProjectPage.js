@@ -52,7 +52,7 @@ const SingleProjectPage = () => {
       <div
         className="project-main-image"
         style={{
-          backgroundImage: `url(${project.cover_image})`,
+          backgroundImage: `url(https://api.eurogroup.org${project.cover_image})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -144,7 +144,7 @@ const SingleProjectPage = () => {
           <img
             src={
               project.landscape_image1
-                ? `${project.landscape_image1}`
+                ? `https://api.eurogroup.org${project.landscape_image1}`
                 : "../images/team.webp"
             }
             alt="Main Project"
@@ -155,7 +155,7 @@ const SingleProjectPage = () => {
             <img
               src={
                 project.portrait_image1
-                  ? `${project.portrait_image1}`
+                  ? `https://api.eurogroup.org${project.portrait_image1}`
                   : "../images/team.webp"
               }
               alt="Project Detail 1"
@@ -165,7 +165,7 @@ const SingleProjectPage = () => {
             <img
               src={
                 project.portrait_image2
-                  ? `${project.portrait_image2}`
+                  ? `https://api.eurogroup.org${project.portrait_image2}`
                   : "../images/team.webp"
               }
               alt="Project Detail 2"
@@ -176,7 +176,7 @@ const SingleProjectPage = () => {
           <img
             src={
               project.landscape_image2
-                ? `${project.landscape_image2}`
+                ? `https://api.eurogroup.org${project.landscape_image2}`
                 : "../images/team.webp"
             }
             alt="Final Project"

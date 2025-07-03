@@ -61,10 +61,9 @@ const ClientsSection = () => {
     axios
       .get(`${BASE_API_URL}projects/clients`)
       .then((response) => {
-        const clientLogos = response.data.data.map((client) => client.logo);
-        const setClientLogos = [...new Set(clientLogos)];
-        setClients(setClientLogos);
-        setError(null);
+        const clientLogos = response.data.data.map((client) => `${BASE_API_URL}${client.logo}`);
+	const setClientLogos = [...new Set(clientLogos)];
+        setClients(setClientLogos); setError(null);
       })
       .catch((error) => {
         setError("Failed to fetch clients due to " + error);
