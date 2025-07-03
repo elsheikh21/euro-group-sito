@@ -27,8 +27,8 @@
 }
 
 .client-logo img {
-  width: 20dvw;
-  height: 20dvh;
+  width: 16dvw;
+  height: 14dvh;
   display: block;
   background-color: transparent;
   filter: grayscale(100%);

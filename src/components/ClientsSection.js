@@ -75,7 +75,7 @@ const ClientsSection = () => {
   // Group clients into slides of 5x3 (15 clients per slide)
   const slides = [];
   for (let i = 0; i < clients.length; i += 16) {
-    const slide = clients.slice(i, i + 3);
+    const slide = clients.slice(i, i + 16);
     // Only add slide if it has items
     if (slide.length > 0) {
       slides.push(slide);
@@ -95,11 +95,11 @@ const ClientsSection = () => {
 
   // Logging to verify the list
   const placeholderImage = '../images/placeholder.png'; // Replace with the actual placeholder image URL
-// Create slides with 5x3 grid layout (15 clients per slide)
+// Create slides with 5x3 grid layout (16 clients per slide)
 const createSlides = () => {
   const slides = [];
-  for (let i = 0; i < clients.length; i += 15) {
-    const slideClients = clients.slice(i, i + 15);
+  for (let i = 0; i < clients.length; i += 16) {
+    const slideClients = clients.slice(i, i + 16);
     slides.push(slideClients);
   }
   return slides;
@@ -115,7 +115,7 @@ const createSlides = () => {
                 <div key={`${slideIndex}-${index}`} className="client-logo">
                   <img
                     src={client || placeholderImage}
-                    alt={`Client ${slideIndex * 15 + index + 1}`}
+                    alt={`Client ${slideIndex * 16 + index + 1}`}
                     onError={(e) => {
                       e.target.onerror = null;
                       e.target.src = placeholderImage;
