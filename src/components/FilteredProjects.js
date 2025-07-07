@@ -37,12 +37,13 @@ const FilteredProjects = ({ projects }) => {
     <div className="filtered-projects">
       <Slider {...settings}>
         {projects.map((project) => (
-          <div
-            key={project.id}
+          <a
+            href={`/project/${project.id}`}
             className="home-project-card"
-            onClick={() =>
-              navigate(`/project/${project.id}`, { state: { project } })
-            } // Navigate to single project page
+            onClick={e  => {
+              e.preventDefault();
+              navigate(`/project/${project.id}`, { state: { project } });
+            }}
           >
             <img
               src={
@@ -55,7 +56,7 @@ const FilteredProjects = ({ projects }) => {
             />
             <div className="project-card__title">{project.name}</div>
             <div className="project-card__location">{project.location}</div>
-          </div>
+          </a>
         ))}
       </Slider>
     </div>

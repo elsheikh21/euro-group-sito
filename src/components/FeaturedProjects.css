@@ -22,6 +22,7 @@
   height: 55vh;
   max-width: 75%;
   padding: 0px !important;
+  text-decoration: none;
 }
 
 .project-card__image {
@@ -39,6 +40,7 @@
   justify-content: center;
   background-color: #f3f3f5;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .project-card__location {

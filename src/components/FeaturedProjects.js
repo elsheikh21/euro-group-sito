@@ -59,14 +59,15 @@ const FeaturedProjects = () => {
       <h2 className="featured-projects__title">Featured Projects</h2>
       <Slider {...settings}>
         {projects.map((project) => (
-          <div
-            key={project.id}
+          <a
+            href={`project/${project.id}`}
             className="home-project-card"
-            onClick={() =>
+            onClick={e => {
+              e.preventDefault();
               navigate(`/project/${project.id}`, {
                 state: { project }, // Pass the entire project data in state
-              })
-            }
+              });
+            }}
           >
             <img
               src={`${BASE_API_URL}${project.cover_image}`}
@@ -75,7 +76,7 @@ const FeaturedProjects = () => {
             />
             <div className="project-card__title">{project.name}</div>
             <div className="project-card__location">{project.location}</div>
-          </div>
+          </a>
         ))}
       </Slider>
     </div>
