@@ -87,7 +87,6 @@
   font-size: 1.15rem;
   color: #666;
   margin-bottom: 30px;
-  line-height: 1.6;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical; 
@@ -131,7 +130,6 @@
   /* Adds some spacing between image and text */
 }
 
-/* Optional: Adjust layout on mobile */
 @media (max-width: 768px) {
   .service-content {
     flex-direction: column;

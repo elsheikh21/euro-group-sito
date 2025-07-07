@@ -1,18 +1,24 @@
-import React, { useState, useEffect } from "react"; import { useNavigate } from 
-"react-router-dom"; import ReactPaginate from "react-paginate"; import axios from 
-"axios"; import "./ProjectsSection.css";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import ReactPaginate from "react-paginate";
+import axios from "axios";
+import "./ProjectsSection.css";
 
 export const BASE_API_URL = "https://api.eurogroup.org/";
 
 const ProjectsSection = () => {
   /* eslint-disable no-unused-vars */
-  const navigate = useNavigate(); // Hook to navigate between pages
+  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [projects, setProjects] = useState([]);
   const [error, setError] = useState(null);
   const [selectedService, setSelectedService] = useState("all");
   const [selectedSector, setSelectedSector] = useState(null);
-  const [pageNumber, setPageNumber] = useState(0); // New state for pagination
+  // const [pageNumber, setPageNumber] = useState(0); // New state for pagination
   const projectsPerPage = 12;
+
+  // get current page from URL query params, default to 0
+  const pageNumber = parseInt(searchParams.get("page") || "1", 10);
 
   // Fetch projects from the backend API
   useEffect(() => {
@@ -38,7 +44,9 @@ const ProjectsSection = () => {
   )
   .filter((project) => !selectedSector || project.sector === selectedSector);
 
-  const pagesVisited = pageNumber * projectsPerPage;
+  const pageIndex = pageNumber - 1;
+
+  const pagesVisited = pageIndex * projectsPerPage;
   const displayProjects = filteredProjects.slice(
     pagesVisited,
     pagesVisited + projectsPerPage
@@ -46,10 +54,17 @@ const ProjectsSection = () => {
   const pageCount = Math.ceil(filteredProjects.length / projectsPerPage);
 
   const changePage = ({ selected }) => {
-    setPageNumber(selected);
+    setSearchParams({ page: selected + 1});
   };
 
-  
+//  useEffect(() => {
+//    if (parseInt(searchParams.get("page") || "1", 10) !== 1) {
+//      setSearchParams({ page: 1 });
+//    }
+    // setSearchParams({ page: 1 });
+   // eslint-disable-next-line
+// }, [selectedService, selectedSector]);
+
 const [services, setServices] = useState([]);
 
 useEffect(() => {
@@ -72,7 +87,8 @@ useEffect(() => {
   const handleServiceClick = (serviceId) => {
     setSelectedService(serviceId);
     setSelectedSector(null); // Reset sector filter when changing service
-    setPageNumber(0); // Reset to first page when filters change
+    // setPageNumber(0); // Reset to first page when filters change
+   setSearchParams({ page: 1 });
   };
 
     // Extract unique sectors from projects for secondary filter (only for 'sectors')
@@ -111,7 +127,10 @@ useEffect(() => {
               className={`secondary-filter-button ${
                 selectedSector === sector ? "active" : ""
               }`}
-              onClick={() => setSelectedSector(sector)}
+              onClick={() => {
+               setSelectedSector(sector);
+               setSearchParams({ page: 1 });
+              }}
             >
               {sector}
             </button>
@@ -122,12 +141,12 @@ useEffect(() => {
       <div className="projects-grid">
         {displayProjects.map((project) => (
           <a
-            href={`/project/${project.id}`}
+            href={`/project/${project.id}?page=${pageNumber}`}
             key={project.id}
             className="project-card"
             onClick={e => {
                 e.preventDefault();
-                navigate(`/project/${project.id}`, {
+                navigate(`/project/${project.id}?page=${pageNumber}`, {
                   state: { project },
                 });
             }}
@@ -157,6 +176,7 @@ useEffect(() => {
         pageClassName={"page-number"}
         pageLinkClassName={"page-number"}
         activeLinkClassName={"page-number-active"}
+        forcePage={pageIndex}
       />
     </section>
   );
